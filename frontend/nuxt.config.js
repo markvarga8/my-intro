@@ -16,8 +16,6 @@ export default {
   css: [
   ],
 
-  router: { base: 'my-intro2' },
-
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     { src: '~/plugins/vuex-persist', ssr: false },
@@ -66,7 +64,11 @@ export default {
           free: 'Full Stack Web developer',
           send: 'Send',
           close: 'close',
-          skills: 'Skills'
+          skills: 'Skills',
+          search: 'Search boldly!',
+          facebook: 'Search Facebook',
+          linkedin: 'Search Linkedin',
+          writeMessage: 'Or write a message here:'
         },
         hu: {
           welcome: 'Tovább',
@@ -74,7 +76,7 @@ export default {
           about: 'Rólam',
           message: 'Írj üzenetet!',
           serv: 'Szolgáltatások',
-          skillsTitle1: 'vállalkozóknak',
+          skillsTitle1: 'Vállalkozóknak',
           skillsTitle2: 'Magánszemélyeknek',
           frontend: 'Frontend fejlesztés',
           backend: 'Backend fejlesztés',
@@ -82,7 +84,11 @@ export default {
           free: 'Full Stack Webfejlesztő',
           send: 'Küldés',
           close: 'Bezárás',
-          skills: 'Szaktudás'
+          skills: 'Szaktudás',
+          search: 'Keress bátran!',
+          facebook: 'Keress Facebookon',
+          linkedin: 'Keress Linkedinen',
+          writeMessage: 'Vagy írj itt üzenetet:'
         }
       }
     }

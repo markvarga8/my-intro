@@ -13,6 +13,7 @@
         </b-card-text>
         <hr class="hr" />
         <h3>{{$t('name')}}</h3>
+        <b-spinner v-if="loading" style="width: 3rem; height: 3rem;" label="Large Spinner" type="grow"></b-spinner>
       </b-card>
     </div>
 
@@ -43,9 +44,9 @@
         tag="article"
         class="mb-5 mr-5 w-75 skillsCard"
       >
-        <h3>{{$t('skillsTitle1')}}</h3>
+        <h3>{{$t('skillsTitle2')}}</h3>
 
-        <b-button class="button-background" href="#" variant="outline">{{$t('welcome')}}</b-button>
+        <b-button @click.native="individual = true" class="button-background" href="#" variant="outline">{{$t('welcome')}}</b-button>
       </b-card>
 
       <b-card
@@ -55,9 +56,9 @@
         tag="article"
         class="mb-5 w-75 skillsCard"
       >
-        <h3>{{$t('skillsTitle2')}}</h3>
+        <h3>{{$t('skillsTitle1')}}</h3>
 
-        <b-button class="button-background" href="#" variant="outline">{{$t('welcome')}}</b-button>
+        <b-button @click.native="entrepeneur = true" class="button-background" href="#" variant="outline">{{$t('welcome')}}</b-button>
       </b-card>
     </b-container>
 
@@ -87,6 +88,61 @@
         <mdb-btn class="button-background" @click.native="backend = true">{{$t('more')}}</mdb-btn>
       </b-card>
     </b-container>
+
+    <mdb-modal :show="individual" @close="individual = false">
+      <mdb-modal-header>
+        <mdb-modal-title>{{$t('skillsTitle2')}}</mdb-modal-title>
+      </mdb-modal-header>
+      <mdb-modal-body>
+        <h3>
+          Aki magánszemélyként a munkaerőpiacon komolyan gondolja a sikerességet az egy másodpercig sem gondolkodik azon,
+          hogy szükség van-e online portfolióra vagy sem!
+        </h3>
+        <hr>
+        <h3>
+          Akár egy egy oldalas bemutatkozó weboldalra van szükséged, akár egy komolyabb,
+          saját ötleteid szerint összerakott weboldalra, nyugodtan fordulj hozzám és írj!
+        </h3>
+        <hr>
+        <h3>Tartalomkezelést vagy átalakítást is vállalok, szóval ha nem vagy elégedett a jelenlegivel akkor is nyugodtan keress meg!</h3>
+        <hr>
+        <h3>Agilis fejlesztési szemléletemnek köszönhetően a végeredmény garantáltan olyan lesz mint amilyennek te elképzelted!</h3>
+      </mdb-modal-body>
+      <mdb-modal-footer>
+        <mdb-btn class="button-background" color="outline" @click.native="individual = false">{{$t('close')}}</mdb-btn>
+        <b-button href="/contacts" class="button-background" variant="outline">{{$t('welcome')}}</b-button>
+      </mdb-modal-footer>
+    </mdb-modal>
+
+    <mdb-modal :show="entrepeneur" @close="entrepeneur = false">
+      <mdb-modal-header>
+        <mdb-modal-title>{{$t('skillsTitle1')}}</mdb-modal-title>
+      </mdb-modal-header>
+      <mdb-modal-body>
+        <h3>
+          Mai világba már gyakorlatilag kihagyott ziccernek számít, ha egy vállalkozó esetleg nincs jelen az internet szerteágazó világába,
+          ami rengeteg lehetőséget biztosít a termékek és szolgáltatások bemutatására, reklámozására.
+        </h3>
+        <hr>
+        <h3>
+         Ennek a szerteágazó világnak az egyik nagyon hasznos hozományai a weboldalak/webalkalmazások,
+         amellyelekkel ma már rengeteg ügyfélhez juttathatjuk el információinkat vállalkozásunkról. <!-- szerteágazó, sokat árulnak el...  -->
+        </h3>
+        <hr>
+        <h3>
+          Ebben lehetek én a segítségedre! Legyen szó egy teljesen új,
+          a nulláról felépítendő webalkalmazásról, vagy lehet szó már meglévőről, ahol tartalomkezelésben vagy átalakításban is segíthetek neked!.
+        </h3>
+        <hr>
+        <h3>
+          Agilis fejlesztési szemléletemnek köszönhetően a végeredmény garantáltan olyan lesz mint amilyennek te elképzelted!
+        </h3>
+      </mdb-modal-body>
+      <mdb-modal-footer>
+        <mdb-btn class="button-background" color="outline" @click.native="entrepeneur = false">{{$t('close')}}</mdb-btn>
+        <b-button href="/contacts" class="button-background" variant="outline">{{$t('welcome')}}</b-button>
+      </mdb-modal-footer>
+    </mdb-modal>
 
     <mdb-modal :show="frontend" @close="frontend = false">
       <mdb-modal-header>
@@ -123,7 +179,6 @@
           <li>MVC structure</li>
           <li>REST applications</li>
           <li>ORM</li>
-          <li>Git</li>
         </ul>
       </mdb-modal-body>
       <mdb-modal-footer>
@@ -160,8 +215,19 @@ export default {
   }),
   data: () => ({
     frontend: false,
-    backend: false
+    backend: false,
+    individual: false,
+    entrepeneur: false,
+    loading: false
   }),
+  methods: {
+    start () {
+      this.loading = true
+    },
+    finish () {
+      this.loading = false
+    }
+  },
   head () {
     return {
       title: 'Mark Varga',
