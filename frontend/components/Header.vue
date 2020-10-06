@@ -1,33 +1,77 @@
 <template>
   <div>
-    <!-- <input type="checkbox" id="check"> -->
-
-    <header>
-      <div class="left-area">
-        <a href="/"><h3>Mark <span>Varga</span></h3></a>
-      </div>
-    </header>
-
-    <div class="sidebar">
-      <b-button href="/" class="btn" variant="outline"><b-icon class="icon" icon="house-door"></b-icon></b-button>
-      <b-button href="/about" class="btn" variant="outline"><b-icon class="icon" icon="info-circle"></b-icon></b-button>
-      <b-button href="/contacts" class="btn" variant="outline"><b-icon class="icon" icon="telephone"></b-icon></b-button>
-      <label for="checkEn">
-        <b-button v-if="hu" @click="translateEn" class="btn" variant="outline">EN</b-button>
-      </label>
-      <label for="check">
-        <b-button v-if="en" class="btn" variant="outline" @click="translateHu">HU</b-button>
-      </label>
-      <b-checkbox id="check" v-model="$i18n.locale" value="hu">hu</b-checkbox>
-      <b-checkbox id="checkEn" v-model="$i18n.locale" value="en">en</b-checkbox>
-    </div>
+    <mdb-navbar class="navbar" position="top" dark href="/" scrolling >
+      <mdb-navbar-brand>
+        <a href="/"><img class="logo" src="" alt=""></a>
+      </mdb-navbar-brand>
+      <mdb-navbar-toggler right>
+        <mdb-navbar-nav right>
+          <b-checkbox id="check" v-model="$i18n.locale" value="hu">hu</b-checkbox>
+          <b-checkbox id="checkEn" v-model="$i18n.locale" value="en">en</b-checkbox>
+          <mdb-nav-item class="menu" href="/">
+              <mdb-button>{{$t('home')}}</mdb-button>
+          </mdb-nav-item>
+          <mdb-nav-item class="menu" href="/about">
+              <mdb-button>{{$t('about')}}</mdb-button>
+          </mdb-nav-item>
+          <mdb-nav-item class="menu" href="/contacts">
+              <mdb-button>{{$t('contact')}}</mdb-button>
+          </mdb-nav-item>
+          <mdb-nav-item class="menu" href="https://github.com/ben1998deguz">
+              <mdb-icon fab icon="github"/>
+          </mdb-nav-item>
+          <mdb-nav-item class="menu" href="https://www.facebook.com/vargabeni69/">
+              <mdb-icon fab icon="facebook-f"/>
+          </mdb-nav-item>
+          <mdb-nav-item class="menu" href="https://www.linkedin.com/in/varga-mark-61796a197/">
+              <mdb-icon fab icon="linkedin"/>
+          </mdb-nav-item>
+          <mdb-nav-item class="menu">
+            <label for="checkEn">
+              <mdb-btn
+                v-if="hu"
+                @click="translateEn"
+                tag="a"
+                gradient="blue"
+                floating
+                size="sm"
+              >EN
+              </mdb-btn>
+            </label>
+          </mdb-nav-item>
+          <mdb-nav-item class="menu">
+            <label for="check">
+              <mdb-btn
+                v-if="en"
+                @click="translateHu"
+                tag="a"
+                gradient="blue"
+                floating
+                size="sm"
+                >
+                HU
+              </mdb-btn>
+            </label>
+          </mdb-nav-item>
+        </mdb-navbar-nav>
+      </mdb-navbar-toggler>
+    </mdb-navbar>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
+import { mdbNavbar, mdbNavbarNav, mdbNavItem, mdbNavbarBrand, mdbNavbarToggler, mdbIcon } from 'mdbvue'
 
 export default {
+  components: {
+    mdbNavbar,
+    mdbNavbarNav,
+    mdbNavItem,
+    mdbNavbarBrand,
+    mdbNavbarToggler,
+    mdbIcon
+  },
   computed: mapState({
     en: state => state.LangModule.en,
     hu: state => state.LangModule.hu
@@ -47,166 +91,100 @@ export default {
 
 <style>
 
-header {
-  position: fixed;
-  background:rgba(82, 73, 73, 0.767);
-  padding: 0px;
-  width: 100%;
-  height: 50px;
-  z-index: 999;
-  border-bottom: 3px solid white;
-}
+.logo {
+      height: 40px;
+      width: auto;
+      margin: 10px;
+    }
 
-.left-area {
-  text-align: center;
-}
+    .menu {
+      text-align: end;
+      padding-right: 0.5em;
+    }
 
-.left-area:hover {
-  text-decoration: none !important;
-}
+    .hm-gradient {
+      background:  rgba(82, 73, 73, 0.267);
+    }
 
-.left-area h3 {
-  margin-top: 10px;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 22px;
-  font-weight: 900;
-}
+    .navbar {
+      background:  rgba(82, 73, 73, 0.767);
+      box-shadow: 0 0 0 0 transparent;
+    }
 
-.left-area h3:hover {
-  text-decoration: none !important;
-}
+    .navbar:not(.top-nav-collapse) {
+      background:  rgb(219, 194, 156);
+    }
 
-.left-area span {
-  color: #1dc4e7
-}
+    .row {
+      margin: 0;
+      padding:0;
+    }
 
-/* .logout-btn {
-  padding: 5px;
-  background: #19b3d3;
-  text-decoration: none;
-  float: right;
-  margin-top: -30px;
-  margin-right: 40px;
-  border-radius: 2px;
-  font-size: 15px;
-  font-weight: 600;
-  color: #fff;
-  transition: 0.5s;
-  transition-property: background;
-} */
+    .column {
+      margin: 0;
+      padding: 0;
+    }
 
-/* .logout-btn:hover {
-  background: #0d9dbb;
-} */
+    .half-page {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 0 6rem;
+    }
 
-.sidebar {
-  background: rgba(82, 73, 73, 0.767);
-  margin-top: 50px;
-  padding-top: 30px;
-  position: fixed;
-  left: 0;
-  width: 70px;
-  height: 100%;
-  transition: 0.5s;
-  transition-property: left;
-  border-right: 3px solid white;
-  text-align: center;
-  z-index: 1;
-}
+    .heading {
+      font-weight: 700;
+      color:  rgba(82, 73, 73, 0.967);
+    }
 
-/* .sidebar .profile-image {
-  width: 100px;
-  height: 100px;
-  border-radius: 100px;
-  margin-bottom: 10px;
-} */
+    .subheading {
+      margin: 2.5rem 0;
+      color:  rgba(82, 73, 73, 0.767);
+      font-size: 1.5rem;
+    }
 
-.sidebar h4 {
-  color: #ccc;
-  margin-top: 0;
-  margin-bottom: 20px;
-}
+    .btn-lily {
+      background:  rgba(82, 73, 73, 0.967);
+      color: white;
+    }
 
-.sidebar a {
-  color: #fff;
-  display: block;
-  width: 100%;
-  line-height: 60px;
-  text-decoration: none;
-  text-align: center;
-  box-sizing: border-box;
-  transition: 0.5s;
-  transition-property: background;
-}
+    .image {
+      width: 100%;
+      height: 100vh !important;
+    }
 
-.sidebar a:hover {
-  background: #19b3d3;
-}
+    .paragraph {
+      padding: 3rem 1.5em;
+    }
 
-.sidebar .btn {
-  width: 67px;
-  font-size: 0.8rem;
-  margin-left: 0px;
-  background: rgba(82, 73, 73, 0.767);
-  color: white;
-}
+    .custom-control {
+      display: none;
+    }
 
-label #sidebar-btn {
-  z-index: 1;
-  color: #fff;
-  position: fixed;
-  cursor: pointer;
-  font-size: 20px;
-  margin: 5px 25px;
-  transition: 0.5s;
-  transition-property: color;
-}
+    @media screen and (max-width: 770px) {
+      .half-page {
+        padding:2rem;
+      }
 
-label #sidebar-btn:hover {
-  color: #19b3d3;
-}
+      .navbar {
+        position: relative;
+        margin-top: 5px;
+      }
+      .navbar:not(.top-nav-collapse) {
+          background:  rgba(82, 73, 73, 0.767);
+      }
+    }
 
-#check:checked ~ .sidebar {
-  left: -190px;
-}
+    @media screen and (max-width: 400px) {
+      .half-page {
+        padding: 1rem;
+      }
+    }
 
-#check:checked ~ .sidebar a span {
-  display: none;
-}
-
-#check:checked ~ .sidebar a {
-  font-size: 20px;
-  margin-left: 170px;
-  width: 80px;
-}
-
-/* .content {
-  margin-left: 250px;
-  background: url('../assets/images/web.png') no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-  transition: 0.5s;
-  transition-property: margin-left;
-} */
-
-/* #check:checked ~ .content {
-  margin-left: 60px;
-} */
-
-.custom-control {
-  display: none;
-}
-
-@media only screen and (max-width: 900px) {
-.sidebar {
-  width: 40px;
-}
-
-.sidebar .btn {
-  width: 37px;
-  font-size: 0.5rem;
-}
-}
+    @media screen and (max-width: 320px) {
+      .heading {
+        font-size: 4em;
+      }
+    }
 </style>

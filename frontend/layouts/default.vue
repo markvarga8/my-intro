@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="appp">
     <Header />
     <Nuxt />
     <Footer />
@@ -19,5 +19,7 @@ export default {
 </script>
 
 <style>
-
+  .appp {
+    background:  rgb(219, 194, 156);
+  }
 </style>
