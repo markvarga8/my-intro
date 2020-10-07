@@ -2,49 +2,51 @@
   <div class="about">
     <mdb-container>
       <section class="text-center my-5">
-        <mdb-row>
+        <mdb-row class="roww">
           <mdb-col md="12" class="mb-4">
-            <mdb-card class="card-image">
+            <mdb-card class="card-image animated fadeInDown">
               <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
                 <div>
                   <h6 class="">
-                    <mdb-icon icon="users"></mdb-icon><strong class="ml-3">{{$t('about')}}</strong>
+                    <mdb-icon icon="user"></mdb-icon><strong class="ml-3">{{$t('about')}}</strong>
                   </h6>
                   <h3 class="py-3 font-weight-bold">
                     <strong>{{$t('name')}}</strong>
                   </h3>
-                  <p class="pb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem, optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos. Odit sed qui, dolorum!</p>
-                  <mdb-btn color="lily" rounded size="md"><mdb-icon icon="clone" class="left"/> View project</mdb-btn>
+                  <p class="pb-3">{{$t('aboutIntro')}}</p>
+                  <a href="/contacts"><mdb-btn color="lily" rounded size="md"><mdb-icon icon="envelope" class="left"/>{{$t('contact')}}</mdb-btn></a>
                 </div>
               </div>
             </mdb-card>
           </mdb-col>
-          <mdb-col md="6" class="md-0 mb-4">
-            <mdb-card class="card-image-entrepeneur">
-              <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
-                <div>
-                  <h3 class="py-3 font-weight-bold">
-                    <strong>{{$t('skillsTitle2')}}</strong>
-                  </h3>
-                  <p class="pb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem, optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos. Odit sed qui, dolorum!</p>
-                  <mdb-btn color="lily" rounded size="md"><mdb-icon icon="clone" class="left"/> View project</mdb-btn>
+          <mdb-row class="intro">
+            <mdb-col md="6" class="md-0 mb-4">
+              <mdb-card class="card-image-entrepeneur animated fadeInLeft">
+                <div class="hei text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
+                  <div>
+                    <h3 class="py-3 font-weight-bold">
+                      <strong>{{$t('skillsTitle2')}}</strong>
+                    </h3>
+                    <p class="pb-3">{{$t('entrepreneurIntro')}}</p>
+                    <a href="/contacts"><mdb-btn color="lily" rounded size="md"><mdb-icon icon="envelope" class="left"/>{{$t('contact')}}</mdb-btn></a>
+                  </div>
                 </div>
-              </div>
-            </mdb-card>
-          </mdb-col>
-          <mdb-col md="6" class="md-0 mb-4">
-            <mdb-card class="card-image-individual">
-              <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
-                <div>
-                  <h3 class="py-3 font-weight-bold">
-                    <strong>{{$t('skillsTitle1')}}</strong>
-                  </h3>
-                  <p class="pb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem, optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos. Odit sed qui, dolorum!</p>
-                  <mdb-btn color="lily" rounded size="md"><mdb-icon icon="clone" class="left"/> View project</mdb-btn>
+              </mdb-card>
+            </mdb-col>
+            <mdb-col md="6" class="md-0 mb-4">
+              <mdb-card class="card-image-individual animated fadeInRight">
+                <div class="hei text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
+                  <div>
+                    <h3 class="py-3 font-weight-bold">
+                      <strong>{{$t('skillsTitle1')}}</strong>
+                    </h3>
+                    <p class="pb-3">{{$t('individualIntro')}}</p>
+                    <a href="/contacts"><mdb-btn color="lily" rounded size="md"><mdb-icon icon="envelope" class="left"/>{{$t('contact')}}</mdb-btn></a>
+                  </div>
                 </div>
-              </div>
-            </mdb-card>
-          </mdb-col>
+              </mdb-card>
+            </mdb-col>
+          </mdb-row>
         </mdb-row>
       </section>
     </mdb-container>
@@ -91,6 +93,9 @@ export default {
 </script>
 
 <style>
+  .about {
+    margin-top: -60px;
+  }
   .card-image {
     background-image: url('../../assets/images/frontend.jpg');
     background-repeat: no-repeat;
@@ -101,11 +106,25 @@ export default {
     background-image: url('../../assets/images/hand.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    height: 100%;
   }
 
   .card-image-individual {
     background-image: url('../../assets/images/company.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    height: 100%;
+  }
+
+  .roww {
+    padding-top: 10% !important;
+  }
+
+  .intro {
+    height: 20%;
+  }
+
+  .hei {
+    height: 100%;
   }
 </style>

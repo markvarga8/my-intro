@@ -1,117 +1,107 @@
 <template>
   <div class="home">
-
     <mdb-row class="page row">
-      <mdb-col md="6" xs="12" class="half-page column animated fadeInLeft">
-        <h1 class="heading display-3">{{$t('name')}}</h1>
-        <h2 class="subheading font-weight-bold">{{$t('free')}}</h2>
-        <a href="#intro"><mdb-btn rounded icon="caret-right" icon-right color="lily">{{$t('welcome')}}</mdb-btn></a>
+      <mdb-col md="6" xs="12" class="container half-page column animated fadeInLeft">
+        <h1 class="heading display-3">
+          {{ $t('name') }}
+        </h1>
+        <h2 class="pb-5 subheading font-weight-bold">
+          {{ $t('free') }}
+        </h2>
+        <mdb-icon icon="angle-double-down" class="icolor bottom-left animated bounce infinite fa-3x" />
+        <mdb-icon icon="angle-double-down" class="icolor bottom-right animated bounce infinite fa-3x" />
+        <mdb-icon icon="angle-double-down" class="icolor bottom-center animated bounce infinite fa-3x" />
       </mdb-col>
       <mdb-col class="column" md="6" xs="12">
         <mdb-view>
-        <img class="image animated fadeInDown" src="../assets/images/background.jpg" >
-        <mdb-mask flex-center class="hm-gradient" />
+          <img class="image animated fadeInDown" src="../assets/images/background.jpg">
+          <mdb-mask flex-center class="hm-gradient" />
         </mdb-view>
       </mdb-col>
     </mdb-row>
 
-    <div id="intro"></div>
+    <div id="intro" />
 
-    <no-ssr placeholder="loading...">
-    </no-ssr>
+    <no-ssr placeholder="loading..." />
 
     <mdb-container>
       <section class="my-5">
-        <h2 class="h1-responsive font-weight-bold text-center my-5">{{$t('help')}}</h2>
-        <p class="lead grey-text w-responsive text-center mx-auto mb-5">{{$t('intro')}}</p>
+        <h2 v-animateOnScroll="{animation: 'bounceInDown'}" class="h1-responsive font-weight-bold text-center my-5">
+          {{ $t('help') }}
+        </h2>
+        <p v-animateOnScroll="{animation: 'bounceInDown'}" class="lead grey-text w-responsive text-center mx-auto mb-5">
+          {{ $t('intro') }}
+        </p>
         <mdb-row>
           <mdb-col md="4">
-            <mdb-row class="mb-3">
+            <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
               <mdb-col size="3">
-                <mdb-icon icon="flag-checkered" size="2x"/>
+                <mdb-icon icon="flag-checkered" size="2x" />
               </mdb-col>
               <mdb-col size="10">
-                <h5 class="font-weight-bold mb-3">{{$t('exp')}}</h5>
+                <h5 class="font-weight-bold mb-3">
+                  {{ $t('exp') }}
+                </h5>
                 <p class="grey-text">
-                  {{$t('content1')}}
+                  {{ $t('content1') }}
                 </p>
               </mdb-col>
             </mdb-row>
-            <mdb-row class="mb-3">
+            <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
               <mdb-col size="3">
-                <mdb-icon icon="flask" size="2x"/>
+                <mdb-icon icon="flask" size="2x" />
               </mdb-col>
               <mdb-col size="10">
-                <h5 class="font-weight-bold mb-3">{{$t('agile')}}</h5>
+                <h5 class="font-weight-bold mb-3">
+                  {{ $t('agile') }}
+                </h5>
                 <p class="grey-text">
-                  {{$t('content2')}}
+                  {{ $t('content2') }}
                 </p>
               </mdb-col>
             </mdb-row>
           </mdb-col>
           <mdb-col md="4" class="text-name">
-            <img class="img-fluid" v-animateOnScroll="{animation: 'bounceInLeft'}" src="https://mdbootstrap.com/img/Mockups/Transparent/Small/iphone-portfolio1.png" alt="Sample image" />
+            <img v-animateOnScroll="{animation: 'bounceInDown'}" class="img-fluid" src="https://mdbootstrap.com/img/Mockups/Transparent/Small/iphone-portfolio1.png" alt="Sample image">
           </mdb-col>
           <mdb-col md="4">
-            <mdb-row class="mb-3">
+            <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
               <mdb-col size="2">
-                <mdb-icon icon="magic" size="2x"/>
+                <mdb-icon icon="magic" size="2x" />
               </mdb-col>
               <mdb-col size="10">
-                <h5 class="font-weight-bold mb-3">{{$t('website')}}</h5>
-                <p class="grey-text">{{$t('content3')}}</p>
-              </mdb-col>
-            </mdb-row>
-            <mdb-row class="mb-3">
-              <mdb-col size="2">
-                <mdb-icon icon="heart" size="2x"/>
-              </mdb-col>
-              <mdb-col size="10">
-                <h5 class="font-weight-bold mb-3">{{$t('mobile')}}</h5>
-                <p class="grey-text">{{$t('content4')}}</p>
-              </mdb-col>
-            </mdb-row>
-            <mdb-row class="mb-3">
-              <mdb-col size="2">
-                <mdb-icon icon="bolt" size="2x"/>
-              </mdb-col>
-              <mdb-col size="10">
-                <h5 class="font-weight-bold mb-3">{{$t('contentManagment')}}</h5>
-                <p class="grey-text">{{$t('content5')}}</p>
-              </mdb-col>
-            </mdb-row>
-          </mdb-col>
-        </mdb-row>
-      </section>
-    </mdb-container>
-
-    <mdb-container>
-      <section class="my-5">
-        <h2 class="h1-responsive font-weight-bold text-center my-5">{{$t('serv')}}</h2>
-        <mdb-row class="skills">
-          <mdb-col md="6" class="md-0 mb-5">
-            <mdb-row>
-              <mdb-col lg="2" md="3" size="2">
-                <mdb-icon icon="users" size="2x"/>
-              </mdb-col>
-              <mdb-col lg="10" md="9" size="10">
-                <h4 class="font-weight-bold">{{$t('skillsTitle2')}}</h4>
-                <p class="grey-text">{{$t('entreContent')}}</p>
-                <mdb-btn @click.native="entrepeneur = true" color="lily" size="sm">{{$t('welcome')}}</mdb-btn>
-              </mdb-col>
-            </mdb-row>
-          </mdb-col>
-          <mdb-col md="6" class="md-0 mb-5">
-            <mdb-row>
-              <mdb-col lg="2" md="3" size="2">
-                <mdb-icon icon="tachometer-alt" size="2x"/>
-              </mdb-col>
-              <mdb-col lg="10" md="9" size="10">
-                <h4 class="font-weight-bold">{{$t('skillsTitle1')}}</h4>
+                <h5 class="font-weight-bold mb-3">
+                  {{ $t('website') }}
+                </h5>
                 <p class="grey-text">
-                  {{$t('indiContent')}}
+                  {{ $t('content3') }}
                 </p>
-                <mdb-btn @click.native="individual = true" color="lily" size="sm">{{$t('welcome')}}</mdb-btn>
+              </mdb-col>
+            </mdb-row>
+            <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
+              <mdb-col size="2">
+                <mdb-icon icon="heart" size="2x" />
+              </mdb-col>
+              <mdb-col size="10">
+                <h5 class="font-weight-bold mb-3">
+                  {{ $t('mobile') }}
+                </h5>
+                <p class="grey-text">
+                  {{ $t('content4') }}
+                </p>
+              </mdb-col>
+            </mdb-row>
+            <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
+              <mdb-col size="2">
+                <mdb-icon icon="bolt" size="2x" />
+              </mdb-col>
+              <mdb-col size="10">
+                <h5 class="font-weight-bold mb-3">
+                  {{ $t('contentManagment') }}
+                </h5>
+                <p class="grey-text">
+                  {{ $t('content5') }}
+                </p>
               </mdb-col>
             </mdb-row>
           </mdb-col>
@@ -121,90 +111,166 @@
 
     <mdb-container>
       <section class="my-5">
-        <h2 class="h1-responsive font-weight-bold text-center my-5">{{$t('skills')}}</h2>
+        <h2 v-animateOnScroll="{animation: 'bounceInDown'}" class="h1-responsive font-weight-bold text-center my-5">
+          {{ $t('serv') }}
+        </h2>
+        <mdb-row class="skills">
+          <mdb-col v-animateOnScroll="{animation: 'bounceInLeft'}" md="6" class="md-0 mb-5">
+            <mdb-row>
+              <mdb-col lg="2" md="3" size="2">
+                <mdb-icon icon="user" size="2x" />
+              </mdb-col>
+              <mdb-col lg="10" md="9" size="10">
+                <h4 class="font-weight-bold">
+                  {{ $t('skillsTitle2') }}
+                </h4>
+                <p class="grey-text">
+                  {{ $t('entreContent') }}
+                </p>
+                <mdb-btn color="lily" size="sm" @click.native="entrepeneur = true">
+                  {{ $t('welcome') }}
+                </mdb-btn>
+              </mdb-col>
+            </mdb-row>
+          </mdb-col>
+          <mdb-col v-animateOnScroll="{animation: 'bounceInRight'}" md="6" class="md-0 mb-5">
+            <mdb-row>
+              <mdb-col lg="2" md="3" size="2">
+                <mdb-icon icon="tachometer-alt" size="2x" />
+              </mdb-col>
+              <mdb-col lg="10" md="9" size="10">
+                <h4 class="font-weight-bold">
+                  {{ $t('skillsTitle1') }}
+                </h4>
+                <p class="grey-text">
+                  {{ $t('indiContent') }}
+                </p>
+                <mdb-btn color="lily" size="sm" @click.native="individual = true">
+                  {{ $t('welcome') }}
+                </mdb-btn>
+              </mdb-col>
+            </mdb-row>
+          </mdb-col>
+        </mdb-row>
+      </section>
+    </mdb-container>
+
+    <mdb-container>
+      <section class="my-5">
+        <h2 v-animateOnScroll="{animation: 'bounceInDown'}" class="h1-responsive font-weight-bold text-center my-5">
+          {{ $t('skills') }}
+        </h2>
         <mdb-row>
-          <mdb-col lg="5" class="text-center text-lg-left">
-            <img class="img-fluid animated fadeInDown" src="https://mdbootstrap.com/img/Photos/Others/screens-section.jpg" alt="Sample image" />
+          <mdb-col v-animateOnScroll="{animation: 'bounceInLeft'}" lg="5" class="text-center text-lg-left">
+            <img class="img-fluid animated fadeInDown" src="https://mdbootstrap.com/img/Photos/Others/screens-section.jpg" alt="Sample image">
           </mdb-col>
           <mdb-col lg="7">
-            <mdb-row class="mb-3">
+            <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
               <mdb-col size="1">
-                <mdb-icon icon="share" size="lg" class="mb-3 mt-3"/>
+                <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
               </mdb-col>
               <mdb-col xl="10" md="11" size="10">
-                <h5 class="font-weight-bold mb-3">HTML/CSS/JavaScript</h5>
+                <h5 class="font-weight-bold mb-3">
+                  HTML/CSS/JavaScript
+                </h5>
               </mdb-col>
             </mdb-row>
-            <mdb-row class="mb-3">
+            <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
               <mdb-col size="1">
-                <mdb-icon icon="share" size="lg" class="mb-3 mt-3"/>
+                <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
               </mdb-col>
               <mdb-col xl="10" md="11" size="10">
-                <h5 class="font-weight-bold mb-3">Vue.js/Nuxt.js (Vuex)</h5>
+                <h5 class="font-weight-bold mb-3">
+                  Vue.js/Nuxt.js (Vuex)
+                </h5>
               </mdb-col>
             </mdb-row>
-            <mdb-row class="mb-3">
+            <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
               <mdb-col size="1">
-                <mdb-icon icon="share" size="lg" class="mb-3 mt-3"/>
+                <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
               </mdb-col>
               <mdb-col xl="10" md="11" size="10">
-                <h5 class="font-weight-bold mb-3">Bootstrap/Bootstrap-vue</h5>
+                <h5 class="font-weight-bold mb-3">
+                  Bootstrap/Bootstrap-vue
+                </h5>
               </mdb-col>
             </mdb-row>
-            <mdb-row class="mb-3">
+            <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
               <mdb-col size="1">
-                <mdb-icon icon="share" size="lg" class="mb-3 mt-3"/>
+                <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
               </mdb-col>
               <mdb-col xl="10" md="11" size="10">
-                <h5 class="font-weight-bold mb-3">Vuetify</h5>
+                <h5 class="font-weight-bold mb-3">
+                  Vuetify
+                </h5>
               </mdb-col>
             </mdb-row>
-            <mdb-row class="mb-3">
+            <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
               <mdb-col size="1">
-                <mdb-icon icon="share" size="lg" class="mb-3 mt-3"/>
+                <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
               </mdb-col>
               <mdb-col xl="10" md="11" size="10">
-                <h5 class="font-weight-bold mb-3">Github</h5>
+                <h5 class="font-weight-bold mb-3">
+                  Github
+                </h5>
               </mdb-col>
             </mdb-row>
-            <mdb-row class="mb-3">
+            <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
               <mdb-col size="1">
-                <mdb-icon icon="share" size="lg" class="mb-3 mt-3"/>
+                <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
               </mdb-col>
               <mdb-col xl="10" md="11" size="10">
-                <h5 class="font-weight-bold mb-3">NPM</h5>
+                <h5 class="font-weight-bold mb-3">
+                  NPM
+                </h5>
               </mdb-col>
             </mdb-row>
-            <mdb-row class="mb-3">
+            <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
               <mdb-col size="1">
-                <mdb-icon icon="share" size="lg" class="mb-3 mt-3"/>
+                <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
               </mdb-col>
               <mdb-col xl="10" md="11" size="10">
-                <h5 class="font-weight-bold mb-3">Node.js</h5>
+                <h5 class="font-weight-bold mb-3">
+                  Node.js
+                </h5>
               </mdb-col>
             </mdb-row>
-            <mdb-row class="mb-3">
+            <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
               <mdb-col size="1">
-                <mdb-icon icon="share" size="lg" class="mb-3 mt-3"/>
+                <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
               </mdb-col>
               <mdb-col xl="10" md="11" size="10">
-                <h5 class="font-weight-bold mb-3">Express.js</h5>
+                <h5 class="font-weight-bold mb-3">
+                  Express.js
+                </h5>
               </mdb-col>
             </mdb-row>
-            <mdb-row class="mb-3">
+            <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
               <mdb-col size="1">
-                <mdb-icon icon="share" size="lg" class="mb-3 mt-3"/>
+                <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
               </mdb-col>
               <mdb-col xl="10" md="11" size="10">
-                <h5 class="font-weight-bold mb-3">MySql</h5>
+                <h5 class="font-weight-bold mb-3">
+                  MySql
+                </h5>
               </mdb-col>
             </mdb-row>
-            <mdb-row class="mb-3">
+            <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
               <mdb-col size="1">
-                <mdb-icon icon="share" size="lg" class="mb-3 mt-3"/>
+                <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
               </mdb-col>
               <mdb-col xl="10" md="11" size="10">
-                <h5 class="font-weight-bold mb-3">Sequelize (ORM)</h5>
+                <h5 class="font-weight-bold mb-3">
+                  Sequelize (ORM)
+                </h5>
+              </mdb-col>
+            </mdb-row>
+            <mdb-row v-animateOnScroll="{animation: 'flip'}" class="mb-3">
+              <mdb-col size="1">
+                <mdb-icon icon="angle-double-right" size="lg" class="mb-3 mt-3 animated bounceInLeft infinite" />
+              </mdb-col>
+              <mdb-col xl="10" md="11" size="10">
+                <a href="/about"><mdb-btn color="lily">{{ $t('about') }}</mdb-btn></a>
               </mdb-col>
             </mdb-row>
           </mdb-col>
@@ -215,13 +281,16 @@
     <mdb-container>
       <mdb-modal
         :show="entrepeneur"
-        @close="entrepeneur = false"
         removeBackdrop
         side
         position="bottom-left"
-        info>
+        info
+        @close="entrepeneur = false"
+      >
         <mdb-modal-header>
-          <p class="heading">{{$t('skillsTitle2')}}</p>
+          <p class="heading">
+            {{ $t('skillsTitle2') }}
+          </p>
         </mdb-modal-header>
         <mdb-modal-body>
           <mdb-row>
@@ -233,7 +302,9 @@
                 Akár egy egy oldalas bemutatkozó weboldalra van szükséged, akár egy komolyabb,
                 saját ötleteid szerint összerakott weboldalra, nyugodtan fordulj hozzám és írj! [...]
               </p>
-              <mdb-btn color="primary">{{$t('welcome')}}</mdb-btn>
+              <mdb-btn color="primary">
+                {{ $t('welcome') }}
+              </mdb-btn>
             </mdb-column>
           </mdb-row>
         </mdb-modal-body>
@@ -243,13 +314,16 @@
     <mdb-container>
       <mdb-modal
         :show="individual"
-        @close="individual = false"
-        removeBackdrop
         side
         position="bottom-right"
-        info>
+        removeBackdrop
+        info
+        @close="individual = false"
+      >
         <mdb-modal-header>
-          <p class="heading">{{$t('skillsTitle1')}}</p>
+          <p class="heading">
+            {{ $t('skillsTitle1') }}
+          </p>
         </mdb-modal-header>
         <mdb-modal-body>
           <mdb-row>
@@ -261,7 +335,9 @@
                 Mai világba már gyakorlatilag kihagyott ziccernek számít, ha egy vállalkozó esetleg nincs jelen az internet szerteágazó világába,
                 ami rengeteg lehetőséget biztosít a termékek és szolgáltatások bemutatására, reklámozására.
               </p>
-              <mdb-btn color="primary">{{$t('welcome')}}</mdb-btn>
+              <mdb-btn color="primary">
+                {{ $t('welcome') }}
+              </mdb-btn>
             </mdb-column>
           </mdb-row>
         </mdb-modal-body>
@@ -290,17 +366,6 @@ export default {
   directives: {
     animateOnScroll
   },
-  created () {
-    if (!this.en) {
-      this.$i18n.locale = 'hu'
-    } else {
-      this.$i18n.locale = 'en'
-    }
-  },
-  computed: mapState({
-    en: state => state.LangModule.en,
-    hu: state => state.LangModule.hu
-  }),
   data: () => ({
     frontend: false,
     backend: false,
@@ -308,6 +373,17 @@ export default {
     entrepeneur: false,
     loading: false
   }),
+  computed: mapState({
+    en: state => state.LangModule.en,
+    hu: state => state.LangModule.hu
+  }),
+  created () {
+    if (!this.en) {
+      this.$i18n.locale = 'hu'
+    } else {
+      this.$i18n.locale = 'en'
+    }
+  },
   methods: {
     start () {
       this.loading = true
@@ -332,7 +408,6 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Hind&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -349,4 +424,36 @@ html {
   .skills {
     height: 20%;
   }
-</style>>
+
+  .image {
+    width: 100%;
+    height: 100vh !important;
+  }
+
+  .help {
+    margin-top: 10%;
+  }
+
+  /* Bottom left */
+  .bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+  }
+
+  .bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+  }
+
+  .bottom-center {
+    position: absolute;
+    bottom: 8px;
+    right: 50%;
+  }
+
+  .icolor {
+    color: rgb(82, 73, 73);
+  }
+</style>

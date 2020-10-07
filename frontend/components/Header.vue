@@ -9,22 +9,22 @@
           <b-checkbox id="check" v-model="$i18n.locale" value="hu">hu</b-checkbox>
           <b-checkbox id="checkEn" v-model="$i18n.locale" value="en">en</b-checkbox>
           <mdb-nav-item class="menu" href="/">
-              <mdb-button>{{$t('home')}}</mdb-button>
+            <mdb-button>{{$t('home')}}</mdb-button>
           </mdb-nav-item>
           <mdb-nav-item class="menu" href="/about">
-              <mdb-button>{{$t('about')}}</mdb-button>
+            <mdb-button>{{$t('about')}}</mdb-button>
           </mdb-nav-item>
           <mdb-nav-item class="menu" href="/contacts">
-              <mdb-button>{{$t('contact')}}</mdb-button>
+            <mdb-button>{{$t('contact')}}</mdb-button>
           </mdb-nav-item>
           <mdb-nav-item class="menu" href="https://github.com/ben1998deguz">
-              <mdb-icon fab icon="github"/>
+            <mdb-icon fab icon="github"/>
           </mdb-nav-item>
           <mdb-nav-item class="menu" href="https://www.facebook.com/vargabeni69/">
-              <mdb-icon fab icon="facebook-f"/>
+            <mdb-icon fab icon="facebook-f"/>
           </mdb-nav-item>
           <mdb-nav-item class="menu" href="https://www.linkedin.com/in/varga-mark-61796a197/">
-              <mdb-icon fab icon="linkedin"/>
+            <mdb-icon fab icon="linkedin"/>
           </mdb-nav-item>
           <mdb-nav-item class="menu">
             <label for="checkEn">
@@ -112,7 +112,7 @@ export default {
     }
 
     .navbar:not(.top-nav-collapse) {
-      background:  rgb(219, 194, 156);
+      background:  transparent;
     }
 
     .row {
@@ -149,11 +149,6 @@ export default {
       color: white;
     }
 
-    .image {
-      width: 100%;
-      height: 100vh !important;
-    }
-
     .paragraph {
       padding: 3rem 1.5em;
     }
@@ -170,6 +165,7 @@ export default {
       .navbar {
         position: relative;
         margin-top: 5px;
+        text-align: center;
       }
       .navbar:not(.top-nav-collapse) {
           background:  rgba(82, 73, 73, 0.767);
