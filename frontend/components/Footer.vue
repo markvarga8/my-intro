@@ -6,30 +6,14 @@
           <mdb-col md="3" lg="3" xl="3" class="mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">{{$t('name')}}</h6>
             <p class="text-uppercase mb-4 font-weight-bold">{{$t('free')}}</p>
-            <p class="text-uppercase mb-4 font-weight-bold">36-30-517-54-22</p>
-            <p class="mb-4 font-weight-bold">ben1998deguz@gmail.com</p>
+            <p class="mb-4 font-weight-bold">markweb.varga@gmail.com</p>
           </mdb-col>
           <hr class="w-100 clearfix d-md-none" />
-          <mdb-col md="4" lg="3" xl="3" class="mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">{{$t('message')}}</h6>
-            <b-form>
-              <input class="input" type="text" placeholder="Name">
-              <input class="input" type="email" placeholder="Email">
-              <textarea
-                class="input textarea"
-                name=""
-                cols="20"
-                rows="5"
-                placeholder="Message"
-              />
-              <b-button class="button-background block mx-auto" variant="outline">{{$t('send')}}</b-button>
-            </b-form>
-          </mdb-col>
         </mdb-row>
         <hr />
         <mdb-row class="d-flex align-items-center">
           <mdb-col md="8" lg="8">
-            <p class=" text-center text-md-left grey-text">&copy; Varga Mark 2020 Copyright: Minden jog fentartva</p>
+            <p class=" text-center text-md-left grey-text">&copy; {{$t('name')}} 2020 Copyright: {{$t('reserve')}}</p>
           </mdb-col>
           <mdb-col md="4" lg="4" class="ml-lg-0">
             <div class="text-center text-md-right">

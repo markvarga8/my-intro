@@ -1,32 +1,32 @@
 <template>
   <div>
-    <mdb-navbar class="navbar" position="top" dark href="/" scrolling >
+    <mdb-navbar class="navbar" position="top" dark href="/" scrolling>
       <mdb-navbar-brand>
-        <a href="/"><img class="logo" src="" alt=""></a>
+        <a href="/" class="logo">MW</a>
       </mdb-navbar-brand>
       <mdb-navbar-toggler right>
         <mdb-navbar-nav right>
           <b-checkbox id="check" v-model="$i18n.locale" value="hu">hu</b-checkbox>
           <b-checkbox id="checkEn" v-model="$i18n.locale" value="en">en</b-checkbox>
-          <mdb-nav-item class="menu" href="/">
+          <mdb-nav-item class="menu borderBottom" href="/">
             <mdb-button>{{$t('home')}}</mdb-button>
           </mdb-nav-item>
-          <mdb-nav-item class="menu" href="/about">
+          <mdb-nav-item class="menu borderBottom" href="/about">
             <mdb-button>{{$t('about')}}</mdb-button>
           </mdb-nav-item>
-          <mdb-nav-item class="menu" href="/contacts">
+          <mdb-nav-item class="menu borderBottom" href="/contacts">
             <mdb-button>{{$t('contact')}}</mdb-button>
           </mdb-nav-item>
-          <mdb-nav-item class="menu" href="https://github.com/ben1998deguz">
+          <mdb-nav-item class="menu borderBottom" href="https://github.com/ben1998deguz">
             <mdb-icon fab icon="github"/>
           </mdb-nav-item>
-          <mdb-nav-item class="menu" href="https://www.facebook.com/vargabeni69/">
+          <mdb-nav-item class="menu borderBottom" href="https://www.facebook.com/vargabeni69/">
             <mdb-icon fab icon="facebook-f"/>
           </mdb-nav-item>
-          <mdb-nav-item class="menu" href="https://www.linkedin.com/in/varga-mark-61796a197/">
+          <mdb-nav-item class="menu borderBottom" href="https://www.linkedin.com/in/varga-mark-61796a197/">
             <mdb-icon fab icon="linkedin"/>
           </mdb-nav-item>
-          <mdb-nav-item class="menu">
+          <mdb-nav-item v-bind:class="{ borderBottom: hu }" class="menu">
             <label for="checkEn">
               <mdb-btn
                 v-if="hu"
@@ -39,7 +39,7 @@
               </mdb-btn>
             </label>
           </mdb-nav-item>
-          <mdb-nav-item class="menu">
+          <mdb-nav-item v-bind:class="{ borderBottom: en }" class="menu">
             <label for="check">
               <mdb-btn
                 v-if="en"
@@ -90,11 +90,20 @@ export default {
 </script>
 
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
 
-.logo {
+    .logo {
       height: 40px;
       width: auto;
       margin: 10px;
+      font-size: 3rem;
+      color:  white;
+      font-family: 'Chilanka', cursive;
+      text-decoration: none !important;
+    }
+
+    .logo:hover {
+      color: black;
     }
 
     .menu {
@@ -163,13 +172,17 @@ export default {
       }
 
       .navbar {
-        position: relative;
+        position: sticky;
         margin-top: 5px;
         text-align: center;
       }
       .navbar:not(.top-nav-collapse) {
           background:  rgba(82, 73, 73, 0.767);
       }
+
+      .borderBottom {
+      border-bottom: 1px solid white;
+    }
     }
 
     @media screen and (max-width: 400px) {
