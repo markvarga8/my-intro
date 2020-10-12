@@ -19,37 +19,11 @@
               </div>
             </mdb-card>
           </mdb-col>
-          <mdb-row class="intro">
-            <mdb-col md="6" class="md-0 mb-4">
-              <mdb-card class="card-image-entrepeneur animated fadeInLeft">
-                <div class="hei text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
-                  <div>
-                    <h3 class="py-3 font-weight-bold">
-                      <strong class="titleSize">{{$t('skillsTitle2')}}</strong>
-                    </h3>
-                    <p class="pb-3">{{$t('entrepreneurIntro')}}</p>
-                    <a href="/contacts"><mdb-btn color="lily" rounded size="md"><mdb-icon icon="envelope" class="left"/>{{$t('contact')}}</mdb-btn></a>
-                  </div>
-                </div>
-              </mdb-card>
-            </mdb-col>
-            <mdb-col md="6" class="md-0 mb-4">
-              <mdb-card class="card-image-individual animated fadeInRight">
-                <div class="hei text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
-                  <div>
-                    <h3 class="py-3 font-weight-bold">
-                      <strong class="titleSize">{{$t('skillsTitle1')}}</strong>
-                    </h3>
-                    <p class="pb-3">{{$t('individualIntro')}}</p>
-                    <a href="/contacts"><mdb-btn color="lily" rounded size="md"><mdb-icon icon="envelope" class="left"/>{{$t('contact')}}</mdb-btn></a>
-                  </div>
-                </div>
-              </mdb-card>
-            </mdb-col>
-          </mdb-row>
         </mdb-row>
       </section>
     </mdb-container>
+
+    <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5"/>
 
     <mdb-container>
 
@@ -218,226 +192,37 @@
 
       <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5"/>
 
-      <mdb-container class="max">
-        <section class="my-5">
-          <h2 v-animateOnScroll="{animation: 'bounceInDown'}" class="h1-responsive font-weight-bold text-center my-5">{{$t('project')}}</h2>
-          <p v-animateOnScroll="{animation: 'bounceInDown'}" class="grey-text w-responsive text-center mx-auto mb-5">{{$t('scroll')}}</p>
+      <mdb-container>
+        <section class="text-center my-5">
           <mdb-row>
-            <mdb-col v-animateOnScroll="{animation: 'bounceInLeft'}" lg="5" class="mb-lg-0 mb-5">
-              <img src="../../assets/images/inflation.jpg" alt="Sample project image" class="imgHeight img-fluid rounded z-depth-1" />
-              <h2 class="mt-3">{{$t('inflation')}}</h2>
-            </mdb-col>
-            <mdb-col lg="7">
-              <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="code" size="2x"/>
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">{{$t('tech')}}</h5>
-                  <p class="grey-text">Vue.js, Vuex, Bootstrap-vue, Git, npm, Express.js, MySQL, Sequelize, API development, REST</p>
-                </mdb-col>
-              </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="stream" size="2x"/>
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">{{$t('description')}}</h5>
-                  <p class="grey-text">
-                    {{$t('inflationContent')}}
-                  </p>
-                </mdb-col>
-              </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="link" size="2x" />
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">Link</h5>
-                  <a href="https://github.com/fst02/Personal-Inflation-Calculator"><mdb-btn color="lily">{{$t('here')}}</mdb-btn></a>
-                </mdb-col>
-              </mdb-row>
-            </mdb-col>
-          </mdb-row>
-          <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5"/>
-          <mdb-row>
-            <mdb-col lg="7">
-              <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="code" size="2x" />
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">{{$t('tech')}}</h5>
-                  <p class="grey-text">Vue.js, Vuex, Bootstrap-vue, Git, npm, Express.js, MySQL, Sequelize, API development, REST</p>
-                </mdb-col>
-              </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="stream" size="2x"/>
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">{{$t('description')}}</h5>
-                  <p class="grey-text">{{$t('leaderboard')}}</p>
-                </mdb-col>
-              </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="link" size="2x"/>
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">Link</h5>
-                  <a href="https://github.com/fst02/leaderboard-spa"><mdb-btn color="lily">{{$t('here')}}</mdb-btn></a>
-                </mdb-col>
-              </mdb-row>
-            </mdb-col>
-            <mdb-col v-animateOnScroll="{animation: 'bounceInRight'}" lg="5">
-              <img src="../../assets/images/leaderboard.jpg" alt="Sample project image" class="imgHeight img-fluid rounded z-depth-1"/>
-              <h2 class="mt-3">Leader Board - SPA</h2>
-            </mdb-col>
-          </mdb-row>
-          <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5"/>
-          <mdb-row>
-            <mdb-col v-animateOnScroll="{animation: 'bounceInLeft'}" lg="5" class="mb-lg-0 mb-5">
-              <img src="../../assets/images/introduction.jpg" alt="Sample project image" class="imgHeight img-fluid rounded z-depth-1" />
-              <h2 class="mt-3">Introduction</h2>
-            </mdb-col>
-            <mdb-col lg="7">
-              <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="code" size="2x"/>
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">{{$t('tech')}}</h5>
-                  <p class="grey-text">Nuxt.js, Vuex, Bootstrap-vue, Git, npm, Express.js, MySQL, Sequelize, API development, REST</p>
-                </mdb-col>
-              </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="link" size="2x" />
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">Link</h5>
-                  <a href="https://github.com/ben1998deguz/my-intro"><mdb-btn color="lily">{{$t('here')}}</mdb-btn></a>
-                </mdb-col>
-              </mdb-row>
-            </mdb-col>
-          </mdb-row>
-          <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5"/>
-          <mdb-row>
-            <mdb-col lg="7">
-              <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="code" size="2x" />
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">{{$t('tech')}}</h5>
-                  <p class="grey-text">HTML5, CSS3, JavaScript</p>
-                </mdb-col>
-              </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="link" size="2x"/>
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">Link</h5>
-                  <a href="https://github.com/ben1998deguz/coffee"><mdb-btn color="lily">{{$t('here')}}</mdb-btn></a>
-                </mdb-col>
-              </mdb-row>
-            </mdb-col>
-            <mdb-col v-animateOnScroll="{animation: 'bounceInRight'}" lg="5">
-              <img src="../../assets/images/2.png" alt="Sample project image" class="imgHeight img-fluid rounded z-depth-1"/>
-              <h2 class="mt-3">Coffee website</h2>
-            </mdb-col>
-          </mdb-row>
-          <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5"/>
-          <mdb-row>
-            <mdb-col v-animateOnScroll="{animation: 'bounceInLeft'}" lg="5" class="mb-lg-0 mb-5">
-              <img src="../../assets/images/hangman.jpg" alt="Sample project image" class="imgHeight img-fluid rounded z-depth-1" />
-              <h2 class="mt-3">Hangman</h2>
-            </mdb-col>
-            <mdb-col lg="7">
-              <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="code" size="2x"/>
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">{{$t('tech')}}</h5>
-                  <p class="grey-text">HTML, CSS, JavaScript, Bootstrap, Git</p>
-                </mdb-col>
-              </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="link" size="2x" />
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">Link</h5>
-                  <a href="https://github.com/fst02/hangman"><mdb-btn color="lily">{{$t('here')}}</mdb-btn></a>
-                </mdb-col>
-              </mdb-row>
-            </mdb-col>
-          </mdb-row>
-          <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5"/>
-          <mdb-row>
-            <mdb-col lg="7">
-              <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="code" size="2x" />
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">{{$t('tech')}}</h5>
-                  <p class="grey-text">HTML, CSS, JavaScript, Bootstrap, Git</p>
-                </mdb-col>
-              </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="link" size="2x"/>
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">Link</h5>
-                  <a href="https://github.com/fst02/tetris"><mdb-btn color="lily">{{$t('here')}}</mdb-btn></a>
-                </mdb-col>
-              </mdb-row>
-            </mdb-col>
-            <mdb-col v-animateOnScroll="{animation: 'bounceInRight'}" lg="5">
-              <img src="../../assets/images/Tetris.jpg" alt="Sample project image" class="imgHeight img-fluid rounded z-depth-1"/>
-              <h2 class="mt-3">Tetris</h2>
-            </mdb-col>
-          </mdb-row>
-          <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5"/>
-          <mdb-row>
-            <mdb-col v-animateOnScroll="{animation: 'bounceInLeft'}" lg="5" class="mb-lg-0 mb-5">
-              <img src="../../assets/images/mario.jpg" alt="Sample project image" class="imgHeight img-fluid rounded z-depth-1" />
-              <h2 class="mt-3">Mario</h2>
-            </mdb-col>
-            <mdb-col lg="7">
-              <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="code" size="2x"/>
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">{{$t('tech')}}</h5>
-                  <p class="grey-text">HTML, CSS, JavaScript, Bootstrap, Git</p>
-                </mdb-col>
-              </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="link" size="2x" />
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">Link</h5>
-                  <a href="https://github.com/fst02/mario"><mdb-btn color="lily">{{$t('here')}}</mdb-btn></a>
-                </mdb-col>
-              </mdb-row>
-            </mdb-col>
-          </mdb-row>
-          <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5"/>
-          <mdb-row>
-            <mdb-col size="2">
-              <mdb-icon icon="angle-double-right" size="lg" class="mb-3 mt-3 animated bounceInLeft infinite" />
-            </mdb-col>
-            <mdb-col xl="10" md="11" size="10">
-              <a class="mx-auto" href="/contacts"><mdb-btn v-animateOnScroll="{animation: 'flip'}" color="lily">{{$t('contact')}}</mdb-btn></a>
-            </mdb-col>
+            <mdb-row class="intro">
+              <mdb-col md="6" class="md-0 mb-4">
+                <mdb-card v-animateOnScroll="{animation: 'bounceInLeft'}" class="card-image-entrepeneur">
+                  <div class="hei text-white rgba-black-strong">
+                    <div>
+                      <h3 class="py-3 font-weight-bold">
+                        <strong class="titleSize">{{$t('portfolio')}}</strong>
+                      </h3>
+                      <p class="pb-3">Portfólió megtekintéséhez kattints a tovább gombra!</p>
+                      <a href="/contacts"><mdb-btn color="lily" rounded size="md"><mdb-icon icon="envelope" class="left"/>{{$t('welcome')}}</mdb-btn></a>
+                    </div>
+                  </div>
+                </mdb-card>
+              </mdb-col>
+              <mdb-col md="6" class="md-0 mb-4">
+                <mdb-card v-animateOnScroll="{animation: 'bounceInRight'}" class="card-image-individual">
+                  <div class="hei text-white rgba-black-strong">
+                    <div>
+                      <h3 class="py-3 font-weight-bold">
+                        <strong class="titleSize">{{$t('contact')}}</strong>
+                      </h3>
+                      <p class="pb-3">Kontaktok megtekintéséhez kattints a tovább gombra</p>
+                      <a href="/contacts"><mdb-btn color="lily" rounded size="md"><mdb-icon icon="envelope" class="left"/>{{$t('welcome')}}</mdb-btn></a>
+                    </div>
+                  </div>
+                </mdb-card>
+              </mdb-col>
+            </mdb-row>
           </mdb-row>
         </section>
       </mdb-container>
@@ -528,11 +313,13 @@ html {
   }
 
   .roww {
-    padding-top: 10% !important;
+    padding-top: 30vh !important;
+    padding-bottom: 30vh;
   }
 
   .intro {
     height: 20%;
+    width: 100%;
   }
 
   .hei {
@@ -579,7 +366,7 @@ html {
     }
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1300px) {
       .titleSize {
         font-size: 1.3rem;
       }

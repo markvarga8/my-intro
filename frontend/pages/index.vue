@@ -341,7 +341,7 @@
               </mdb-column>
               <mdb-column col="7">
                 <p>
-                  {{ $t('modal1') }}
+                  {{$t('entrepreneurIntro')}}
                 </p>
                 <a href="/about">
                   <mdb-btn color="lily">
@@ -375,7 +375,7 @@
               </mdb-column>
               <mdb-column col="7">
                 <p>
-                  {{ $t('modal2') }}
+                  {{$t('individualIntro')}}
                 </p>
                 <a href="/about">
                   <mdb-btn color="lily">
@@ -532,11 +532,15 @@ html {
     margin-left: 105%;
   }
 
+  .sticky:hover {
+    border: 5px solid black;
+  }
+
   .headerColor {
     background: rgba(82, 73, 73, 0.967) !important;
   }
 
-  @media screen and (max-width: 770px) {
+  @media screen and (max-width: 1400px) {
       .phone {
         display: none;
       }

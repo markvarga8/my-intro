@@ -302,7 +302,7 @@ export default {
     margin-left: 105%;
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1300px) {
     .sticky {
         margin-left: 78%;
         width: 60px;

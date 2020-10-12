@@ -2,7 +2,7 @@
   <div>
     <mdb-navbar class="navbar" position="top" dark href="/" scrolling>
       <mdb-navbar-brand>
-        <a href="/" class="logo">MW</a>
+        <a href="/" class="logo"></a>
       </mdb-navbar-brand>
       <mdb-navbar-toggler right>
         <mdb-navbar-nav right>
@@ -100,7 +100,7 @@ export default {
       width: auto;
       margin: 10px;
       font-size: 3rem;
-      color:  white;
+      color: white;
       font-family: 'Chilanka', cursive;
       text-decoration: none !important;
     }
@@ -112,6 +112,7 @@ export default {
     .menu {
       text-align: end;
       padding-right: 0.5em;
+      font-size: 1.4rem;
     }
 
     .hm-gradient {
@@ -169,22 +170,48 @@ export default {
       display: none;
     }
 
+    /* .navbar.navbar-dark .navbar-nav .nav-item .nav-link {
+      color: rgb(124, 123, 33);
+    } */
+
+    @media screen and (max-width: 1300px) {
+      .menu {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media screen and (max-width: 996px) {
+       .navbar {
+        text-align: center;
+      }
+      .navbar:not(.top-nav-collapse) {
+          background:   rgba(82, 73, 73, 0.877);
+      }
+    }
+
     @media screen and (max-width: 770px) {
       .half-page {
         padding:2rem;
       }
 
       .navbar {
-        position: relative;
         text-align: center;
       }
       .navbar:not(.top-nav-collapse) {
-          background:  rgba(82, 73, 73, 0.767);
+          background:  rgba(82, 73, 73, 0);
       }
 
       .borderBottom {
-      border-bottom: 1px solid white;
-    }
+        border-bottom: 1px solid white;
+      }
+
+      .menu {
+        font-size: 1.6rem;
+      }
+
+      .logo {
+        display: none;
+      }
     }
 
     @media screen and (max-width: 400px) {
