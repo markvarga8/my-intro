@@ -8,16 +8,16 @@
         <mdb-navbar-nav right>
           <b-checkbox id="check" v-model="$i18n.locale" value="hu">hu</b-checkbox>
           <b-checkbox id="checkEn" v-model="$i18n.locale" value="en">en</b-checkbox>
-          <mdb-nav-item class="menu menuH borderBottom" href="/">
+          <mdb-nav-item class="menu borderBottom" href="/">
             <mdb-button>{{$t('home')}}</mdb-button>
           </mdb-nav-item>
-          <mdb-nav-item class="menu menuH borderBottom" href="/about">
+          <mdb-nav-item class="menu borderBottom" href="/about">
             <mdb-button>{{$t('about')}}</mdb-button>
           </mdb-nav-item>
-          <mdb-nav-item class="menu menuH borderBottom" href="/portfolio">
-            <mdb-button>Portfolio</mdb-button>
+          <mdb-nav-item class="menu borderBottom" href="/portfolio">
+            <mdb-button>{{$t('portfolio')}}</mdb-button>
           </mdb-nav-item>
-          <mdb-nav-item class="menu menuH borderBottom" href="/contacts">
+          <mdb-nav-item class="menu borderBottom" href="/contacts">
             <mdb-button>{{$t('contact')}}</mdb-button>
           </mdb-nav-item>
           <mdb-nav-item class="menu borderBottom" href="https://github.com/ben1998deguz">
@@ -29,7 +29,7 @@
           <mdb-nav-item class="menu borderBottom" href="https://www.linkedin.com/in/varga-mark-61796a197/">
             <mdb-icon fab icon="linkedin"/>
           </mdb-nav-item>
-          <mdb-nav-item v-bind:class="{ borderBottom: hu }" class="menu menuH">
+          <mdb-nav-item v-bind:class="{ borderBottom: hu }" class="menu">
             <label for="checkEn">
               <mdb-btn
                 v-if="hu"
@@ -42,7 +42,7 @@
               </mdb-btn>
             </label>
           </mdb-nav-item>
-          <mdb-nav-item v-bind:class="{ borderBottom: en }" class="menu menuH">
+          <mdb-nav-item v-bind:class="{ borderBottom: en }" class="menu">
             <label for="check">
               <mdb-btn
                 v-if="en"
@@ -167,10 +167,6 @@ export default {
 
     .custom-control {
       display: none;
-    }
-
-    .menuH:hover {
-      border-bottom: 1px solid white;
     }
 
     @media screen and (max-width: 770px) {

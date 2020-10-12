@@ -69,7 +69,7 @@
                 </mdb-col>
                 <mdb-col xl="10" md="11" size="10">
                   <h5 class="font-weight-bold mb-3">
-                    HTML/CSS/JavaScript
+                    HTML5/CSS3/JavaScript
                   </h5>
                 </mdb-col>
               </mdb-row>
@@ -89,7 +89,7 @@
                 </mdb-col>
                 <mdb-col xl="10" md="11" size="10">
                   <h5 class="font-weight-bold mb-3">
-                    Bootstrap/Bootstrap-vue
+                    Bootstrap/Bootstrap-Vue
                   </h5>
                 </mdb-col>
               </mdb-row>
@@ -99,7 +99,7 @@
                 </mdb-col>
                 <mdb-col xl="10" md="11" size="10">
                   <h5 class="font-weight-bold mb-3">
-                    Vuetify
+                    Vuetify.js
                   </h5>
                 </mdb-col>
               </mdb-row>
@@ -159,7 +159,7 @@
                 </mdb-col>
                 <mdb-col xl="10" md="11" size="10">
                   <h5 class="font-weight-bold mb-3">
-                    REST
+                    REST architecture
                   </h5>
                 </mdb-col>
               </mdb-row>

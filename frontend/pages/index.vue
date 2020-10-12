@@ -60,7 +60,7 @@
               </mdb-row>
             </mdb-col>
             <mdb-col md="4" class="text-name imageMargin">
-              <img v-animateOnScroll="{animation: 'bounceInDown'}" class="phone img-fluid" src="https://mdbootstrap.com/img/Mockups/Transparent/Small/iphone-portfolio1.png" alt="Sample image">
+              <img v-animateOnScroll="{animation: 'bounceInDown'}" class="phone img-fluid" src="../assets/images/iphone.png" alt="Sample image">
             </mdb-col>
             <mdb-col md="4">
               <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
@@ -78,7 +78,7 @@
               </mdb-row>
               <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
                 <mdb-col class="iconMargin" size="2">
-                  <mdb-icon icon="heart" size="2x" />
+                  <mdb-icon icon="mobile-alt" size="2x" />
                 </mdb-col>
                 <mdb-col size="10">
                   <h5 class="font-weight-bold mb-3">
@@ -91,7 +91,7 @@
               </mdb-row>
               <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
                 <mdb-col class="iconMargin" size="2">
-                  <mdb-icon icon="bolt" size="2x" />
+                  <mdb-icon icon="align-justify" size="2x" />
                 </mdb-col>
                 <mdb-col size="10">
                   <h5 class="font-weight-bold mb-3">
@@ -173,7 +173,7 @@
                 </mdb-col>
                 <mdb-col xl="10" md="11" size="10">
                   <h5 class="font-weight-bold mb-3">
-                    HTML/CSS/JavaScript
+                    HTML5/CSS3/JavaScript
                   </h5>
                 </mdb-col>
               </mdb-row>
@@ -193,7 +193,7 @@
                 </mdb-col>
                 <mdb-col xl="10" md="11" size="10">
                   <h5 class="font-weight-bold mb-3">
-                    Bootstrap/Bootstrap-vue
+                    Bootstrap/Bootstrap-Vue
                   </h5>
                 </mdb-col>
               </mdb-row>
@@ -203,7 +203,7 @@
                 </mdb-col>
                 <mdb-col xl="10" md="11" size="10">
                   <h5 class="font-weight-bold mb-3">
-                    Vuetify
+                    Vuetify.js
                   </h5>
                 </mdb-col>
               </mdb-row>
@@ -263,7 +263,7 @@
                 </mdb-col>
                 <mdb-col xl="10" md="11" size="10">
                   <h5 class="font-weight-bold mb-3">
-                    REST
+                    REST architecture
                   </h5>
                 </mdb-col>
               </mdb-row>

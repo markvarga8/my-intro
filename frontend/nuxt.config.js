@@ -105,7 +105,8 @@ export default {
           social: 'But you also reach out on different social interfaces:',
           future: 'If you would like to discuss your future website with me in person:',
           leaderboard: 'A summary table of results that obtains data from multiple sources and thus can dynamically provide users with up-to-date data.',
-          reserve: 'All rights reserved!'
+          reserve: 'All rights reserved!',
+          portfolio: 'Portfolio'
         },
         hu: {
           welcome: 'Tovább',
@@ -162,7 +163,8 @@ export default {
           social: 'De elérsz a különböző közösségi felületeken is:',
           future: 'Ha esetleg személyesen szeretnél velem tárgyalni leendő weboldaladról:',
           leaderboard: 'Egy eredményeket összefoglaló táblázat, amely több forrásból szerzi be az adatokat és így dinamikusan friss adatokkal tudja ellátni a felhasnálókat.',
-          reserve: 'Minden jog fenntertva!'
+          reserve: 'Minden jog fenntertva!',
+          portfolio: 'Portfólió'
         }
       }
     }
