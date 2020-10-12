@@ -20,14 +20,10 @@
       </mdb-col>
     </mdb-row>
 
-    <div id="intro" />
-
-    <no-ssr placeholder="loading..." />
-
     <mdb-container>
 
-      <mdb-container>
-        <section class="my-5">
+      <mdb-container class="max">
+        <section>
           <h2 v-animateOnScroll="{animation: 'bounceInDown'}" class="h1-responsive font-weight-bold text-center my-5">
             {{ $t('help') }}
           </h2>
@@ -113,7 +109,7 @@
 
       <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5"/>
 
-      <mdb-container>
+      <mdb-container class="max">
         <section class="my-5">
           <h2 v-animateOnScroll="{animation: 'bounceInDown'}" class="h1-responsive font-weight-bold text-center my-5">
             {{ $t('serv') }}
@@ -161,7 +157,7 @@
 
       <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5"/>
 
-      <mdb-container>
+      <mdb-container class="max">
         <section class="my-5">
           <h2 v-animateOnScroll="{animation: 'bounceInDown'}" class="h1-responsive font-weight-bold text-center my-5">
             {{ $t('skills') }}
@@ -333,7 +329,7 @@
           info
           @close="entrepeneur = false"
         >
-          <mdb-modal-header>
+          <mdb-modal-header class="headerColor">
             <p class="heading">
               {{ $t('skillsTitle2') }}
             </p>
@@ -348,7 +344,7 @@
                   {{ $t('modal1') }}
                 </p>
                 <a href="/about">
-                  <mdb-btn color="primary">
+                  <mdb-btn color="lily">
                     {{ $t('about') }}
                   </mdb-btn>
                 </a>
@@ -367,7 +363,7 @@
           info
           @close="individual = false"
         >
-          <mdb-modal-header>
+          <mdb-modal-header class="headerColor">
             <p class="heading">
               {{ $t('skillsTitle1') }}
             </p>
@@ -382,7 +378,7 @@
                   {{ $t('modal2') }}
                 </p>
                 <a href="/about">
-                  <mdb-btn color="primary">
+                  <mdb-btn color="lily">
                     {{ $t('about') }}
                   </mdb-btn>
                 </a>
@@ -469,6 +465,11 @@ html {
   scroll-behavior: smooth;
 }
 
+  .max {
+    max-width: 100vw !important;
+    overflow: hidden !important;
+  }
+
   .button-background {
     background: rgb(82, 73, 73);
     color: white;
@@ -522,17 +523,27 @@ html {
   }
 
   .sticky {
-    float:right;
+    display: block;
     width: 80px;
     background: rgba(219, 194, 156, 0);
-    border: 3px solid black;
+    border: 1px solid black;
     position: sticky;
     bottom: 20px;
+    margin-left: 105%;
   }
 
-  @media screen and (max-width: 800px) {
+  .headerColor {
+    background: rgba(82, 73, 73, 0.967) !important;
+  }
+
+  @media screen and (max-width: 770px) {
       .phone {
         display: none;
+      }
+
+      .sticky {
+        margin-left: 78%;
+        width: 60px;
       }
     }
 </style>

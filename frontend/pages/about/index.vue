@@ -53,7 +53,7 @@
 
     <mdb-container>
 
-      <mdb-container>
+      <mdb-container class="max">
         <section class="my-5">
           <h2 v-animateOnScroll="{animation: 'bounceInDown'}" class="h1-responsive font-weight-bold text-center my-5">
             {{ $t('skills') }}
@@ -218,7 +218,7 @@
 
       <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5"/>
 
-      <mdb-container>
+      <mdb-container class="max">
         <section class="my-5">
           <h2 v-animateOnScroll="{animation: 'bounceInDown'}" class="h1-responsive font-weight-bold text-center my-5">{{$t('project')}}</h2>
           <p v-animateOnScroll="{animation: 'bounceInDown'}" class="grey-text w-responsive text-center mx-auto mb-5">{{$t('scroll')}}</p>
@@ -503,6 +503,11 @@ html {
   .about {
     margin-top: -60px;
   }
+
+  .max {
+    max-width: 100vw !important;
+    overflow: hidden !important;
+  }
   .card-image {
     background-image: url('../../assets/images/frontend.jpg');
     background-repeat: no-repeat;
@@ -543,12 +548,13 @@ html {
   }
 
    .sticky {
-    float:right;
+    display: block;
     width: 80px;
     background: rgba(219, 194, 156, 0);
-    border: 3px solid black;
+    border: 1px solid black;
     position: sticky;
     bottom: 20px;
+    margin-left: 105%;
   }
 
   @keyframes timeline-left {
@@ -576,6 +582,11 @@ html {
   @media screen and (max-width: 800px) {
       .titleSize {
         font-size: 1.3rem;
+      }
+
+      .sticky {
+        margin-left: 78%;
+        width: 60px;
       }
     }
 </style>

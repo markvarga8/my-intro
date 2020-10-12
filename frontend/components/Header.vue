@@ -172,8 +172,7 @@ export default {
       }
 
       .navbar {
-        position: sticky;
-        margin-top: 5px;
+        position: relative;
         text-align: center;
       }
       .navbar:not(.top-nav-collapse) {
