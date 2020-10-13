@@ -27,7 +27,7 @@
           <h2 v-animateOnScroll="{animation: 'bounceInDown'}" class="h1-responsive font-weight-bold text-center my-5">
             {{ $t('help') }}
           </h2>
-          <p v-animateOnScroll="{animation: 'bounceInDown'}" class="lead grey-text w-responsive text-center mx-auto mb-5">
+          <p v-animateOnScroll="{animation: 'bounceInDown'}" class="textColor lead w-responsive text-center mx-auto mb-5">
             {{ $t('intro') }}
           </p>
           <mdb-row>
@@ -40,7 +40,7 @@
                   <h5 class="font-weight-bold mb-3">
                     {{ $t('exp') }}
                   </h5>
-                  <p class="grey-text">
+                  <p class="textColor">
                     {{ $t('content1') }}
                   </p>
                 </mdb-col>
@@ -53,7 +53,7 @@
                   <h5 class="font-weight-bold mb-3">
                     {{ $t('agile') }}
                   </h5>
-                  <p class="grey-text">
+                  <p class="textColor">
                     {{ $t('content2') }}
                   </p>
                 </mdb-col>
@@ -71,7 +71,7 @@
                   <h5 class="font-weight-bold mb-3">
                     {{ $t('website') }}
                   </h5>
-                  <p class="grey-text">
+                  <p class="textColor">
                     {{ $t('content3') }}
                   </p>
                 </mdb-col>
@@ -84,7 +84,7 @@
                   <h5 class="font-weight-bold mb-3">
                     {{ $t('mobile') }}
                   </h5>
-                  <p class="grey-text">
+                  <p class="textColor">
                     {{ $t('content4') }}
                   </p>
                 </mdb-col>
@@ -97,7 +97,7 @@
                   <h5 class="font-weight-bold mb-3">
                     {{ $t('contentManagment') }}
                   </h5>
-                  <p class="grey-text">
+                  <p class="textColor">
                     {{ $t('content5') }}
                   </p>
                 </mdb-col>
@@ -124,7 +124,7 @@
                   <h4 class="font-weight-bold">
                     {{ $t('skillsTitle2') }}
                   </h4>
-                  <p class="grey-text">
+                  <p class="textColor">
                     {{ $t('entreContent') }}
                   </p>
                   <mdb-btn color="lily" size="sm" @click.native="entrepeneur = true">
@@ -142,7 +142,7 @@
                   <h4 class="font-weight-bold">
                     {{ $t('skillsTitle1') }}
                   </h4>
-                  <p class="grey-text">
+                  <p class="textColor">
                     {{ $t('indiContent') }}
                   </p>
                   <mdb-btn color="lily" size="sm" @click.native="individual = true">
@@ -157,75 +157,7 @@
 
       <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5"/>
 
-      <mdb-container>
-        <mdb-modal
-          :show="entrepeneur"
-          removeBackdrop
-          side
-          position="bottom-left"
-          info
-          @close="entrepeneur = false"
-        >
-          <mdb-modal-header class="headerColor">
-            <p class="heading">
-              {{ $t('skillsTitle2') }}
-            </p>
-          </mdb-modal-header>
-          <mdb-modal-body>
-            <mdb-row>
-              <mdb-column col="5">
-                <img src="../assets/images/hand.jpg" class="img-fluid" alt="Baloon floating in Mind-Space">
-              </mdb-column>
-              <mdb-column col="7">
-                <p>
-                  {{$t('entrepreneurIntro')}}
-                </p>
-                <a href="/about">
-                  <mdb-btn color="lily">
-                    {{ $t('about') }}
-                  </mdb-btn>
-                </a>
-              </mdb-column>
-            </mdb-row>
-          </mdb-modal-body>
-        </mdb-modal>
-      </mdb-container>
-
-      <mdb-container>
-        <mdb-modal
-          :show="individual"
-          side
-          position="bottom-right"
-          removeBackdrop
-          info
-          @close="individual = false"
-        >
-          <mdb-modal-header class="headerColor">
-            <p class="heading">
-              {{ $t('skillsTitle1') }}
-            </p>
-          </mdb-modal-header>
-          <mdb-modal-body>
-            <mdb-row>
-              <mdb-column col="5">
-                <img src="../assets/images/company.jpg" class="img-fluid" alt="Baloon floating in Mind-Space">
-              </mdb-column>
-              <mdb-column col="7">
-                <p>
-                  {{$t('individualIntro')}}
-                </p>
-                <a href="/about">
-                  <mdb-btn color="lily">
-                    {{ $t('about') }}
-                  </mdb-btn>
-                </a>
-              </mdb-column>
-            </mdb-row>
-          </mdb-modal-body>
-        </mdb-modal>
-      </mdb-container>
-
-      <mdb-container>
+      <mdb-container class="max">
         <section class="text-center my-5">
           <mdb-row>
             <mdb-row class="intro">
@@ -271,6 +203,74 @@
             </mdb-row>
           </mdb-row>
         </section>
+      </mdb-container>
+
+      <mdb-container>
+        <mdb-modal
+          :show="entrepeneur"
+          removeBackdrop
+          fullHeight
+          position="top"
+          info
+          @close="entrepeneur = false"
+        >
+          <mdb-modal-header class="headerColor">
+            <p class="heading">
+              {{ $t('skillsTitle2') }}
+            </p>
+          </mdb-modal-header>
+          <mdb-modal-body>
+            <mdb-row>
+              <mdb-column col="5">
+                <img src="../assets/images/hand.jpg" class="img-fluid" alt="Baloon floating in Mind-Space">
+              </mdb-column>
+              <mdb-column col="7">
+                <p>
+                  {{$t('entrepreneurIntro')}}
+                </p>
+                <a href="/about">
+                  <mdb-btn color="lily">
+                    {{ $t('about') }}
+                  </mdb-btn>
+                </a>
+              </mdb-column>
+            </mdb-row>
+          </mdb-modal-body>
+        </mdb-modal>
+      </mdb-container>
+
+      <mdb-container>
+        <mdb-modal
+          :show="individual"
+          fullHeight
+          position="top"
+          removeBackdrop
+          info
+          @close="individual = false"
+        >
+          <mdb-modal-header class="headerColor">
+            <p class="heading">
+              {{ $t('skillsTitle1') }}
+            </p>
+          </mdb-modal-header>
+          <mdb-modal-body>
+            <mdb-row>
+              <mdb-column col="5">
+                <img src="../assets/images/company.jpg" class="img-fluid" alt="Baloon floating in Mind-Space">
+              </mdb-column>
+              <mdb-column col="7">
+                <p>
+                  {{$t('individualIntro')}}
+                </p>
+                <a href="/about">
+                  <mdb-btn color="lily">
+                    {{ $t('about') }}
+                  </mdb-btn>
+                </a>
+              </mdb-column>
+            </mdb-row>
+          </mdb-modal-body>
+        </mdb-modal>
       </mdb-container>
       <a
         id="back-to-top"
@@ -433,6 +433,14 @@ html {
     height: 100%;
   }
 
+   .card-image-entrepeneurr:hover {
+    outline: 5px solid black;
+  }
+
+   .card-image-entrepeneurr a {
+    text-decoration: none !important;
+  }
+
   .card-image-individuall {
     background: rgb(187,186,212);
     background: linear-gradient(90deg, rgba(187,186,212,1) 0%, rgba(34,34,230,1) 35%, rgba(0,212,255,1) 100%);
@@ -441,11 +449,27 @@ html {
     height: 100%;
   }
 
+   .card-image-individuall:hover {
+    outline: 5px solid black;
+  }
+
+  .card-image-individuall a {
+    text-decoration: none !important;
+  }
+
   .card-image-contact {
     background-image: url('../assets/images/contact.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 100%;
+  }
+
+  .card-image-contact:hover {
+    outline: 5px solid black;
+  }
+
+  .card-image-contact a {
+    text-decoration: none !important;
   }
 
    .intro {
@@ -458,6 +482,14 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .hei:hover {
+    align-items: flex-start;
+  }
+
+  .textColor {
+    color: rgb(77, 67, 67);
   }
 
   @media screen and (max-width: 1400px) {

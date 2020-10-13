@@ -2,7 +2,7 @@
   <div class="contact">
 
     <mdb-container>
-      <section class="my-5 mt-5">
+      <section class="roww my-5 mt-5">
         <mdb-row class="border text-center animated fadeInLeft">
           <mdb-col lg="12">
             <h4>{{$t('interest')}}</h4>
@@ -83,12 +83,24 @@ html {
     margin-top: -60px;
   }
 
-  .container {
-    padding-top: 8% !important;
-  }
-
   .border {
     border: 3px solid black !important;
     padding: 20px;
+  }
+
+  .roww {
+    padding-top: 10% !important;
+  }
+
+  @media screen and (max-width: 550px) {
+    .roww {
+      padding-top: 20% !important;
+    }
+  }
+
+  @media screen and (max-width: 996px) {
+    .roww {
+      padding-top: 25% !important;
+    }
   }
 </style>

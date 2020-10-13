@@ -170,7 +170,7 @@
 
       <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5"/>
 
-      <mdb-container>
+      <mdb-container class="max">
         <section class="text-center my-5">
           <mdb-row>
             <mdb-row class="intro">
@@ -277,24 +277,33 @@ html {
   }
 
   .card-image-entrepeneur {
-    background-image: url('../../assets/images/hand.jpg');
+    background-image: url('../../assets/images/portfolio.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 100%;
+  }
+
+  .card-image-entrepeneur:hover {
+    outline: 5px solid black;
+  }
+
+  .card-image-entrepeneur a {
+    text-decoration: none !important;
   }
 
   .card-image-individual {
-    background-image: url('../../assets/images/company.jpg');
+    background-image: url('../../assets/images/contact.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 100%;
   }
 
-  .card-image-intro {
-    background-image: url('../../assets/images/backend.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 100vh;
+  .card-image-individual:hover {
+    outline: 5px solid black;
+  }
+
+  .card-image-individual a {
+    text-decoration: none !important;
   }
 
   .cardHeight {
@@ -315,7 +324,14 @@ html {
   }
 
   .hei {
-    height: 100%;
+    height: 15rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hei:hover {
+    align-items: flex-start;
   }
 
   .timeline-animation-left {
@@ -334,6 +350,10 @@ html {
     position: sticky;
     bottom: 20px;
     margin-left: 105%;
+  }
+
+  .sticky:hover {
+    border: 5px solid black;
   }
 
   @keyframes timeline-left {
