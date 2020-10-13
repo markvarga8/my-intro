@@ -1,43 +1,29 @@
 <template>
   <div class="about">
-    <mdb-container>
-      <section class="text-center my-5">
-        <mdb-row class="roww">
-          <mdb-col md="12" class="mb-4">
-            <mdb-card class="card-image animated fadeInDown">
-              <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
-                <div>
-                  <h6 class="">
-                    <mdb-icon icon="user"></mdb-icon><strong class="ml-3">{{$t('about')}}</strong>
-                  </h6>
-                  <h3 class="py-3 font-weight-bold">
-                    <strong class="titleSize">{{$t('name')}}</strong>
-                  </h3>
-                  <p class="pb-3">{{$t('aboutIntro')}}</p>
-                  <a href="/contacts"><mdb-btn color="lily" rounded size="md"><mdb-icon icon="envelope" class="left"/>{{$t('contact')}}</mdb-btn></a>
-                </div>
-              </div>
-            </mdb-card>
-          </mdb-col>
-        </mdb-row>
-      </section>
-    </mdb-container>
 
-    <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5"/>
+    <mdb-jumbotron class="cardHeight mb-0 text-center blue-grey lighten-5 animated fadeInDown">
+      <h2 class="card-title h2">{{$t('name')}}</h2>
+      <p class="indigo-text my-4 font-weight-bold">{{$t('free')}}</p>
+      <mdb-row class="d-flex justify-content-center">
+        <mdb-col xl="7" class="pb-2">
+          <p class="card-text">{{$t('aboutIntro')}}</p>
+        </mdb-col>
+      </mdb-row>
+    </mdb-jumbotron>
 
     <mdb-container>
 
       <mdb-container class="max">
         <section class="my-5">
-          <h2 v-animateOnScroll="{animation: 'bounceInDown'}" class="h1-responsive font-weight-bold text-center my-5">
+          <h2 class="h1-responsive font-weight-bold text-center my-5 animated fadeInDown">
             {{ $t('skills') }}
           </h2>
           <mdb-row>
-            <mdb-col v-animateOnScroll="{animation: 'bounceInLeft'}" lg="5" class="text-center text-lg-left">
+            <mdb-col lg="5" class="text-center text-lg-left animated fadeInLeft">
               <img class="img-fluid animated fadeInDown" src="https://mdbootstrap.com/img/Photos/Others/screens-section.jpg" alt="Sample image">
             </mdb-col>
             <mdb-col lg="7">
-              <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
+              <mdb-row class="mb-3 animated fadeInLeft">
                 <mdb-col size="1">
                   <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
                 </mdb-col>
@@ -47,7 +33,7 @@
                   </h5>
                 </mdb-col>
               </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
+              <mdb-row class="mb-3 animated fadeInRight">
                 <mdb-col size="1">
                   <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
                 </mdb-col>
@@ -57,7 +43,7 @@
                   </h5>
                 </mdb-col>
               </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
+              <mdb-row class="mb-3 animated fadeInRight">
                 <mdb-col size="1">
                   <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
                 </mdb-col>
@@ -67,7 +53,7 @@
                   </h5>
                 </mdb-col>
               </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
+              <mdb-row class="mb-3 animated fadeInRight">
                 <mdb-col size="1">
                   <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
                 </mdb-col>
@@ -77,7 +63,7 @@
                   </h5>
                 </mdb-col>
               </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
+              <mdb-row class="mb-3 animated fadeInLeft">
                 <mdb-col size="1">
                   <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
                 </mdb-col>
@@ -87,7 +73,7 @@
                   </h5>
                 </mdb-col>
               </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
+              <mdb-row class="mb-3 animated fadeInRight">
                 <mdb-col size="1">
                   <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
                 </mdb-col>
@@ -97,7 +83,7 @@
                   </h5>
                 </mdb-col>
               </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
+              <mdb-row class="mb-3 animated fadeInRight">
                 <mdb-col size="1">
                   <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
                 </mdb-col>
@@ -177,14 +163,6 @@
                   </h5>
                 </mdb-col>
               </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'flip'}" class="mb-3">
-                <mdb-col size="1">
-                  <mdb-icon icon="angle-double-right" size="lg" class="mb-3 mt-3 animated bounceInLeft infinite" />
-                </mdb-col>
-                <mdb-col xl="10" md="11" size="10">
-                  <a href="/contacts"><mdb-btn color="lily">{{ $t('contact') }}</mdb-btn></a>
-                </mdb-col>
-              </mdb-row>
             </mdb-col>
           </mdb-row>
         </section>
@@ -198,28 +176,28 @@
             <mdb-row class="intro">
               <mdb-col md="6" class="md-0 mb-4">
                 <mdb-card v-animateOnScroll="{animation: 'bounceInLeft'}" class="card-image-entrepeneur">
-                  <div class="hei text-white rgba-black-strong">
-                    <div>
-                      <h3 class="py-3 font-weight-bold">
-                        <strong class="titleSize">{{$t('portfolio')}}</strong>
-                      </h3>
-                      <p class="pb-3">Portfólió megtekintéséhez kattints a tovább gombra!</p>
-                      <a href="/contacts"><mdb-btn color="lily" rounded size="md"><mdb-icon icon="envelope" class="left"/>{{$t('welcome')}}</mdb-btn></a>
+                  <a href="/portfolio">
+                    <div class="hei text-white rgba-black-strong">
+                      <div>
+                        <h3 class="py-3 font-weight-bold">
+                          <strong class="titleSize">{{$t('portfolio')}}</strong>
+                        </h3>
+                      </div>
                     </div>
-                  </div>
+                  </a>
                 </mdb-card>
               </mdb-col>
               <mdb-col md="6" class="md-0 mb-4">
                 <mdb-card v-animateOnScroll="{animation: 'bounceInRight'}" class="card-image-individual">
-                  <div class="hei text-white rgba-black-strong">
-                    <div>
-                      <h3 class="py-3 font-weight-bold">
-                        <strong class="titleSize">{{$t('contact')}}</strong>
-                      </h3>
-                      <p class="pb-3">Kontaktok megtekintéséhez kattints a tovább gombra</p>
-                      <a href="/contacts"><mdb-btn color="lily" rounded size="md"><mdb-icon icon="envelope" class="left"/>{{$t('welcome')}}</mdb-btn></a>
+                  <a href="/contacts">
+                    <div class="hei text-white rgba-black-strong">
+                      <div>
+                        <h3 class="py-3 font-weight-bold">
+                          <strong class="titleSize">{{$t('contact')}}</strong>
+                        </h3>
+                      </div>
                     </div>
-                  </div>
+                  </a>
                 </mdb-card>
               </mdb-col>
             </mdb-row>
@@ -240,7 +218,7 @@
 
 <script>
 import { mapState } from 'vuex'
-import { mdbContainer, mdbRow, mdbCol, mdbCard, mdbBtn, mdbIcon, animateOnScroll } from 'mdbvue'
+import { mdbContainer, mdbRow, mdbCol, mdbCard, mdbIcon, animateOnScroll, mdbJumbotron } from 'mdbvue'
 export default {
   name: 'AboutPage',
   components: {
@@ -248,8 +226,8 @@ export default {
     mdbRow,
     mdbCol,
     mdbCard,
-    mdbBtn,
-    mdbIcon
+    mdbIcon,
+    mdbJumbotron
   },
   directives: {
     animateOnScroll
@@ -312,9 +290,23 @@ html {
     height: 100%;
   }
 
+  .card-image-intro {
+    background-image: url('../../assets/images/backend.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+  }
+
+  .cardHeight {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background: rgb(34,193,195);
+    background: linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  }
+
   .roww {
-    padding-top: 30vh !important;
-    padding-bottom: 30vh;
+    padding-top: 15vh !important;
+    background: rgb(219, 194, 156);
   }
 
   .intro {
@@ -367,6 +359,11 @@ html {
   }
 
   @media screen and (max-width: 1300px) {
+      .cardHeight {
+        padding-top: 20%;
+        padding-bottom: 10%;
+      }
+
       .titleSize {
         font-size: 1.3rem;
       }
@@ -374,6 +371,22 @@ html {
       .sticky {
         margin-left: 78%;
         width: 60px;
+      }
+    }
+
+    @media screen and (max-width: 996px) {
+      .titleSize {
+        font-size: 1.3rem;
+      }
+
+      .sticky {
+        margin-left: 78%;
+        width: 60px;
+      }
+
+      .cardHeight {
+        padding-top: 40%;
+        padding-bottom: 10%;
       }
     }
 </style>

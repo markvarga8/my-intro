@@ -198,7 +198,7 @@ export default {
         text-align: center;
       }
       .navbar:not(.top-nav-collapse) {
-          background:  rgba(82, 73, 73, 0);
+          background:  rgba(82, 73, 73, 0.884);
       }
 
       .borderBottom {
