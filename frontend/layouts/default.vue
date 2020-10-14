@@ -20,7 +20,8 @@ export default {
 
 <style>
   .appp {
-    background: rgb(249,222,181);
-    background: linear-gradient(90deg, rgba(249,222,181,1) 19%, rgba(236,196,135,1) 50%, rgba(181,166,141,1) 100%);
+    background: #FFEFBA;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 </style>

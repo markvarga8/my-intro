@@ -14,7 +14,7 @@
       </mdb-col>
       <mdb-col class="column" md="6" xs="12">
         <mdb-view>
-          <img class="image animated fadeInDown" src="../assets/images/background.jpg">
+          <img class="image animated fadeInDown" src="../assets/images/background2.jpg">
           <mdb-mask flex-center class="hm-gradient" />
         </mdb-view>
       </mdb-col>
@@ -208,10 +208,6 @@
       <mdb-container>
         <mdb-modal
           :show="entrepeneur"
-          removeBackdrop
-          fullHeight
-          position="top"
-          info
           @close="entrepeneur = false"
         >
           <mdb-modal-header class="headerColor">
@@ -242,10 +238,6 @@
       <mdb-container>
         <mdb-modal
           :show="individual"
-          fullHeight
-          position="top"
-          removeBackdrop
-          info
           @close="individual = false"
         >
           <mdb-modal-header class="headerColor">
@@ -397,7 +389,7 @@ html {
   }
 
   .icolor {
-    color: rgb(82, 73, 73);
+    color: black;
   }
 
   .iconMargin {
@@ -423,7 +415,9 @@ html {
   }
 
   .headerColor {
-    background: rgba(82, 73, 73, 0.967) !important;
+    background: #83a4d4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 
   .card-image-entrepeneurr {
@@ -431,10 +425,11 @@ html {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 100%;
+    opacity: 1;
   }
 
    .card-image-entrepeneurr:hover {
-    outline: 5px solid black;
+     opacity: 0.8;
   }
 
    .card-image-entrepeneurr a {
@@ -447,10 +442,11 @@ html {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 100%;
+    opacity: 1;
   }
 
    .card-image-individuall:hover {
-    outline: 5px solid black;
+    opacity: 0.8;
   }
 
   .card-image-individuall a {
@@ -462,10 +458,11 @@ html {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 100%;
+    opacity: 1;
   }
 
   .card-image-contact:hover {
-    outline: 5px solid black;
+    opacity: 0.8;
   }
 
   .card-image-contact a {
@@ -485,12 +482,16 @@ html {
   }
 
   .hei:hover {
-    align-items: flex-start;
   }
 
   .textColor {
-    color: rgb(77, 67, 67);
+    color: black;
   }
+
+  .heading {
+      font-weight: 700;
+      color:  black !important;
+    }
 
   @media screen and (max-width: 1400px) {
       .phone {

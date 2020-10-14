@@ -39,7 +39,17 @@
                 </mdb-col>
                 <mdb-col xl="10" md="11" size="10">
                   <h5 class="font-weight-bold mb-3">
-                    Vue.js/Nuxt.js (Vuex)
+                    Vue.js (Vuex)
+                  </h5>
+                </mdb-col>
+              </mdb-row>
+              <mdb-row class="mb-3 animated fadeInLeft">
+                <mdb-col size="1">
+                  <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
+                </mdb-col>
+                <mdb-col xl="10" md="11" size="10">
+                  <h5 class="font-weight-bold mb-3">
+                    Nuxt.js (Vuex)
                   </h5>
                 </mdb-col>
               </mdb-row>
@@ -53,7 +63,7 @@
                   </h5>
                 </mdb-col>
               </mdb-row>
-              <mdb-row class="mb-3 animated fadeInRight">
+              <mdb-row class="mb-3 animated fadeInLeft">
                 <mdb-col size="1">
                   <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
                 </mdb-col>
@@ -63,7 +73,7 @@
                   </h5>
                 </mdb-col>
               </mdb-row>
-              <mdb-row class="mb-3 animated fadeInLeft">
+              <mdb-row class="mb-3 animated fadeInRight">
                 <mdb-col size="1">
                   <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
                 </mdb-col>
@@ -73,7 +83,7 @@
                   </h5>
                 </mdb-col>
               </mdb-row>
-              <mdb-row class="mb-3 animated fadeInRight">
+              <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
                 <mdb-col size="1">
                   <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
                 </mdb-col>
@@ -83,7 +93,7 @@
                   </h5>
                 </mdb-col>
               </mdb-row>
-              <mdb-row class="mb-3 animated fadeInRight">
+              <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
                 <mdb-col size="1">
                   <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
                 </mdb-col>
@@ -284,7 +294,7 @@ html {
   }
 
   .card-image-entrepeneur:hover {
-    outline: 5px solid black;
+    opacity: 0.8;
   }
 
   .card-image-entrepeneur a {
@@ -299,7 +309,7 @@ html {
   }
 
   .card-image-individual:hover {
-    outline: 5px solid black;
+    opacity: 0.8;
   }
 
   .card-image-individual a {
@@ -309,8 +319,9 @@ html {
   .cardHeight {
     padding-top: 10%;
     padding-bottom: 10%;
-    background: rgb(34,193,195);
-    background: linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    background: #085078;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #085078, #85D8CE);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #085078, #85D8CE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 
   .roww {
@@ -328,10 +339,6 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  .hei:hover {
-    align-items: flex-start;
   }
 
   .timeline-animation-left {

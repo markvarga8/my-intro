@@ -120,7 +120,7 @@ export default {
     }
 
     .navbar {
-      background:  rgba(82, 73, 73, 0.767);
+      background: #eacda3;
       box-shadow: 0 0 0 0 transparent;
     }
 
@@ -148,18 +148,25 @@ export default {
 
     .heading {
       font-weight: 700;
-      color:  rgba(82, 73, 73, 0.967);
+      color:  black;
     }
 
     .subheading {
       margin: 2.5rem 0;
-      color:  rgba(82, 73, 73, 0.767);
+      color:  black;
       font-size: 1.5rem;
     }
 
     .btn-lily {
-      background:  rgba(82, 73, 73, 0.967);
-      color: white;
+      background: #eacda3;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #d6ae7b, #eacda3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      color: black;
+      outline: 1px solid black;
+    }
+
+    .btn-lily:hover {
+      outline: 3px solid black;
     }
 
     .paragraph {
@@ -170,9 +177,9 @@ export default {
       display: none;
     }
 
-    /* .navbar.navbar-dark .navbar-nav .nav-item .nav-link {
-      color: rgb(124, 123, 33);
-    } */
+    .navbar.navbar-dark .navbar-nav .nav-item .nav-link {
+      color: black;
+    }
 
     @media screen and (max-width: 1300px) {
       .menu {
@@ -185,7 +192,9 @@ export default {
         text-align: center;
       }
       .navbar:not(.top-nav-collapse) {
-          background:   rgba(82, 73, 73, 0.877);
+        background: #eacda3;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #d6ae7b, #eacda3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       }
     }
 
@@ -196,9 +205,14 @@ export default {
 
       .navbar {
         text-align: center;
+        background: #eacda3;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #d6ae7b, #eacda3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       }
       .navbar:not(.top-nav-collapse) {
-          background:  rgba(82, 73, 73, 0.884);
+        background: #eacda3;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #d6ae7b, #eacda3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       }
 
       .borderBottom {
@@ -206,7 +220,7 @@ export default {
       }
 
       .menu {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
       }
 
       .logo {

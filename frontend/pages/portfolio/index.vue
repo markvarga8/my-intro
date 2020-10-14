@@ -360,7 +360,7 @@ export default {
   }
 
   .card-image-entrepeneur:hover {
-    outline: 5px solid black;
+    opacity: 0.8;
   }
 
   .card-image-entrepeneur a {
@@ -375,7 +375,7 @@ export default {
   }
 
   .card-image-individual:hover {
-    outline: 5px solid black;
+    opacity: 0.8;
   }
 
   .card-image-individual a {
@@ -389,12 +389,8 @@ export default {
     justify-content: center;
   }
 
-  .hei:hover {
-    align-items: flex-start;
-  }
-
   .textColor {
-    color: rgb(77, 67, 67);
+    color: black;
   }
 
   @media screen and (max-width: 1300px) {
