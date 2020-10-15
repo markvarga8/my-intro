@@ -111,7 +111,7 @@
 
       <mdb-container class="max">
         <section class="my-5">
-          <h2 v-animateOnScroll="{animation: 'bounceInDown'}" class="h1-responsive font-weight-bold text-center my-5">
+          <h2 v-animateOnScroll="{animation: 'bounceInDown'}" class="servMargin h1-responsive font-weight-bold text-center my-5">
             {{ $t('serv') }}
           </h2>
           <mdb-row class="skills">
@@ -122,7 +122,7 @@
                 </mdb-col>
                 <mdb-col lg="10" md="9" size="10">
                   <h4 class="font-weight-bold">
-                    {{ $t('skillsTitle2') }}
+                    {{ $t('skillsTitle1') }}
                   </h4>
                   <p class="textColor">
                     {{ $t('entreContent') }}
@@ -140,7 +140,7 @@
                 </mdb-col>
                 <mdb-col lg="10" md="9" size="10">
                   <h4 class="font-weight-bold">
-                    {{ $t('skillsTitle1') }}
+                    {{ $t('skillsTitle2') }}
                   </h4>
                   <p class="textColor">
                     {{ $t('indiContent') }}
@@ -216,9 +216,9 @@
             </p>
           </mdb-modal-header>
           <mdb-modal-body>
-            <mdb-row>
+            <mdb-row class="imgCenter">
               <mdb-column col="5">
-                <img src="../assets/images/hand.jpg" class="img-fluid" alt="Baloon floating in Mind-Space">
+                <img src="../assets/images/hand.jpg" class="img-fluid" alt="">
               </mdb-column>
               <mdb-column col="7">
                 <p>
@@ -227,6 +227,11 @@
                 <a href="/about">
                   <mdb-btn color="lily">
                     {{ $t('about') }}
+                  </mdb-btn>
+                </a>
+                <a href="/portfolio">
+                  <mdb-btn color="lily">
+                    {{ $t('portfolio') }}
                   </mdb-btn>
                 </a>
               </mdb-column>
@@ -246,7 +251,7 @@
             </p>
           </mdb-modal-header>
           <mdb-modal-body>
-            <mdb-row>
+            <mdb-row class="imgCenter">
               <mdb-column col="5">
                 <img src="../assets/images/company.jpg" class="img-fluid" alt="Baloon floating in Mind-Space">
               </mdb-column>
@@ -259,6 +264,11 @@
                     {{ $t('about') }}
                   </mdb-btn>
                 </a>
+                <a href="/portfolio">
+                  <mdb-btn color="lily">
+                    {{ $t('portfolio') }}
+                  </mdb-btn>
+                </a>
               </mdb-column>
             </mdb-row>
           </mdb-modal-body>
@@ -267,7 +277,7 @@
       <a
         id="back-to-top"
         href="#"
-        class="sticky btn back-to-top"
+        class="sticky btn back-to-top textC"
       >
         <mdb-icon icon="angle-double-up" class="fa-3x" />
       </a>
@@ -401,7 +411,8 @@ html {
   }
 
   .sticky {
-    display: block;
+    display: flex;
+    justify-content: center;
     width: 80px;
     background: rgba(219, 194, 156, 0);
     border: 1px solid black;
@@ -415,9 +426,7 @@ html {
   }
 
   .headerColor {
-    background: #83a4d4;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #eacda3;
   }
 
   .card-image-entrepeneurr {
@@ -481,9 +490,6 @@ html {
     justify-content: center;
   }
 
-  .hei:hover {
-  }
-
   .textColor {
     color: black;
   }
@@ -493,20 +499,48 @@ html {
       color:  black !important;
     }
 
+  .textC {
+    text-align: center;
+  }
+
+  .imgCenter {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
   @media screen and (max-width: 1400px) {
       .phone {
         display: none;
       }
 
       .sticky {
-        margin-left: 78%;
-        width: 60px;
+        margin-left: 98%;
+        width: 50px;
+      }
+
+      .iconMargin {
+        margin-right: -80px;
       }
   }
 
    @media screen and (max-width: 770px) {
      .half-page {
         padding-top: 20%;
+      }
+
+      .sticky {
+        margin-left: 85%;
+        width: 50px;
+        height: 60px;
+      }
+
+      .iconMargin {
+        margin-right: -80px;
+      }
+
+      .servMargin {
+        margin-top: -45px !important;
       }
    }
 </style>

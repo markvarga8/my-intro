@@ -328,7 +328,8 @@ export default {
   }
 
   .sticky {
-    display: block;
+    display: flex;
+    justify-content: center;
     width: 80px;
     background: rgba(219, 194, 156, 0);
     border: 1px solid black;
@@ -393,14 +394,22 @@ export default {
     color: black;
   }
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1400px) {
     .sticky {
-        margin-left: 78%;
-        width: 60px;
+      margin-left: 98%;
+      width: 50px;
     }
 
     .roww {
       padding-top: 25% !important;
+    }
+  }
+
+  @media screen and (max-width: 770px) {
+    .sticky {
+        margin-left: 85%;
+        width: 50px;
+        height: 60px;
     }
   }
 </style>

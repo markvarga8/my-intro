@@ -319,9 +319,9 @@ html {
   .cardHeight {
     padding-top: 10%;
     padding-bottom: 10%;
-    background: #085078;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #085078, #85D8CE);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #085078, #85D8CE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #eacda3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #d6ae7b, #eacda3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 
   .roww {
@@ -350,7 +350,8 @@ html {
   }
 
    .sticky {
-    display: block;
+    display: flex;
+    justify-content: center;
     width: 80px;
     background: rgba(219, 194, 156, 0);
     border: 1px solid black;
@@ -385,7 +386,7 @@ html {
     }
   }
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1400px) {
       .cardHeight {
         padding-top: 20%;
         padding-bottom: 10%;
@@ -396,19 +397,20 @@ html {
       }
 
       .sticky {
-        margin-left: 78%;
-        width: 60px;
+        margin-left: 98%;
+        width: 50px;
       }
     }
 
-    @media screen and (max-width: 996px) {
+    @media screen and (max-width: 770px) {
       .titleSize {
         font-size: 1.3rem;
       }
 
       .sticky {
-        margin-left: 78%;
-        width: 60px;
+        margin-left: 85%;
+        width: 50px;
+        height: 60px;
       }
 
       .cardHeight {
