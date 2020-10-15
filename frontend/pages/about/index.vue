@@ -20,7 +20,7 @@
           </h2>
           <mdb-row>
             <mdb-col lg="5" class="text-center text-lg-left animated fadeInLeft">
-              <img class="img-fluid animated fadeInDown" src="https://mdbootstrap.com/img/Photos/Others/screens-section.jpg" alt="Sample image">
+              <img class="img-fluid animated fadeInDown" src="../../assets/images/screens-section.jpg" alt="Sample image">
             </mdb-col>
             <mdb-col lg="7">
               <mdb-row class="mb-3 animated fadeInLeft">

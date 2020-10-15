@@ -83,7 +83,7 @@
             <mdb-col lg="5" class="mb-lg-0 mb-5">
               <h2 v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">Introduction</h2>
               <hr v-animateOnScroll="{animation: 'bounceInLeft'}" color="lily" class="my-5"/>
-              <img v-animateOnScroll="{animation: 'bounceInLeft'}" src="../../assets/images/introduction.jpg" alt="Sample project image" class="imgHeight img-fluid rounded z-depth-1" />
+              <img v-animateOnScroll="{animation: 'bounceInLeft'}" src="../../assets/images/introduction.png" alt="Sample project image" class="imgHeight img-fluid rounded z-depth-1" />
             </mdb-col>
             <mdb-col lg="7">
               <mdb-row class="mb-3">
