@@ -1,7 +1,7 @@
 export default {
   ssr: false,
   head: {
-    title: 'frontend',
+    title: 'Varga Mark',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -19,7 +19,10 @@ export default {
     { src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js' }
   ],
 
-  css: ['frontend/assets/scss/main.scss'],
+  css: [
+    '~/assets/scss/main.scss',
+    'mdbvue/lib/css/mdb.min.css'
+  ],
 
   plugins: [
     { src: '~/plugins/vuex-persist', ssr: false },

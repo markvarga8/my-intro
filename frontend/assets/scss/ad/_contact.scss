@@ -1,0 +1,28 @@
+html {
+  scroll-behavior: smooth;
+}
+
+  .contact {
+    margin-top: -60px;
+  }
+
+  .border {
+    border: 3px solid black !important;
+    padding: 20px;
+  }
+
+  .rowww {
+    padding-top: 10% !important;
+  }
+
+  @media screen and (max-width: 550px) {
+    .rowww {
+      padding-top: 20% !important;
+    }
+  }
+
+  @media screen and (max-width: 996px) {
+    .rowww {
+      padding-top: 25% !important;
+    }
+  }

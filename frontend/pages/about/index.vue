@@ -1,18 +1,22 @@
 <template>
   <div class="about">
-
     <mdb-jumbotron class="cardHeight mb-0 text-center blue-grey lighten-5 animated fadeInDown">
-      <h2 class="card-title h2">{{$t('name')}}</h2>
-      <p class="indigo-text my-4 font-weight-bold">{{$t('free')}}</p>
+      <h2 class="card-title h2">
+        {{ $t('name') }}
+      </h2>
+      <p class="indigo-text my-4 font-weight-bold">
+        {{ $t('free') }}
+      </p>
       <mdb-row class="d-flex justify-content-center">
         <mdb-col xl="7" class="pb-2">
-          <p class="card-text">{{$t('aboutIntro')}}</p>
+          <p class="card-text">
+            {{ $t('aboutIntro') }}
+          </p>
         </mdb-col>
       </mdb-row>
     </mdb-jumbotron>
 
     <mdb-container>
-
       <mdb-container class="max">
         <section class="my-5">
           <h2 class="h1-responsive font-weight-bold text-center my-5 animated fadeInDown">
@@ -178,7 +182,7 @@
         </section>
       </mdb-container>
 
-      <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5"/>
+      <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5">
 
       <mdb-container class="max">
         <section class="text-center my-5">
@@ -190,7 +194,7 @@
                     <div class="hei text-white rgba-black-strong">
                       <div>
                         <h3 class="py-3 font-weight-bold">
-                          <strong class="titleSize">{{$t('portfolio')}}</strong>
+                          <strong class="titleSize">{{ $t('portfolio') }}</strong>
                         </h3>
                       </div>
                     </div>
@@ -203,7 +207,7 @@
                     <div class="hei text-white rgba-black-strong">
                       <div>
                         <h3 class="py-3 font-weight-bold">
-                          <strong class="titleSize">{{$t('contact')}}</strong>
+                          <strong class="titleSize">{{ $t('contact') }}</strong>
                         </h3>
                       </div>
                     </div>
@@ -215,14 +219,13 @@
         </section>
       </mdb-container>
       <a
-      id="back-to-top"
-      href="#"
-      class="sticky btn back-to-top"
-    >
-      <mdb-icon icon="angle-double-up" class="fa-3x" />
-    </a>
+        id="back-to-top"
+        href="#"
+        class="sticky btn back-to-top"
+      >
+        <mdb-icon icon="angle-double-up" class="fa-3x" />
+      </a>
     </mdb-container>
-
   </div>
 </template>
 
@@ -242,6 +245,10 @@ export default {
   directives: {
     animateOnScroll
   },
+  computed: mapState({
+    en: state => state.LangModule.en,
+    hu: state => state.LangModule.hu
+  }),
   created () {
     if (!this.en) {
       this.$i18n.locale = 'hu'
@@ -249,10 +256,6 @@ export default {
       this.$i18n.locale = 'en'
     }
   },
-  computed: mapState({
-    en: state => state.LangModule.en,
-    hu: state => state.LangModule.hu
-  }),
   head () {
     return {
       title: 'Mark Varga',
@@ -267,155 +270,3 @@ export default {
   }
 }
 </script>
-
-<style>
-html {
-  scroll-behavior: smooth;
-}
-
-  .about {
-    margin-top: -60px;
-  }
-
-  .max {
-    max-width: 100vw !important;
-    overflow: hidden !important;
-  }
-  .card-image {
-    background-image: url('../../assets/images/frontend.jpg');
-    background-repeat: no-repeat;
-  }
-
-  .card-image-entrepeneur {
-    background-image: url('../../assets/images/portfolio.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 100%;
-  }
-
-  .card-image-entrepeneur:hover {
-    opacity: 0.8;
-  }
-
-  .card-image-entrepeneur a {
-    text-decoration: none !important;
-  }
-
-  .card-image-individual {
-    background-image: url('../../assets/images/contact.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 100%;
-  }
-
-  .card-image-individual:hover {
-    opacity: 0.8;
-  }
-
-  .card-image-individual a {
-    text-decoration: none !important;
-  }
-
-  .cardHeight {
-    padding-top: 10%;
-    padding-bottom: 10%;
-    background: #eacda3;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #d6ae7b, #eacda3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  }
-
-  .roww {
-    padding-top: 15vh !important;
-    background: rgb(219, 194, 156);
-  }
-
-  .intro {
-    height: 20%;
-    width: 100%;
-  }
-
-  .hei {
-    height: 15rem !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .timeline-animation-left {
-    animation-name: timeline-left
-  }
-
-  .imgHeight {
-    height: 300px;
-  }
-
-   .sticky {
-    display: flex;
-    justify-content: center;
-    width: 80px;
-    background: rgba(219, 194, 156, 0);
-    border: 1px solid black;
-    position: sticky;
-    bottom: 20px;
-    margin-left: 105%;
-  }
-
-  .sticky:hover {
-    border: 5px solid black;
-  }
-
-  @keyframes timeline-left {
-    from {
-      padding-left: 100px;
-    }
-    to {
-      padding-left: 24px
-    }
-  }
-
-    .timeline-animation-right {
-    animation-name: timeline-right
-  }
-
-  @keyframes timeline-right {
-    from {
-      padding-right: 100px;
-    }
-    to {
-      padding-right: 24px
-    }
-  }
-
-  @media screen and (max-width: 1400px) {
-      .cardHeight {
-        padding-top: 20%;
-        padding-bottom: 10%;
-      }
-
-      .titleSize {
-        font-size: 1.3rem;
-      }
-
-      .sticky {
-        margin-left: 98%;
-        width: 50px;
-      }
-    }
-
-    @media screen and (max-width: 770px) {
-      .titleSize {
-        font-size: 1.3rem;
-      }
-
-      .sticky {
-        margin-left: 85%;
-        width: 50px;
-        height: 60px;
-      }
-
-      .cardHeight {
-        padding-top: 40%;
-        padding-bottom: 10%;
-      }
-    }
-</style>
