@@ -19,10 +19,7 @@ export default {
     { src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js' }
   ],
 
-  css: [
-    'bootstrap-css-only/css/bootstrap.min.css',
-    'mdbvue/lib/css/mdb.min.css'
-  ],
+  css: ['frontend/assets/scss/main.scss'],
 
   plugins: [
     { src: '~/plugins/vuex-persist', ssr: false },
