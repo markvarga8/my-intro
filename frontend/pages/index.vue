@@ -21,7 +21,6 @@
     </mdb-row>
 
     <mdb-container>
-
       <mdb-container class="max">
         <section>
           <h2 v-animateOnScroll="{animation: 'bounceInDown'}" class="h1-responsive font-weight-bold text-center my-5">
@@ -107,7 +106,7 @@
         </section>
       </mdb-container>
 
-      <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5"/>
+      <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5">
 
       <mdb-container class="max">
         <section class="my-5">
@@ -155,7 +154,7 @@
         </section>
       </mdb-container>
 
-      <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5"/>
+      <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5">
 
       <mdb-container class="max">
         <section class="text-center my-5">
@@ -167,7 +166,9 @@
                     <div class="text-white rgba-black-strong">
                       <div class="hei">
                         <h3 class="py-3 font-weight-bold">
-                          <strong class="titleSize">{{$t('about')}}</strong>
+                          <strong class="titleSize">
+                            {{ $t('about') }}
+                          </strong>
                         </h3>
                       </div>
                     </div>
@@ -180,7 +181,9 @@
                     <div class="text-white rgba-black-strong">
                       <div class="hei">
                         <h3 class="py-3 font-weight-bold textC">
-                          <strong class="titleSize">{{$t('portfolio')}}</strong>
+                          <strong class="titleSize">
+                            {{ $t('portfolio') }}
+                          </strong>
                         </h3>
                       </div>
                     </div>
@@ -193,7 +196,9 @@
                     <div class="text-white rgba-black-strong">
                       <div class="hei">
                         <h3 class="py-3 font-weight-bold">
-                          <strong class="titleSize">{{$t('contact')}}</strong>
+                          <strong class="titleSize">
+                            {{ $t('contact') }}
+                          </strong>
                         </h3>
                       </div>
                     </div>
@@ -222,7 +227,7 @@
               </mdb-column>
               <mdb-column col="7">
                 <p>
-                  {{$t('entrepreneurIntro')}}
+                  {{ $t('entrepreneurIntro') }}
                 </p>
                 <a href="/about">
                   <mdb-btn color="lily">
@@ -257,7 +262,7 @@
               </mdb-column>
               <mdb-column col="7">
                 <p>
-                  {{$t('individualIntro')}}
+                  {{ $t('individualIntro') }}
                 </p>
                 <a href="/about">
                   <mdb-btn color="lily">
@@ -348,199 +353,4 @@ export default {
 </script>
 
 <style>
-
-html {
-  scroll-behavior: smooth;
-}
-
-  .max {
-    max-width: 100vw !important;
-    overflow: hidden !important;
-  }
-
-  .button-background {
-    background: rgb(82, 73, 73);
-    color: white;
-    border-bottom: 1px solid white;
-    border-left: 1px solid white;
-    border-right: 1px solid white;
-  }
-
-  .skills {
-    height: 20%;
-  }
-
-  .image {
-    width: 100%;
-    height: 100vh !important;
-  }
-
-  .help {
-    margin-top: 10%;
-  }
-
-  /* Bottom left */
-  .bottom-left {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
-  }
-
-  .bottom-right {
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-  }
-
-  .bottom-center {
-    position: absolute;
-    bottom: 8px;
-    right: 50%;
-  }
-
-  .icolor {
-    color: black;
-  }
-
-  .iconMargin {
-    margin-right: -160px;
-  }
-
-  .imageMargin {
-    margin-right: -50px;
-  }
-
-  .sticky {
-    display: flex;
-    justify-content: center;
-    width: 80px;
-    background: rgba(219, 194, 156, 0);
-    border: 1px solid black;
-    position: sticky;
-    bottom: 20px;
-    margin-left: 105%;
-  }
-
-  .sticky:hover {
-    border: 5px solid black;
-  }
-
-  .headerColor {
-    background: #eacda3;
-  }
-
-  .card-image-entrepeneurr {
-    background-image: url('../assets/images/portfolio.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 100%;
-    opacity: 1;
-  }
-
-   .card-image-entrepeneurr:hover {
-     opacity: 0.8;
-  }
-
-   .card-image-entrepeneurr a {
-    text-decoration: none !important;
-  }
-
-  .card-image-individuall {
-    background: rgb(187,186,212);
-    background: linear-gradient(90deg, rgba(187,186,212,1) 0%, rgba(34,34,230,1) 35%, rgba(0,212,255,1) 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 100%;
-    opacity: 1;
-  }
-
-   .card-image-individuall:hover {
-    opacity: 0.8;
-  }
-
-  .card-image-individuall a {
-    text-decoration: none !important;
-  }
-
-  .card-image-contact {
-    background-image: url('../assets/images/contact.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 100%;
-    opacity: 1;
-  }
-
-  .card-image-contact:hover {
-    opacity: 0.8;
-  }
-
-  .card-image-contact a {
-    text-decoration: none !important;
-  }
-
-   .intro {
-    height: 20%;
-    width: 100%;
-  }
-
-  .hei {
-    height: 15rem !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .textColor {
-    color: black;
-  }
-
-  .heading {
-      font-weight: 700;
-      color:  black !important;
-    }
-
-  .textC {
-    text-align: center;
-  }
-
-  .imgCenter {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-  }
-
-  @media screen and (max-width: 1400px) {
-      .phone {
-        display: none;
-      }
-
-      .sticky {
-        margin-left: 98%;
-        width: 50px;
-      }
-
-      .iconMargin {
-        margin-right: -80px;
-      }
-  }
-
-   @media screen and (max-width: 770px) {
-     .half-page {
-        padding-top: 20%;
-      }
-
-      .sticky {
-        margin-left: 85%;
-        width: 50px;
-        height: 60px;
-      }
-
-      .iconMargin {
-        margin-right: -80px;
-      }
-
-      .servMargin {
-        margin-top: -45px !important;
-      }
-   }
 </style>

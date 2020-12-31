@@ -1,25 +1,37 @@
 <template>
   <div class="footer">
-     <mdb-footer color="stylish-color-dark" class="font-small pt-4 mt-4">
+    <mdb-footer color="stylish-color-dark" class="font-small pt-4 mt-4">
       <mdb-container class="text-center text-md-left">
         <mdb-row class="text-center text-md-left mt-3 pb-3">
           <mdb-col md="3" lg="3" xl="3" class="mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">{{$t('name')}}</h6>
-            <p class="text-uppercase mb-4 font-weight-bold">{{$t('free')}}</p>
-            <p class="mb-4 font-weight-bold">markweb.varga@gmail.com</p>
+            <h6 class="text-uppercase mb-4 font-weight-bold">
+              {{ $t('name') }}
+            </h6>
+            <p class="text-uppercase mb-4 font-weight-bold">
+              {{ $t('free') }}
+            </p>
+            <p class="mb-4 font-weight-bold">
+              markweb.varga@gmail.com
+            </p>
           </mdb-col>
-          <hr class="w-100 clearfix d-md-none" />
+          <hr class="w-100 clearfix d-md-none">
         </mdb-row>
-        <hr />
+        <hr>
         <mdb-row class="d-flex align-items-center">
           <mdb-col md="8" lg="8">
-            <p class=" text-center text-md-left grey-text">&copy; {{$t('name')}} 2020 Copyright: {{$t('reserve')}}</p>
+            <p class=" text-center text-md-left grey-text">
+              &copy; {{ $t('name') }} 2020 Copyright: {{ $t('reserve') }}
+            </p>
           </mdb-col>
           <mdb-col md="4" lg="4" class="ml-lg-0">
             <div class="text-center text-md-right">
               <ul class="list-unstyled list-inline">
-                <li class="list-inline-item"><a href="https://www.facebook.com/vargabeni69/" class="btn-floating btn-sm rgba-white-slight mx-1"><i class="fab fa-facebook"></i></a></li>
-                <li class="list-inline-item"><a href="https://www.linkedin.com/in/varga-mark-61796a197/" class="btn-floating btn-sm rgba-white-slight mx-1"><i class="fab fa-linkedin-in"></i></a></li>
+                <li class="list-inline-item">
+                  <a href="https://www.facebook.com/vargabeni69/" class="btn-floating btn-sm rgba-white-slight mx-1"><i class="fab fa-facebook" /></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://www.linkedin.com/in/varga-mark-61796a197/" class="btn-floating btn-sm rgba-white-slight mx-1"><i class="fab fa-linkedin-in" /></a>
+                </li>
               </ul>
             </div>
           </mdb-col>

@@ -2,56 +2,68 @@
   <div>
     <mdb-navbar class="navbar" position="top" dark href="/" scrolling>
       <mdb-navbar-brand>
-        <a href="/" class="logo"></a>
+        <a href="/" class="logo" />
       </mdb-navbar-brand>
       <mdb-navbar-toggler right>
         <mdb-navbar-nav right>
-          <b-checkbox id="check" v-model="$i18n.locale" value="hu">hu</b-checkbox>
-          <b-checkbox id="checkEn" v-model="$i18n.locale" value="en">en</b-checkbox>
+          <b-checkbox id="check" v-model="$i18n.locale" value="hu">
+            hu
+          </b-checkbox>
+          <b-checkbox id="checkEn" v-model="$i18n.locale" value="en">
+            en
+          </b-checkbox>
           <mdb-nav-item class="menu borderBottom" href="/">
-            <mdb-button>{{$t('home')}}</mdb-button>
+            <mdb-button>
+              {{ $t('home') }}
+            </mdb-button>
           </mdb-nav-item>
           <mdb-nav-item class="menu borderBottom" href="/about">
-            <mdb-button>{{$t('about')}}</mdb-button>
+            <mdb-button>
+              {{ $t('about') }}
+            </mdb-button>
           </mdb-nav-item>
           <mdb-nav-item class="menu borderBottom" href="/portfolio">
-            <mdb-button>{{$t('portfolio')}}</mdb-button>
+            <mdb-button>
+              {{ $t('portfolio') }}
+            </mdb-button>
           </mdb-nav-item>
           <mdb-nav-item class="menu borderBottom" href="/contacts">
-            <mdb-button>{{$t('contact')}}</mdb-button>
+            <mdb-button>
+              {{ $t('contact') }}
+            </mdb-button>
           </mdb-nav-item>
           <mdb-nav-item class="menu borderBottom" href="https://github.com/ben1998deguz">
-            <mdb-icon fab icon="github"/>
+            <mdb-icon fab icon="github" />
           </mdb-nav-item>
           <mdb-nav-item class="menu borderBottom" href="https://www.facebook.com/vargabeni69/">
-            <mdb-icon fab icon="facebook-f"/>
+            <mdb-icon fab icon="facebook-f" />
           </mdb-nav-item>
           <mdb-nav-item class="menu borderBottom" href="https://www.linkedin.com/in/varga-mark-61796a197/">
-            <mdb-icon fab icon="linkedin"/>
+            <mdb-icon fab icon="linkedin" />
           </mdb-nav-item>
-          <mdb-nav-item v-bind:class="{ borderBottom: hu }" class="menu">
+          <mdb-nav-item :class="{ borderBottom: hu }" class="menu">
             <label for="checkEn">
               <mdb-btn
                 v-if="hu"
-                @click="translateEn"
                 tag="a"
                 gradient="blue"
                 floating
                 size="sm"
+                @click="translateEn"
               >EN
               </mdb-btn>
             </label>
           </mdb-nav-item>
-          <mdb-nav-item v-bind:class="{ borderBottom: en }" class="menu">
+          <mdb-nav-item :class="{ borderBottom: en }" class="menu">
             <label for="check">
               <mdb-btn
                 v-if="en"
-                @click="translateHu"
                 tag="a"
                 gradient="blue"
                 floating
                 size="sm"
-                >
+                @click="translateHu"
+              >
                 HU
               </mdb-btn>
             </label>
