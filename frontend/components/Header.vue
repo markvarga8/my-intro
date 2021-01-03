@@ -3,6 +3,7 @@
     <mdb-navbar class="navbar" position="top" dark href="/" scrolling>
       <mdb-navbar-brand>
         <a href="/" class="logo" />
+        <p>{{ date }}</p>
       </mdb-navbar-brand>
       <mdb-navbar-toggler right>
         <mdb-navbar-nav right>
@@ -15,6 +16,11 @@
           <mdb-nav-item class="menu borderBottom" href="/">
             <mdb-button>
               {{ $t('home') }}
+            </mdb-button>
+          </mdb-nav-item>
+          <mdb-nav-item class="menu borderBottom" href="/blog">
+            <mdb-button>
+              Blog
             </mdb-button>
           </mdb-nav-item>
           <mdb-nav-item class="menu borderBottom" href="/about">
