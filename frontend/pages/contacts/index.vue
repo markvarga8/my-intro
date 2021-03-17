@@ -3,7 +3,7 @@
     <mdb-container>
       <section class="rowww my-5 mt-5">
         <mdb-row class="border text-center animated fadeInLeft">
-          <mdb-col lg="12">
+          <mdb-col lg="12" class="m-1">
             <h4>
               {{ $t('interest') }}
             </h4>
@@ -14,7 +14,7 @@
           </mdb-col>
         </mdb-row>
         <mdb-row class="border text-center m-5 animated fadeInRight">
-          <mdb-col lg="12">
+          <mdb-col lg="12" class="m-1">
             <h4>
               {{ $t('social') }}
             </h4>

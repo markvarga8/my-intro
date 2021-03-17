@@ -20,7 +20,7 @@
         <mdb-row class="d-flex align-items-center">
           <mdb-col md="8" lg="8">
             <p class=" text-center text-md-left grey-text">
-              &copy; {{ $t('name') }} 2020 Copyright: {{ $t('reserve') }}
+              &copy; {{ $t('name') }} {{ year }} Copyright: {{ $t('reserve') }}
             </p>
           </mdb-col>
           <mdb-col md="4" lg="4" class="ml-lg-0">
@@ -50,6 +50,14 @@ export default {
     mdbContainer,
     mdbRow,
     mdbCol
+  },
+  data: () => ({
+    date: new Date()
+  }),
+  computed: {
+    year () {
+      return this.date.getFullYear()
+    }
   }
 }
 </script>

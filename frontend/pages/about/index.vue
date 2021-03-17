@@ -27,13 +27,23 @@
               <img class="img-fluid animated fadeInDown" src="../../assets/images/screens-section.jpg" alt="Sample image">
             </mdb-col>
             <mdb-col lg="7">
+              <mdb-row class="mb-3 animated fadeInRight">
+                <mdb-col size="1">
+                  <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
+                </mdb-col>
+                <mdb-col xl="10" md="11" size="10">
+                  <h5 class="font-weight-bold mb-3">
+                    HTML5/CSS3/JavaScript (ES6, ES7, ES8, ES9)
+                  </h5>
+                </mdb-col>
+              </mdb-row>
               <mdb-row class="mb-3 animated fadeInLeft">
                 <mdb-col size="1">
                   <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
                 </mdb-col>
                 <mdb-col xl="10" md="11" size="10">
                   <h5 class="font-weight-bold mb-3">
-                    HTML5/CSS3/JavaScript
+                    SASS, SCSS
                   </h5>
                 </mdb-col>
               </mdb-row>
@@ -93,7 +103,7 @@
                 </mdb-col>
                 <mdb-col xl="10" md="11" size="10">
                   <h5 class="font-weight-bold mb-3">
-                    NPM
+                    NPM, YARN
                   </h5>
                 </mdb-col>
               </mdb-row>
@@ -113,7 +123,7 @@
                 </mdb-col>
                 <mdb-col xl="10" md="11" size="10">
                   <h5 class="font-weight-bold mb-3">
-                    MySQL
+                    MySQL, PostgreSQL
                   </h5>
                 </mdb-col>
               </mdb-row>
@@ -123,7 +133,7 @@
                 </mdb-col>
                 <mdb-col xl="10" md="11" size="10">
                   <h5 class="font-weight-bold mb-3">
-                    Sequelize (ORM)
+                    Sequelize
                   </h5>
                 </mdb-col>
               </mdb-row>
@@ -133,7 +143,7 @@
                 </mdb-col>
                 <mdb-col xl="10" md="11" size="10">
                   <h5 class="font-weight-bold mb-3">
-                    REST architecture
+                    REST architecture, GraphQL
                   </h5>
                 </mdb-col>
               </mdb-row>

@@ -26,7 +26,9 @@ export default {
 
   plugins: [
     { src: '~/plugins/vuex-persist', ssr: false },
-    { src: '~plugins/vue-cookie.js', ssr: false, injectAs: 'cookie' }
+    // { src: '~/plugins/scroll-progress', ssr: false },
+    { src: '~plugins/vue-cookie.js', ssr: false, injectAs: 'cookie' },
+    { src: '~/plugins/aos', ssr: false }
   ],
 
   components: true,
@@ -62,7 +64,7 @@ export default {
           frontend: 'Frontend development',
           backend: 'Backend development',
           more: 'More info',
-          free: 'Full Stack Web Developer',
+          free: 'Frontend Web Developer',
           send: 'Send',
           close: 'close',
           skills: 'Skills',
@@ -118,7 +120,7 @@ export default {
           frontend: 'Frontend fejlesztés',
           backend: 'Backend fejlesztés',
           more: 'Tovább',
-          free: 'Full Stack Webfejlesztő',
+          free: 'Frontend Webfejlesztő',
           send: 'Küldés',
           close: 'Bezárás',
           skills: 'Szaktudás',

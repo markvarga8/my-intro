@@ -12,7 +12,7 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/axios": "^5.12.5",
     "bootstrap": "^4.5.2",
     "bootstrap-css-only": "^4.4.1",
     "bootstrap-vue": "^2.16.0",
@@ -22,11 +22,14 @@
     "nuxt-i18n": "^6.15.1",
     "push-dir": "^0.4.1",
     "vue-cookie": "^1.1.4",
+    "vue-scroll-progress": "^1.1.5",
+    "vuetify": "^2.4.7",
     "vuex": "^3.5.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/vuetify": "^1.11.3",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.8.1",
     "eslint-plugin-nuxt": "^1.0.0"

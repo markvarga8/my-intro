@@ -18,11 +18,11 @@
               {{ $t('home') }}
             </mdb-button>
           </mdb-nav-item>
-          <mdb-nav-item class="menu borderBottom" href="/blog">
+          <!-- <mdb-nav-item class="menu borderBottom" href="/">
             <mdb-button>
-              Blog
+              BLOG
             </mdb-button>
-          </mdb-nav-item>
+          </mdb-nav-item> -->
           <mdb-nav-item class="menu borderBottom" href="/about">
             <mdb-button>
               {{ $t('about') }}
@@ -138,8 +138,9 @@ export default {
     }
 
     .navbar {
-      background: #eacda3;
-      box-shadow: 0 0 0 0 transparent;
+      background: white;
+      -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0%, 99% 100%, 0 72%);
     }
 
     .navbar:not(.top-nav-collapse) {
@@ -171,7 +172,7 @@ export default {
 
     .subheading {
       margin: 2.5rem 0;
-      color:  black;
+      color:  white;
       font-size: 1.5rem;
     }
 
@@ -197,13 +198,13 @@ export default {
       color: black;
     }
 
-    @media screen and (max-width: 1300px) {
+    @media screen and (max-width: 1800px) {
       .menu {
         font-size: 0.9rem;
       }
     }
 
-    @media screen and (max-width: 996px) {
+    @media screen and (max-width: 1350px) {
        .navbar {
         text-align: center;
       }
@@ -211,6 +212,10 @@ export default {
         background: #eacda3;  /* fallback for old browsers */
         background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3);  /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to right, #d6ae7b, #eacda3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+
+      .navbar.scrolling-navbar {
+        padding: 0 !important;
       }
     }
 
