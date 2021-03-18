@@ -45,9 +45,9 @@
                 <h5 class="font-weight-bold mb-3">
                   Link
                 </h5>
-                <a href="https://github.com/fst02/Personal-Inflation-Calculator"><mdb-btn color="lily">
+                <a href="https://github.com/fst02/Personal-Inflation-Calculator"><button class="btn btn--white btn--animated">
                   {{ $t('here') }}
-                </mdb-btn></a>
+                </button></a>
               </mdb-col>
             </mdb-row>
           </mdb-col>

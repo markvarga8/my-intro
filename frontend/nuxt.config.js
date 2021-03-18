@@ -106,7 +106,8 @@ export default {
           future: 'If you would like to discuss your future website with me in person:',
           leaderboard: 'A summary table of results that obtains data from multiple sources and in this way can dynamically provide users with up-to-date data.',
           reserve: 'All rights reserved!',
-          portfolio: 'Portfolio'
+          portfolio: 'Portfolio',
+          notList: 'The list is not exhaustive!'
         },
         hu: {
           welcome: 'Tovább',
@@ -162,7 +163,8 @@ export default {
           future: 'Ha esetleg személyesen szeretnél velem tárgyalni leendő weboldaladról:',
           leaderboard: 'Egy eredményeket összefoglaló táblázat, amely több forrásból szerzi be az adatokat és így dinamikusan, friss adatokkal tudja ellátni a felhasználókat.',
           reserve: 'Minden jog fenntertva!',
-          portfolio: 'Portfólió'
+          portfolio: 'Portfólió',
+          notList: 'A lista nem teljes!'
         }
       }
     }
