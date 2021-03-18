@@ -1,6 +1,7 @@
 <template>
   <div class="about">
-    <mdb-jumbotron class="cardHeight mb-0 text-center blue-grey lighten-5 animated fadeInDown">
+    <div class="parallaxAbout" />
+    <mdb-jumbotron class="cardHeight mb-0 text-center">
       <h2 class="card-title h2">
         {{ $t('name') }}
       </h2>
@@ -19,15 +20,15 @@
     <mdb-container>
       <mdb-container class="max">
         <section class="my-5">
-          <h2 class="h1-responsive font-weight-bold text-center my-5 animated fadeInDown">
+          <h2 class="h1-responsive font-weight-bold text-center my-5">
             {{ $t('skills') }}
           </h2>
           <mdb-row>
-            <mdb-col lg="5" class="text-center text-lg-left animated fadeInLeft">
-              <img class="img-fluid animated fadeInDown" src="../../assets/images/screens-section.jpg" alt="Sample image">
+            <mdb-col lg="5" class="text-center text-lg-left">
+              <img class="img-fluid" src="~assets/images/screens-section.jpg" alt="Sample image">
             </mdb-col>
             <mdb-col lg="7">
-              <mdb-row class="mb-3 animated fadeInRight">
+              <mdb-row class="mb-3">
                 <mdb-col size="1">
                   <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
                 </mdb-col>
@@ -37,117 +38,37 @@
                   </h5>
                 </mdb-col>
               </mdb-row>
-              <mdb-row class="mb-3 animated fadeInLeft">
+              <mdb-row class="mb-3">
                 <mdb-col size="1">
                   <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
                 </mdb-col>
                 <mdb-col xl="10" md="11" size="10">
                   <h5 class="font-weight-bold mb-3">
-                    SASS, SCSS
+                    CSS Prepocessors: LESS, SASS, SCSS
                   </h5>
                 </mdb-col>
               </mdb-row>
-              <mdb-row class="mb-3 animated fadeInRight">
+              <mdb-row class="mb-3">
                 <mdb-col size="1">
                   <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
                 </mdb-col>
                 <mdb-col xl="10" md="11" size="10">
                   <h5 class="font-weight-bold mb-3">
-                    Vue.js (Vuex)
+                    JS Frameworks: Vue.js, Nuxt.js, React.js
                   </h5>
                 </mdb-col>
               </mdb-row>
-              <mdb-row class="mb-3 animated fadeInLeft">
+              <mdb-row class="mb-3">
                 <mdb-col size="1">
                   <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
                 </mdb-col>
                 <mdb-col xl="10" md="11" size="10">
                   <h5 class="font-weight-bold mb-3">
-                    Nuxt.js (Vuex)
+                    CSS Frameworks: Bootstrap/Bootstrap-Vue, Vuetify.js, Vuesax
                   </h5>
                 </mdb-col>
               </mdb-row>
-              <mdb-row class="mb-3 animated fadeInRight">
-                <mdb-col size="1">
-                  <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
-                </mdb-col>
-                <mdb-col xl="10" md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">
-                    Bootstrap/Bootstrap-Vue
-                  </h5>
-                </mdb-col>
-              </mdb-row>
-              <mdb-row class="mb-3 animated fadeInLeft">
-                <mdb-col size="1">
-                  <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
-                </mdb-col>
-                <mdb-col xl="10" md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">
-                    Vuetify.js
-                  </h5>
-                </mdb-col>
-              </mdb-row>
-              <mdb-row class="mb-3 animated fadeInRight">
-                <mdb-col size="1">
-                  <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
-                </mdb-col>
-                <mdb-col xl="10" md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">
-                    Node.js
-                  </h5>
-                </mdb-col>
-              </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
-                <mdb-col size="1">
-                  <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
-                </mdb-col>
-                <mdb-col xl="10" md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">
-                    NPM, YARN
-                  </h5>
-                </mdb-col>
-              </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
-                <mdb-col size="1">
-                  <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
-                </mdb-col>
-                <mdb-col xl="10" md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">
-                    Express.js
-                  </h5>
-                </mdb-col>
-              </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
-                <mdb-col size="1">
-                  <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
-                </mdb-col>
-                <mdb-col xl="10" md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">
-                    MySQL, PostgreSQL
-                  </h5>
-                </mdb-col>
-              </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
-                <mdb-col size="1">
-                  <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
-                </mdb-col>
-                <mdb-col xl="10" md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">
-                    Sequelize
-                  </h5>
-                </mdb-col>
-              </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
-                <mdb-col size="1">
-                  <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
-                </mdb-col>
-                <mdb-col xl="10" md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">
-                    REST architecture, GraphQL
-                  </h5>
-                </mdb-col>
-              </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
+              <mdb-row class="mb-3">
                 <mdb-col size="1">
                   <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
                 </mdb-col>
@@ -157,7 +78,7 @@
                   </h5>
                 </mdb-col>
               </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
+              <mdb-row class="mb-3">
                 <mdb-col size="1">
                   <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
                 </mdb-col>
@@ -167,7 +88,7 @@
                   </h5>
                 </mdb-col>
               </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
+              <mdb-row class="mb-3">
                 <mdb-col size="1">
                   <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
                 </mdb-col>
@@ -177,7 +98,7 @@
                   </h5>
                 </mdb-col>
               </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
+              <mdb-row class="mb-3">
                 <mdb-col size="1">
                   <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
                 </mdb-col>
@@ -187,12 +108,72 @@
                   </h5>
                 </mdb-col>
               </mdb-row>
+              <mdb-row class="mb-3 animated fadeInRight">
+                <mdb-col size="1">
+                  <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
+                </mdb-col>
+                <mdb-col xl="10" md="11" size="10">
+                  <h5 class="font-weight-bold mb-3">
+                    Node.js skills:
+                  </h5>
+                </mdb-col>
+              </mdb-row>
+              <mdb-row class="mb-3">
+                <mdb-col size="1">
+                  <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
+                </mdb-col>
+                <mdb-col xl="10" md="11" size="10">
+                  <h5 class="font-weight-bold mb-3">
+                    NPM, YARN
+                  </h5>
+                </mdb-col>
+              </mdb-row>
+              <mdb-row class="mb-3">
+                <mdb-col size="1">
+                  <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
+                </mdb-col>
+                <mdb-col xl="10" md="11" size="10">
+                  <h5 class="font-weight-bold mb-3">
+                    Express.js
+                  </h5>
+                </mdb-col>
+              </mdb-row>
+              <mdb-row class="mb-3">
+                <mdb-col size="1">
+                  <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
+                </mdb-col>
+                <mdb-col xl="10" md="11" size="10">
+                  <h5 class="font-weight-bold mb-3">
+                    MySQL, PostgreSQL
+                  </h5>
+                </mdb-col>
+              </mdb-row>
+              <mdb-row class="mb-3">
+                <mdb-col size="1">
+                  <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
+                </mdb-col>
+                <mdb-col xl="10" md="11" size="10">
+                  <h5 class="font-weight-bold mb-3">
+                    Sequelize
+                  </h5>
+                </mdb-col>
+              </mdb-row>
+              <mdb-row class="mb-3">
+                <mdb-col size="1">
+                  <mdb-icon icon="share" size="lg" class="mb-3 mt-3" />
+                </mdb-col>
+                <mdb-col xl="10" md="11" size="10">
+                  <h5 class="font-weight-bold mb-3">
+                    REST architecture, GraphQL
+                  </h5>
+                </mdb-col>
+              </mdb-row>
             </mdb-col>
           </mdb-row>
         </section>
       </mdb-container>
 
-      <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5">
+      <hr color="white" class="my-5">
 
       <mdb-container class="max">
         <section class="text-center my-5">
@@ -231,7 +212,7 @@
       <a
         id="back-to-top"
         href="#"
-        class="sticky btn back-to-top"
+        class="sticky back-to-top textColor"
       >
         <mdb-icon icon="angle-double-up" class="fa-3x" />
       </a>

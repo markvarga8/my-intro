@@ -1,8 +1,13 @@
 <template>
   <div class="home">
     <mdb-row class="page row">
-      <mdb-col md="6" xs="12" class="container half-page column animated fadeInLeft">
-        <h1 class="heading display-3">
+      <mdb-col
+        md="6"
+        xs="12"
+        class="container half-page column"
+        data-aos="fade-down-right"
+        data-aos-duration="2200">
+        <h1 class="heading display-3 heading-animation">
           {{ $t('name') }}
         </h1>
         <h2 class="pb-5 subheading font-weight-bold">
@@ -12,26 +17,32 @@
         <mdb-icon icon="angle-double-down" class="icolor bottom-right animated bounce infinite fa-3x" />
         <mdb-icon icon="angle-double-down" class="icolor bottom-center animated bounce infinite fa-3x" />
       </mdb-col>
-      <mdb-col class="column" md="6" xs="12">
+      <mdb-col
+        class="column"
+        md="6"
+        xs="0"
+        data-aos="fade-down-left"
+        data-aos-duration="2200">
         <mdb-view>
-          <img class="image animated fadeInDown" src="../assets/images/background2.jpg">
-          <mdb-mask flex-center class="hm-gradient" />
+          <img class="image" src="../assets/images/background2.jpg">
         </mdb-view>
       </mdb-col>
     </mdb-row>
 
+    <div class="parallax" />
+
     <mdb-container>
       <mdb-container class="max">
         <section>
-          <h2 v-animateOnScroll="{animation: 'bounceInDown'}" class="h1-responsive font-weight-bold text-center my-5">
+          <h2 class="h1-responsive font-weight-bold text-center my-5">
             {{ $t('help') }}
           </h2>
-          <p v-animateOnScroll="{animation: 'bounceInDown'}" class="textColor lead w-responsive text-center mx-auto mb-5">
+          <p class="textColor lead w-responsive text-center mx-auto mb-5">
             {{ $t('intro') }}
           </p>
           <mdb-row>
             <mdb-col md="4">
-              <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
+              <mdb-row class="mb-3">
                 <mdb-col class="iconMargin" size="3">
                   <mdb-icon icon="flag-checkered" size="2x" />
                 </mdb-col>
@@ -44,7 +55,7 @@
                   </p>
                 </mdb-col>
               </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInLeft'}" class="mb-3">
+              <mdb-row class="mb-3">
                 <mdb-col class="iconMargin" size="3">
                   <mdb-icon icon="flask" size="2x" />
                 </mdb-col>
@@ -59,10 +70,10 @@
               </mdb-row>
             </mdb-col>
             <mdb-col md="4" class="text-name imageMargin">
-              <img v-animateOnScroll="{animation: 'bounceInDown'}" class="phone img-fluid" src="../assets/images/iphone.png" alt="Sample image">
+              <img class="phone img-fluid" src="../assets/images/iphone.png" alt="Sample image">
             </mdb-col>
             <mdb-col md="4">
-              <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
+              <mdb-row class="mb-3">
                 <mdb-col class="iconMargin" size="2">
                   <mdb-icon icon="magic" size="2x" />
                 </mdb-col>
@@ -75,7 +86,7 @@
                   </p>
                 </mdb-col>
               </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
+              <mdb-row class="mb-3">
                 <mdb-col class="iconMargin" size="2">
                   <mdb-icon icon="mobile-alt" size="2x" />
                 </mdb-col>
@@ -88,33 +99,20 @@
                   </p>
                 </mdb-col>
               </mdb-row>
-              <mdb-row v-animateOnScroll="{animation: 'bounceInRight'}" class="mb-3">
-                <mdb-col class="iconMargin" size="2">
-                  <mdb-icon icon="align-justify" size="2x" />
-                </mdb-col>
-                <mdb-col size="10">
-                  <h5 class="font-weight-bold mb-3">
-                    {{ $t('contentManagment') }}
-                  </h5>
-                  <p class="textColor">
-                    {{ $t('content5') }}
-                  </p>
-                </mdb-col>
-              </mdb-row>
             </mdb-col>
           </mdb-row>
         </section>
       </mdb-container>
 
-      <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5">
+      <hr color="white" class="my-5">
 
       <mdb-container class="max">
         <section class="my-5">
-          <h2 v-animateOnScroll="{animation: 'bounceInDown'}" class="servMargin h1-responsive font-weight-bold text-center my-5">
+          <h2 class="servMargin h1-responsive font-weight-bold text-center my-5">
             {{ $t('serv') }}
           </h2>
           <mdb-row class="skills">
-            <mdb-col v-animateOnScroll="{animation: 'bounceInLeft'}" md="6" class="md-0 mb-5">
+            <mdb-col md="6" class="md-0 mb-5">
               <mdb-row>
                 <mdb-col lg="2" md="3" size="2">
                   <mdb-icon icon="user" size="2x" />
@@ -126,13 +124,13 @@
                   <p class="textColor">
                     {{ $t('entreContent') }}
                   </p>
-                  <mdb-btn color="lily" size="sm" @click.native="entrepeneur = true">
+                  <button class="btn btn--white btn--animated" @click="entrepeneur = true">
                     {{ $t('welcome') }}
-                  </mdb-btn>
+                  </button>
                 </mdb-col>
               </mdb-row>
             </mdb-col>
-            <mdb-col v-animateOnScroll="{animation: 'bounceInRight'}" md="6" class="md-0 mb-5">
+            <mdb-col md="6" class="md-0 mb-5">
               <mdb-row>
                 <mdb-col lg="2" md="3" size="2">
                   <mdb-icon icon="tachometer-alt" size="2x" />
@@ -144,9 +142,9 @@
                   <p class="textColor">
                     {{ $t('indiContent') }}
                   </p>
-                  <mdb-btn color="lily" size="sm" @click.native="individual = true">
+                  <button class="btn btn--white btn--animated" @click="individual = true">
                     {{ $t('welcome') }}
-                  </mdb-btn>
+                  </button>
                 </mdb-col>
               </mdb-row>
             </mdb-col>
@@ -154,7 +152,7 @@
         </section>
       </mdb-container>
 
-      <hr v-animateOnScroll="{animation: 'bounceInDown'}" color="lily" class="my-5">
+      <hr color="white" class="my-5">
 
       <mdb-container class="max">
         <section class="text-center my-5">
@@ -216,7 +214,7 @@
           @close="entrepeneur = false"
         >
           <mdb-modal-header class="headerColor">
-            <p class="heading">
+            <p class="modalHeading">
               {{ $t('skillsTitle2') }}
             </p>
           </mdb-modal-header>
@@ -225,19 +223,19 @@
               <mdb-column col="5">
                 <img src="../assets/images/hand.jpg" class="img-fluid" alt="">
               </mdb-column>
-              <mdb-column col="7">
-                <p>
+              <mdb-column class="mt-2" col="7">
+                <p style="color: black">
                   {{ $t('entrepreneurIntro') }}
                 </p>
                 <a href="/about">
-                  <mdb-btn color="lily">
+                  <button class="btn btn--white btn--animated">
                     {{ $t('about') }}
-                  </mdb-btn>
+                  </button>
                 </a>
                 <a href="/portfolio">
-                  <mdb-btn color="lily">
+                  <button class="btn btn--white btn--animated">
                     {{ $t('portfolio') }}
-                  </mdb-btn>
+                  </button>
                 </a>
               </mdb-column>
             </mdb-row>
@@ -251,7 +249,7 @@
           @close="individual = false"
         >
           <mdb-modal-header class="headerColor">
-            <p class="heading">
+            <p class="modalHeading">
               {{ $t('skillsTitle1') }}
             </p>
           </mdb-modal-header>
@@ -260,19 +258,19 @@
               <mdb-column col="5">
                 <img src="../assets/images/company.jpg" class="img-fluid" alt="Baloon floating in Mind-Space">
               </mdb-column>
-              <mdb-column col="7">
-                <p>
+              <mdb-column class="mt-2" col="7">
+                <p style="color: black">
                   {{ $t('individualIntro') }}
                 </p>
                 <a href="/about">
-                  <mdb-btn color="lily">
+                  <button class="btn btn--white btn--animated">
                     {{ $t('about') }}
-                  </mdb-btn>
+                  </button>
                 </a>
                 <a href="/portfolio">
-                  <mdb-btn color="lily">
+                  <button class="btn btn--white btn--animated">
                     {{ $t('portfolio') }}
-                  </mdb-btn>
+                  </button>
                 </a>
               </mdb-column>
             </mdb-row>
@@ -282,7 +280,7 @@
       <a
         id="back-to-top"
         href="#"
-        class="sticky btn back-to-top textC"
+        class="sticky back-to-top textColor"
       >
         <mdb-icon icon="angle-double-up" class="fa-3x" />
       </a>
@@ -291,7 +289,7 @@
 </template>
 
 <script>
-import { mdbContainer, mdbIcon, mdbModal, mdbModalHeader, mdbModalBody, mdbBtn, mdbCol, mdbRow, mdbView, mdbMask, animateOnScroll, mdbCard } from 'mdbvue'
+import { mdbContainer, mdbIcon, mdbModal, mdbModalHeader, mdbModalBody, mdbCol, mdbRow, mdbView, animateOnScroll, mdbCard } from 'mdbvue'
 import { mapState } from 'vuex'
 
 export default {
@@ -299,11 +297,9 @@ export default {
     mdbModal,
     mdbModalHeader,
     mdbModalBody,
-    mdbBtn,
     mdbCol,
     mdbRow,
     mdbView,
-    mdbMask,
     mdbIcon,
     mdbContainer,
     mdbCard

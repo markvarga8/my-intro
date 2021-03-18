@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <mdb-footer color="stylish-color-dark" class="font-small pt-4 mt-4">
+    <mdb-footer class="font-small pt-4 mt-4">
       <mdb-container class="text-center text-md-left">
         <mdb-row class="text-center text-md-left mt-3 pb-3">
           <mdb-col md="3" lg="3" xl="3" class="mx-auto mt-3">
@@ -62,12 +62,16 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
   .footer {
-    background: white;
+    background-color: white;
     -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
     clip-path: polygon(1% 0, 100% 15%, 100% 100%, 0% 100%);
     color: black;
+
+    .page-footer {
+      color: black;
+    }
   }
 
   .mt-4 {
@@ -95,9 +99,7 @@ export default {
   }
 
   .stylish-color-dark {
-    background: #eacda3;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #d6ae7b, #eacda3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: white;
     color: black !important;
   }
 

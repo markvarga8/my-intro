@@ -45,6 +45,20 @@ body {
   background-size: cover;
 }
 
+.parallaxAbout {
+  /* The image used */
+  background-image: url("~assets/images/parallax-about.jpg");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .btn {
   &,
   &:link,
@@ -160,6 +174,10 @@ body {
 
 .headerColor {
   background: white;
+}
+
+.card {
+  border: 1px solid white;
 }
 
 .card-image-entrepeneurr {
