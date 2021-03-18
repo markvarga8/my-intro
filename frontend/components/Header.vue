@@ -198,6 +198,10 @@ export default {
       color: black;
     }
 
+    .navbar.navbar-dark .navbar-toggler {
+      background-color: black;
+    }
+
     @media screen and (max-width: 1800px) {
       .menu {
         font-size: 0.9rem;
@@ -207,11 +211,10 @@ export default {
     @media screen and (max-width: 1350px) {
        .navbar {
         text-align: center;
+        clip-path: polygon(0 0, 100% 0%, 99% 100%, 0 98%);
       }
       .navbar:not(.top-nav-collapse) {
-        background: #eacda3;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #d6ae7b, #eacda3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: white;
       }
 
       .navbar.scrolling-navbar {
@@ -226,14 +229,10 @@ export default {
 
       .navbar {
         text-align: center;
-        background: #eacda3;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #d6ae7b, #eacda3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: white;
       }
       .navbar:not(.top-nav-collapse) {
-        background: #eacda3;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #d6ae7b, #eacda3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: white;
       }
 
       .borderBottom {

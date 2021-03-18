@@ -1,372 +1,103 @@
 <template>
-  <div class="portfolio">
-    <mdb-container class="rowwww">
-      <section class="my-5">
-        <mdb-row class="max">
-          <mdb-col lg="12" class="mb-lg-0 mb-5">
-            <h3 class="mb-3 text-center">
-              {{ $t('notList') }}
-            </h3>
-            <hr color="white" class="my-5">
+  <div class="">
+    <div class="parallaxContact" />
+    <!-- <mdb-container>
+      <section class="rowww my-5 mt-5">
+        <mdb-row class="border text-center animated fadeInLeft">
+          <mdb-col lg="12" class="m-1">
+            <h4>
+              {{ $t('interest') }}
+            </h4>
+            <mdb-icon icon="envelope" class="fa-3x mt-3" />
+            <p class="mt-3">
+              markweb.varga@gmail.com
+            </p>
           </mdb-col>
         </mdb-row>
-        <mdb-row class="max">
-          <mdb-col lg="5" class="mb-lg-0 mb-5">
-            <h2 class="mb-3">
-              {{ $t('inflation') }}
-            </h2>
-            <hr color="white" class="my-5">
-            <img src="~assets/images/inflation.jpg" alt="Sample project image" class="imgHeight img-fluid rounded z-depth-1">
+        <mdb-row class="border text-center m-5 animated fadeInRight">
+          <mdb-col lg="12" class="m-1">
+            <h4>
+              {{ $t('social') }}
+            </h4>
+            <a href="https://www.facebook.com/vargabeni69/">
+              <mdb-icon fab icon="facebook-f" class="fa-3x mr-4 mt-3" />
+            </a>
+            <a href="https://www.linkedin.com/in/varga-mark-61796a197/">
+              <mdb-icon fab icon="linkedin" class="fa-3x" />
+            </a>
           </mdb-col>
-          <mdb-col lg="7">
-            <mdb-row class="mb-3">
-              <mdb-col md="1" size="2">
-                <mdb-icon icon="code" size="2x" />
-              </mdb-col>
-              <mdb-col md="11" size="10">
-                <h5 class="font-weight-bold mb-3">
-                  {{ $t('tech') }}
-                </h5>
-                <h5 class="textColor">
-                  Vue.js, Vuex, Bootstrap-Vue, Git, NPM, Express.js, MySQL, Sequelize, API development, REST, MVC
-                </h5>
-              </mdb-col>
-            </mdb-row>
-            <mdb-row class="mb-3">
-              <mdb-col md="1" size="2">
-                <mdb-icon icon="stream" size="2x" />
-              </mdb-col>
-              <mdb-col md="11" size="10">
-                <h5 class="font-weight-bold mb-3">
-                  {{ $t('description') }}
-                </h5>
-                <p class="textColor">
-                  {{ $t('inflationContent') }}
-                </p>
-              </mdb-col>
-            </mdb-row>
-            <mdb-row class="mb-3">
-              <mdb-col md="1" size="2">
-                <mdb-icon icon="link" size="2x" />
-              </mdb-col>
-              <mdb-col md="11" size="10">
-                <h5 class="font-weight-bold mb-3">
-                  Link
-                </h5>
-                <a href="https://github.com/fst02/Personal-Inflation-Calculator"><button class="btn btn--white btn--animated">
-                  {{ $t('here') }}
-                </button></a>
+        </mdb-row>
+        <mdb-row class="text-center m-5 animated fadeInLeft">
+          <mdb-col lg="12">
+            <h4 class="mb-3">
+              {{ $t('future') }}
+            </h4>
+            <div id="map-container" class="rounded z-depth-1-half map-container" style="height: 400px">
+              <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Budapest+(My%20Business%20Name)&amp;t=&amp;z=9&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="100%" frameBorder="0" style="border: 0" />
+            </div>
+            <br>
+            <mdb-row class="text-center">
+              <mdb-col md="12">
+                <mdb-icon icon="map-marker" class="fa-2x" />
+                <p>Budapest</p>
               </mdb-col>
             </mdb-row>
           </mdb-col>
         </mdb-row>
-        <hr color="white" class="my-5">
-        <mdb-row class="max">
-          <mdb-col lg="7">
-            <h2 class="mb-3">
-              Leader Board - SPA
-            </h2>
-            <hr color="white" class="my-5">
-            <mdb-row class="mb-3">
-              <mdb-col md="1" size="2">
-                <mdb-icon icon="code" size="2x" />
-              </mdb-col>
-              <mdb-col md="11" size="10">
-                <h5 class="font-weight-bold mb-3">
-                  {{ $t('tech') }}
-                </h5>
-                <h5 class="textColor">
-                  Vue.js, Vuex, Bootstrap-Vue, Git, NPM, Express.js, MySQL, Sequelize, API development, REST, MVC
-                </h5>
-              </mdb-col>
-            </mdb-row>
-            <mdb-row class="mb-3">
-              <mdb-col md="1" size="2">
-                <mdb-icon icon="stream" size="2x" />
-              </mdb-col>
-              <mdb-col md="11" size="10">
-                <h5 class="font-weight-bold mb-3">
-                  {{ $t('description') }}
-                </h5>
-                <p class="textColor">
-                  {{ $t('leaderboard') }}
-                </p>
-              </mdb-col>
-            </mdb-row>
-            <mdb-row class="mb-3">
-              <mdb-col md="1" size="2">
-                <mdb-icon icon="link" size="2x" />
-              </mdb-col>
-              <mdb-col md="11" size="10">
-                <h5 class="font-weight-bold mb-3">
-                  Link
-                </h5>
-                <a href="https://github.com/fst02/leaderboard-spa"><button class="btn btn--white btn--animated">
-                  {{ $t('here') }}
-                </button></a>
-              </mdb-col>
-            </mdb-row>
-          </mdb-col>
-          <mdb-col lg="5">
-            <img src="~assets/images/leaderboard.jpg" alt="Sample project image" class="imgHeight img-fluid rounded z-depth-1">
-          </mdb-col>
-        </mdb-row>
-        <hr color="white" class="my-5">
-        <mdb-container>
-          <mdb-row class="max">
-            <mdb-col lg="5" class="mb-lg-0 mb-5">
-              <h2 class="mb-3">
-                Introduction
-              </h2>
-              <hr color="white" class="my-5">
-              <img src="~assets/images/introduction.png" alt="Sample project image" class="imgHeight img-fluid rounded z-depth-1">
-            </mdb-col>
-            <mdb-col lg="7">
-              <mdb-row class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="code" size="2x" />
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">
-                    {{ $t('tech') }}
-                  </h5>
-                  <h5 class="textColor">
-                    Nuxt.js, Vuex, Bootstrap-Vue, Git, npm, Express.js, MySQL, Sequelize, API development, REST, MVC
-                  </h5>
-                </mdb-col>
-              </mdb-row>
-              <mdb-row class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="link" size="2x" />
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">
-                    Link
-                  </h5>
-                  <a href="https://github.com/ben1998deguz/my-intro"><button class="btn btn--white btn--animated">
-                    {{ $t('here') }}
-                  </button></a>
-                </mdb-col>
-              </mdb-row>
-            </mdb-col>
-          </mdb-row>
-          <hr color="white" class="my-5">
-          <mdb-row class="max">
-            <mdb-col lg="7">
-              <h2 class="mb-3">
-                Coffee website
-              </h2>
-              <hr color="white" class="my-5">
-              <mdb-row class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="code" size="2x" />
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">
-                    {{ $t('tech') }}
-                  </h5>
-                  <h5 class="textColor">
-                    HTML5, CSS3, JavaScript, Bootstrap, Jquery, Git
-                  </h5>
-                </mdb-col>
-              </mdb-row>
-              <mdb-row class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="link" size="2x" />
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">
-                    Link
-                  </h5>
-                  <a href="https://github.com/ben1998deguz/coffee"><button class="btn btn--white btn--animated">
-                    {{ $t('here') }}</button></a>
-                </mdb-col>
-              </mdb-row>
-            </mdb-col>
-            <mdb-col lg="5">
-              <img src="~assets/images/2.png" alt="Sample project image" class="imgHeight img-fluid rounded z-depth-1">
-            </mdb-col>
-          </mdb-row>
-          <hr color="white" class="my-5">
-          <mdb-row class="max">
-            <mdb-col lg="5" class="mb-lg-0 mb-5">
-              <h2 class="mb-3">
-                Hangman
-              </h2>
-              <hr color="white" class="my-5">
-              <img src="~assets/images/hangman.jpg" alt="Sample project image" class="imgHeight img-fluid rounded z-depth-1">
-            </mdb-col>
-            <mdb-col lg="7">
-              <mdb-row class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="code" size="2x" />
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">
-                    {{ $t('tech') }}
-                  </h5>
-                  <h5 class="textColor">
-                    HTML, CSS, JavaScript, Bootstrap, API development, Git
-                  </h5>
-                </mdb-col>
-              </mdb-row>
-              <mdb-row class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="link" size="2x" />
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">
-                    Link
-                  </h5>
-                  <a href="https://github.com/fst02/hangman"><button class="btn btn--white btn--animated">
-                    {{ $t('here') }}
-                  </button></a>
-                </mdb-col>
-              </mdb-row>
-            </mdb-col>
-          </mdb-row>
-          <hr color="white" class="my-5">
-          <mdb-row class="max">
-            <mdb-col lg="7">
-              <h2 class="mb-3">
-                Tetris
-              </h2>
-              <hr color="white" class="my-5">
-              <mdb-row class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="code" size="2x" />
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">
-                    {{ $t('tech') }}
-                  </h5>
-                  <h5 class="textColor">
-                    HTML, CSS, JavaScript, Bootstrap, API development, Git
-                  </h5>
-                </mdb-col>
-              </mdb-row>
-              <mdb-row class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="link" size="2x" />
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">
-                    Link
-                  </h5>
-                  <a href="https://github.com/fst02/tetris"><button class="btn btn--white btn--animated">
-                    {{ $t('here') }}
-                  </button></a>
-                </mdb-col>
-              </mdb-row>
-            </mdb-col>
-            <mdb-col lg="5">
-              <img src="~assets/images/Tetris.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1">
-            </mdb-col>
-          </mdb-row>
-          <hr color="white" class="my-5">
-          <mdb-row class="max">
-            <mdb-col lg="5" class="mb-lg-0 mb-5">
-              <h2 class="mb-3">
-                Mario
-              </h2>
-              <hr color="lily" class="my-5">
-              <img src="~assets/images/mario.jpg" alt="Sample project image" class="imgHeight img-fluid rounded z-depth-1">
-            </mdb-col>
-            <mdb-col lg="7">
-              <mdb-row class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="code" size="2x" />
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">
-                    {{ $t('tech') }}
-                  </h5>
-                  <h5 class="textColor">
-                    HTML, CSS, JavaScript, Bootstrap, API development, Git
-                  </h5>
-                </mdb-col>
-              </mdb-row>
-              <mdb-row class="mb-3">
-                <mdb-col md="1" size="2">
-                  <mdb-icon icon="link" size="2x" />
-                </mdb-col>
-                <mdb-col md="11" size="10">
-                  <h5 class="font-weight-bold mb-3">
-                    Link
-                  </h5>
-                  <a href="https://github.com/fst02/mario"><button class="btn btn--white btn--animated">
-                    {{ $t('here') }}</button></a>
-                </mdb-col>
-              </mdb-row>
-            </mdb-col>
-          </mdb-row>
-          <hr color="white" class="my-5">
-
-          <mdb-container class="max">
-            <section class="text-center my-5">
-              <mdb-row>
-                <mdb-row class="intro">
-                  <mdb-col md="6" class="md-0 mb-4">
-                    <mdb-card class="card-image-entrepeneur">
-                      <a href="/about">
-                        <div class="hei text-white rgba-black-strong">
-                          <div>
-                            <h3 class="py-3 font-weight-bold">
-                              <strong class="titleSize">
-                                {{ $t('about') }}
-                              </strong>
-                            </h3>
-                          </div>
-                        </div>
-                      </a>
-                    </mdb-card>
-                  </mdb-col>
-                  <mdb-col md="6" class="md-0 mb-4">
-                    <mdb-card class="card-image-individual">
-                      <a href="/contacts">
-                        <div class="hei text-white rgba-black-strong">
-                          <div>
-                            <h3 class="py-3 font-weight-bold">
-                              <strong class="titleSize">
-                                {{ $t('contact') }}
-                              </strong>
-                            </h3>
-                          </div>
-                        </div>
-                      </a>
-                    </mdb-card>
-                  </mdb-col>
-                </mdb-row>
-              </mdb-row>
-            </section>
-          </mdb-container>
-        </mdb-container>
       </section>
-      <a
-        id="back-to-top"
-        href="#"
-        class="sticky back-to-top textColor"
-      >
-        <mdb-icon icon="angle-double-up" class="fa-3x" />
-      </a>
+    </mdb-container> -->
+    <mdb-container>
+      <section class="my-5">
+        <h2 class="h1-responsive font-weight-bold text-center my-5">{{ $t('contact') }}</h2>
+        <p class="text-center w-responsive mx-auto pb-5">{{ $t('interest') }}</p>
+        <mdb-row>
+          <mdb-col lg="12">
+            <div id="map-container" class="rounded z-depth-1-half map-container" style="height: 400px">
+              <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Budapest+(My%20Business%20Name)&amp;t=&amp;z=9&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="100%" frameBorder="0" style="border: 0" />
+            </div>
+            <br/>
+            <mdb-row class="text-center">
+              <mdb-col md="4">
+                <mdb-icon size="2x" class="mb-3" icon="map-marker"/>
+                <p>Budapest</p>
+              </mdb-col>
+              <mdb-col md="4">
+                <mdb-icon size="2x" class="mb-3" icon="phone"/>
+                <p>+ 36 30 517 54 22</p>
+                <p class="mb-md-0">{{ $t('days') }} 8:00-22:00</p>
+              </mdb-col>
+              <mdb-col md="4">
+                <mdb-icon size="2x" class="mb-3" icon="envelope"/>
+                <p>markweb.varga@gmail.com</p>
+              </mdb-col>
+            </mdb-row>
+            <mdb-row class="text-center mt-5">
+              <mdb-col lg="12" class="m-1">
+                <a href="https://www.facebook.com/vargabeni69/">
+                  <mdb-icon fab icon="facebook-f" class="fa-3x mr-4 mt-3" />
+                </a>
+                <a href="https://www.linkedin.com/in/varga-mark-61796a197/">
+                  <mdb-icon fab icon="linkedin" class="fa-3x" />
+                </a>
+              </mdb-col>
+            </mdb-row>
+          </mdb-col>
+        </mdb-row>
+      </section>
     </mdb-container>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
-import { mdbContainer, mdbRow, mdbCol, mdbIcon, animateOnScroll, mdbCard } from 'mdbvue'
+import { mdbContainer, mdbRow, mdbCol, mdbIcon } from 'mdbvue'
 
 export default {
   components: {
     mdbContainer,
     mdbRow,
     mdbCol,
-    mdbIcon,
-    mdbCard
-  },
-  directives: {
-    animateOnScroll
+    mdbIcon
   },
   computed: mapState({
     en: state => state.LangModule.en,
@@ -393,6 +124,3 @@ export default {
   }
 }
 </script>
-
-<style>
-</style>

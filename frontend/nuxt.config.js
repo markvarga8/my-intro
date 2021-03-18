@@ -72,7 +72,7 @@ export default {
           facebook: 'Search Facebook',
           linkedin: 'Search Linkedin',
           writeMessage: 'Or write a message here:',
-          contact: 'Contacts',
+          contact: 'Contact us',
           help: 'What can I help you?',
           intro: "I'm Mark Varga, a web developer. I design and build websites.",
           exp: 'Relevant experience',
@@ -101,13 +101,14 @@ export default {
           tech: 'Technology',
           description: 'Description',
           here: 'Let see!',
-          interest: 'If I convince You, I am waiting for your message to this email address:',
+          interest: 'If I convince You, I am waiting for your application at these contacts:',
           social: 'But you also find me on different social interfaces:',
           future: 'If you would like to discuss your future website with me in person:',
           leaderboard: 'A summary table of results that obtains data from multiple sources and in this way can dynamically provide users with up-to-date data.',
           reserve: 'All rights reserved!',
           portfolio: 'Portfolio',
-          notList: 'The list is not exhaustive!'
+          notList: 'The list is not exhaustive!',
+          days: 'Mon - Fri,'
         },
         hu: {
           welcome: 'Tovább',
@@ -158,13 +159,14 @@ export default {
           tech: 'Technológia',
           description: 'Leírás',
           here: 'Nézzük!',
-          interest: 'Ha sikerült meggyőznöm, akkor erre az email címre várom a jelentkezésed:',
+          interest: 'Ha sikerült meggyőznöm, akkor ezekre az elérhetőségekre várom a jelentkezésed:',
           social: 'De elérsz a különböző közösségi felületeken is:',
           future: 'Ha esetleg személyesen szeretnél velem tárgyalni leendő weboldaladról:',
           leaderboard: 'Egy eredményeket összefoglaló táblázat, amely több forrásból szerzi be az adatokat és így dinamikusan, friss adatokkal tudja ellátni a felhasználókat.',
           reserve: 'Minden jog fenntertva!',
           portfolio: 'Portfólió',
-          notList: 'A lista nem teljes!'
+          notList: 'A lista nem teljes!',
+          days: 'H - P,'
         }
       }
     }
