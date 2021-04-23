@@ -4,6 +4,7 @@ html {
 
 body {
   font-family: sans-serif;
+  overflow-x: hidden !important;
 }
 
 .max {
@@ -62,6 +63,20 @@ body {
 .parallaxContact {
   /* The image used */
   background-image: url("~assets/images/parallax-contact.jpg");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallaxPortfolio {
+  /* The image used */
+  background-image: url("~assets/images/parallax-portfolio.jpg");
 
   /* Set a specific height */
   min-height: 500px; 
@@ -303,7 +318,7 @@ body {
     padding-top: 20% !important;
   }
 
-  .image {
+  .image, .parallax, .parallaxAbout, .parallaxContact, .parallaxPortfolio {
     display: none !important;
   }
 

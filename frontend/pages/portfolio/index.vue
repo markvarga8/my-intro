@@ -1,5 +1,6 @@
 <template>
   <div class="portfolio">
+    <div class="parallaxPortfolio" />
     <mdb-container class="rowwww">
       <section class="my-5">
         <mdb-row class="max">

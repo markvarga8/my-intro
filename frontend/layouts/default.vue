@@ -14,7 +14,7 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
+  box-shadow: inset 0 0 5px white;
   border-radius: 10px;
 }
 
