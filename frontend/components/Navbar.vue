@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <!-- <div>
     <mdb-navbar class="navbar" position="top" dark href="/" scrolling>
       <mdb-navbar-brand>
         <a href="/" class="logo" />
@@ -18,11 +18,6 @@
               {{ $t('home') }}
             </mdb-button>
           </mdb-nav-item>
-          <!-- <mdb-nav-item class="menu borderBottom" href="/">
-            <mdb-button>
-              BLOG
-            </mdb-button>
-          </mdb-nav-item> -->
           <mdb-nav-item class="menu borderBottom" href="/about">
             <mdb-button>
               {{ $t('about') }}
@@ -77,22 +72,51 @@
         </mdb-navbar-nav>
       </mdb-navbar-toggler>
     </mdb-navbar>
+  </div> -->
+  <div>
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+    >
+      <!--  -->
+    </v-navigation-drawer>
+
+    <v-app-bar app>
+    <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+
+      <v-toolbar-title>Application</v-toolbar-title>
+
+      <v-select
+        v-model="select"
+        :hint="`${select.state}, ${select.abbr}`"
+        :items="items"
+        item-text="state"
+        item-value="abbr"
+        label="Select"
+        persistent-hint
+        return-object
+        single-line
+      />
+    </v-app-bar>
+
+    <v-main>
+      <!--  -->
+    </v-main>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
-import { mdbNavbar, mdbNavbarNav, mdbNavItem, mdbNavbarBrand, mdbNavbarToggler, mdbIcon } from 'mdbvue'
 
 export default {
-  components: {
-    mdbNavbar,
-    mdbNavbarNav,
-    mdbNavItem,
-    mdbNavbarBrand,
-    mdbNavbarToggler,
-    mdbIcon
-  },
+  data: () => ({
+    drawer: null,
+    select: { state: 'English', abbr: 'EN' },
+    items: [
+      { state: 'English', abbr: 'EN' },
+      { state: 'Magyar', abbr: 'HU' }
+    ]
+  }),
   computed: mapState({
     en: state => state.LangModule.en,
     hu: state => state.LangModule.hu

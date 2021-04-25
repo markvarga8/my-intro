@@ -1,9 +1,11 @@
 <template>
   <div class="appp">
     <!-- <VueScrollProgress></VueScrollProgress> -->
-    <Header />
-    <Nuxt />
-    <Footer />
+    <v-app>
+      <Navbar />
+      <Nuxt />
+      <Footer />
+    </v-app>
   </div>
 </template>
 
