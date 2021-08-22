@@ -1,30 +1,29 @@
 <template>
   <div class="home">
-    <mdb-row class="page row">
-      <mdb-col
-        md="6"
-        xs="12"
-        class="container half-page column"
-        data-aos="fade-down-right"
-        data-aos-duration="2200">
+    <mdb-row class="imageBackground">
+      <mdb-col md="6" xs="12" class="container half-page column">
         <h1 class="heading display-3 heading-animation">
-          {{ $t('name') }}
+          {{ $t("name") }}
         </h1>
-        <h2 class="pb-5 subheading font-weight-bold">
-          {{ $t('free') }}
+        <h2 class="subheading font-weight-bold">
+          {{ $t("free") }}
         </h2>
-        <mdb-icon icon="angle-double-down" class="icolor bottom-left animated bounce infinite fa-3x" />
-        <mdb-icon icon="angle-double-down" class="icolor bottom-right animated bounce infinite fa-3x" />
-        <mdb-icon icon="angle-double-down" class="icolor bottom-center animated bounce infinite fa-3x" />
+        <mdb-icon
+          icon="angle-double-down"
+          class="icolor bottom-left animated bounce infinite fa-3x arrows"
+        />
+        <mdb-icon
+          icon="angle-double-down"
+          class="icolor bottom-right animated bounce infinite fa-3x arrows"
+        />
+        <mdb-icon
+          icon="angle-double-down"
+          class="icolor bottom-center animated bounce infinite fa-3x arrows"
+        />
       </mdb-col>
-      <mdb-col
-        class="column"
-        md="6"
-        xs="0"
-        data-aos="fade-down-left"
-        data-aos-duration="2200">
+      <mdb-col class="column" md="6" xs="0">
         <mdb-view>
-          <img class="image" src="../assets/images/background2.jpg">
+          <img class="image" src="../assets/images/_MG_8787.jpg" />
         </mdb-view>
       </mdb-col>
     </mdb-row>
@@ -34,11 +33,13 @@
     <mdb-container>
       <mdb-container class="max">
         <section>
-          <h2 class="h1-responsive font-weight-bold text-center my-5">
-            {{ $t('help') }}
+          <h2
+            class="h1-responsive font-weight-bold text-center my-5 border-white"
+          >
+            {{ $t("help") }}
           </h2>
           <p class="textColor lead w-responsive text-center mx-auto mb-5">
-            {{ $t('intro') }}
+            {{ $t("intro") }}
           </p>
           <mdb-row>
             <mdb-col md="4">
@@ -48,10 +49,10 @@
                 </mdb-col>
                 <mdb-col size="10">
                   <h5 class="font-weight-bold mb-3">
-                    {{ $t('exp') }}
+                    {{ $t("exp") }}
                   </h5>
                   <p class="textColor">
-                    {{ $t('content1') }}
+                    {{ $t("content1") }}
                   </p>
                 </mdb-col>
               </mdb-row>
@@ -61,16 +62,20 @@
                 </mdb-col>
                 <mdb-col size="10">
                   <h5 class="font-weight-bold mb-3">
-                    {{ $t('agile') }}
+                    {{ $t("agile") }}
                   </h5>
                   <p class="textColor">
-                    {{ $t('content2') }}
+                    {{ $t("content2") }}
                   </p>
                 </mdb-col>
               </mdb-row>
             </mdb-col>
             <mdb-col md="4" class="text-name imageMargin">
-              <img class="phone img-fluid" src="../assets/images/iphone.png" alt="Sample image">
+              <img
+                class="phone img-fluid"
+                src="../assets/images/iphone.png"
+                alt="Sample image"
+              />
             </mdb-col>
             <mdb-col md="4">
               <mdb-row class="mb-3">
@@ -79,10 +84,10 @@
                 </mdb-col>
                 <mdb-col size="10">
                   <h5 class="font-weight-bold mb-3">
-                    {{ $t('website') }}
+                    {{ $t("website") }}
                   </h5>
                   <p class="textColor">
-                    {{ $t('content3') }}
+                    {{ $t("content3") }}
                   </p>
                 </mdb-col>
               </mdb-row>
@@ -92,10 +97,10 @@
                 </mdb-col>
                 <mdb-col size="10">
                   <h5 class="font-weight-bold mb-3">
-                    {{ $t('mobile') }}
+                    {{ $t("mobile") }}
                   </h5>
                   <p class="textColor">
-                    {{ $t('content4') }}
+                    {{ $t("content4") }}
                   </p>
                 </mdb-col>
               </mdb-row>
@@ -104,12 +109,14 @@
         </section>
       </mdb-container>
 
-      <hr color="white" class="my-5">
+      <hr color="white" class="my-5" />
 
       <mdb-container class="max">
         <section class="my-5">
-          <h2 class="servMargin h1-responsive font-weight-bold text-center my-5">
-            {{ $t('serv') }}
+          <h2
+            class="servMargin h1-responsive font-weight-bold text-center my-5 border-white"
+          >
+            {{ $t("serv") }}
           </h2>
           <mdb-row class="skills">
             <mdb-col md="6" class="md-0 mb-5">
@@ -119,13 +126,16 @@
                 </mdb-col>
                 <mdb-col lg="10" md="9" size="10">
                   <h4 class="font-weight-bold">
-                    {{ $t('skillsTitle1') }}
+                    {{ $t("skillsTitle1") }}
                   </h4>
                   <p class="textColor">
-                    {{ $t('entreContent') }}
+                    {{ $t("entreContent") }}
                   </p>
-                  <button class="btn btn--white btn--animated" @click="entrepeneur = true">
-                    {{ $t('welcome') }}
+                  <button
+                    class="btn btn--white btn--animated"
+                    @click="entrepeneur = true"
+                  >
+                    {{ $t("welcome") }}
                   </button>
                 </mdb-col>
               </mdb-row>
@@ -137,13 +147,16 @@
                 </mdb-col>
                 <mdb-col lg="10" md="9" size="10">
                   <h4 class="font-weight-bold">
-                    {{ $t('skillsTitle2') }}
+                    {{ $t("skillsTitle2") }}
                   </h4>
                   <p class="textColor">
-                    {{ $t('indiContent') }}
+                    {{ $t("indiContent") }}
                   </p>
-                  <button class="btn btn--white btn--animated" @click="individual = true">
-                    {{ $t('welcome') }}
+                  <button
+                    class="btn btn--white btn--animated"
+                    @click="individual = true"
+                  >
+                    {{ $t("welcome") }}
                   </button>
                 </mdb-col>
               </mdb-row>
@@ -152,20 +165,23 @@
         </section>
       </mdb-container>
 
-      <hr color="white" class="my-5">
+      <hr color="white" class="my-5" />
 
       <mdb-container class="max">
         <section class="text-center my-5">
           <mdb-row>
             <mdb-row class="intro">
               <mdb-col md="4" class="md-0 mb-4">
-                <mdb-card v-animateOnScroll="{animation: 'bounceInLeft'}" class="card-image-individuall">
+                <mdb-card
+                  v-animateOnScroll="{ animation: 'bounceInLeft' }"
+                  class="card-image-individuall"
+                >
                   <a href="/about">
                     <div class="text-white rgba-black-strong">
                       <div class="hei">
                         <h3 class="py-3 font-weight-bold">
                           <strong class="titleSize">
-                            {{ $t('about') }}
+                            {{ $t("about") }}
                           </strong>
                         </h3>
                       </div>
@@ -174,13 +190,16 @@
                 </mdb-card>
               </mdb-col>
               <mdb-col md="4" class="md-0 mb-4">
-                <mdb-card v-animateOnScroll="{animation: 'bounceInDown'}" class="card-image-entrepeneurr">
+                <mdb-card
+                  v-animateOnScroll="{ animation: 'bounceInDown' }"
+                  class="card-image-entrepeneurr"
+                >
                   <a href="/portfolio">
                     <div class="text-white rgba-black-strong">
                       <div class="hei">
                         <h3 class="py-3 font-weight-bold textC">
                           <strong class="titleSize">
-                            {{ $t('portfolio') }}
+                            {{ $t("portfolio") }}
                           </strong>
                         </h3>
                       </div>
@@ -189,13 +208,16 @@
                 </mdb-card>
               </mdb-col>
               <mdb-col md="4" class="md-0 mb-4">
-                <mdb-card v-animateOnScroll="{animation: 'bounceInRight'}" class="card-image-contact">
+                <mdb-card
+                  v-animateOnScroll="{ animation: 'bounceInRight' }"
+                  class="card-image-contact"
+                >
                   <a href="/contacts">
                     <div class="text-white rgba-black-strong">
                       <div class="hei">
                         <h3 class="py-3 font-weight-bold">
                           <strong class="titleSize">
-                            {{ $t('contact') }}
+                            {{ $t("contact") }}
                           </strong>
                         </h3>
                       </div>
@@ -209,32 +231,29 @@
       </mdb-container>
 
       <mdb-container>
-        <mdb-modal
-          :show="entrepeneur"
-          @close="entrepeneur = false"
-        >
+        <mdb-modal :show="entrepeneur" @close="entrepeneur = false">
           <mdb-modal-header class="headerColor">
             <p class="modalHeading">
-              {{ $t('skillsTitle2') }}
+              {{ $t("skillsTitle2") }}
             </p>
           </mdb-modal-header>
           <mdb-modal-body>
             <mdb-row class="imgCenter">
               <mdb-column col="5">
-                <img src="../assets/images/hand.jpg" class="img-fluid" alt="">
+                <img src="../assets/images/hand.jpg" class="img-fluid" alt="" />
               </mdb-column>
               <mdb-column class="mt-2" col="7">
                 <p style="color: black">
-                  {{ $t('entrepreneurIntro') }}
+                  {{ $t("entrepreneurIntro") }}
                 </p>
                 <a href="/about">
                   <button class="btn btn--white btn--animated">
-                    {{ $t('about') }}
+                    {{ $t("about") }}
                   </button>
                 </a>
                 <a href="/portfolio">
                   <button class="btn btn--white btn--animated">
-                    {{ $t('portfolio') }}
+                    {{ $t("portfolio") }}
                   </button>
                 </a>
               </mdb-column>
@@ -244,32 +263,33 @@
       </mdb-container>
 
       <mdb-container>
-        <mdb-modal
-          :show="individual"
-          @close="individual = false"
-        >
+        <mdb-modal :show="individual" @close="individual = false">
           <mdb-modal-header class="headerColor">
             <p class="modalHeading">
-              {{ $t('skillsTitle1') }}
+              {{ $t("skillsTitle1") }}
             </p>
           </mdb-modal-header>
           <mdb-modal-body>
             <mdb-row class="imgCenter">
               <mdb-column col="5">
-                <img src="../assets/images/company.jpg" class="img-fluid" alt="Baloon floating in Mind-Space">
+                <img
+                  src="../assets/images/company.jpg"
+                  class="img-fluid"
+                  alt="Baloon floating in Mind-Space"
+                />
               </mdb-column>
               <mdb-column class="mt-2" col="7">
                 <p style="color: black">
-                  {{ $t('individualIntro') }}
+                  {{ $t("individualIntro") }}
                 </p>
                 <a href="/about">
                   <button class="btn btn--white btn--animated">
-                    {{ $t('about') }}
+                    {{ $t("about") }}
                   </button>
                 </a>
                 <a href="/portfolio">
                   <button class="btn btn--white btn--animated">
-                    {{ $t('portfolio') }}
+                    {{ $t("portfolio") }}
                   </button>
                 </a>
               </mdb-column>
@@ -277,11 +297,7 @@
           </mdb-modal-body>
         </mdb-modal>
       </mdb-container>
-      <a
-        id="back-to-top"
-        href="#"
-        class="sticky back-to-top textColor"
-      >
+      <a id="back-to-top" href="#" class="sticky back-to-top textColor">
         <mdb-icon icon="angle-double-up" class="fa-3x" />
       </a>
     </mdb-container>
@@ -289,8 +305,19 @@
 </template>
 
 <script>
-import { mdbContainer, mdbIcon, mdbModal, mdbModalHeader, mdbModalBody, mdbCol, mdbRow, mdbView, animateOnScroll, mdbCard } from 'mdbvue'
-import { mapState } from 'vuex'
+import {
+  mdbContainer,
+  mdbIcon,
+  mdbModal,
+  mdbModalHeader,
+  mdbModalBody,
+  mdbCol,
+  mdbRow,
+  mdbView,
+  animateOnScroll,
+  mdbCard
+} from "mdbvue";
+import { mapState } from "vuex";
 
 export default {
   components: {
@@ -318,35 +345,32 @@ export default {
     en: state => state.LangModule.en,
     hu: state => state.LangModule.hu
   }),
-  created () {
+  created() {
     if (!this.en) {
-      this.$i18n.locale = 'hu'
+      this.$i18n.locale = "hu";
     } else {
-      this.$i18n.locale = 'en'
+      this.$i18n.locale = "en";
     }
   },
   methods: {
-    start () {
-      this.loading = true
+    start() {
+      this.loading = true;
     },
-    finish () {
-      this.loading = false
+    finish() {
+      this.loading = false;
     }
   },
-  head () {
+  head() {
     return {
-      title: 'Mark Varga',
+      title: "Mark Varga",
       meta: [
         {
-          hid: 'home',
-          name: 'home',
-          content: 'introduction mark varga'
+          hid: "home",
+          name: "home",
+          content: "introduction mark varga"
         }
       ]
-    }
+    };
   }
-}
+};
 </script>
-
-<style>
-</style>

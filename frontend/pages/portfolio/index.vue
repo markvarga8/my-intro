@@ -144,7 +144,7 @@
                   <h5 class="font-weight-bold mb-3">
                     Link
                   </h5>
-                  <a href="https://github.com/ben1998deguz/my-intro"><button class="btn btn--white btn--animated">
+                  <a href="https://github.com/markvarga8/my-intro"><button class="btn btn--white btn--animated">
                     {{ $t('here') }}
                   </button></a>
                 </mdb-col>
@@ -179,7 +179,7 @@
                   <h5 class="font-weight-bold mb-3">
                     Link
                   </h5>
-                  <a href="https://github.com/ben1998deguz/coffee"><button class="btn btn--white btn--animated">
+                  <a href="https://github.com/markvarga8/coffee"><button class="btn btn--white btn--animated">
                     {{ $t('here') }}</button></a>
                 </mdb-col>
               </mdb-row>
