@@ -55,10 +55,6 @@ export default {
       ssr: false,
       injectAs: "cookie",
     },
-    {
-      src: "~/plugins/aos",
-      ssr: false,
-    },
   ],
 
   components: true,
