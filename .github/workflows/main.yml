@@ -10,12 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@main
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+        uses: actions/checkout@master
+      - name: set directory
+        working-directory: ./frontend
+      - name: Use Node.js 16
+        uses: actions/setup-node@v2
         with:
-          node-version: 16
-          cache: 'npm'
+          node-version: '16'
       - name: Install dependencies
         run: npm install
       - name: Build dependencies
