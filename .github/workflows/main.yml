@@ -11,8 +11,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@master
-      - name: set directory
-        working-directory: ./frontend
       - name: Use Node.js 16
         uses: actions/setup-node@v2
         with:
