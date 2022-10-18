@@ -61,8 +61,8 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
-import { mdbContainer, mdbRow, mdbCol, mdbIcon } from "mdbvue";
+import { mapState } from 'vuex'
+import { mdbContainer, mdbRow, mdbCol, mdbIcon } from 'mdbvue'
 
 export default {
   components: {
@@ -75,24 +75,24 @@ export default {
     en: state => state.LangModule.en,
     hu: state => state.LangModule.hu
   }),
-  created() {
+  created () {
     if (!this.en) {
-      this.$i18n.locale = "hu";
+      this.$i18n.locale = 'hu'
     } else {
-      this.$i18n.locale = "en";
+      this.$i18n.locale = 'en'
     }
   },
-  head() {
+  head () {
     return {
-      title: "Mark Varga",
+      title: 'Mark Varga',
       meta: [
         {
-          hid: "home",
-          name: "home",
-          content: "introduction mark varga"
+          hid: 'home',
+          name: 'home',
+          content: 'introduction mark varga'
         }
       ]
-    };
+    }
   }
-};
+}
 </script>

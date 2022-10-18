@@ -90,7 +90,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState } from 'vuex'
 import {
   mdbNavbar,
   mdbNavbarNav,
@@ -98,7 +98,7 @@ import {
   mdbNavbarBrand,
   mdbNavbarToggler,
   mdbIcon
-} from "mdbvue";
+} from 'mdbvue'
 
 export default {
   components: {
@@ -114,16 +114,16 @@ export default {
     hu: state => state.LangModule.hu
   }),
   methods: {
-    translateEn(app) {
-      this.$store.dispatch("LangModule/en");
-      this.$cookie.set("leng", "en", { expires: "6h" });
+    translateEn (app) {
+      this.$store.dispatch('LangModule/en')
+      this.$cookie.set('leng', 'en', { expires: '6h' })
     },
-    translateHu() {
-      this.$store.dispatch("LangModule/hu");
-      this.$cookie.set("leng", "hu", { expires: "6h" });
+    translateHu () {
+      this.$store.dispatch('LangModule/hu')
+      this.$cookie.set('leng', 'hu', { expires: '6h' })
     }
   }
-};
+}
 </script>
 
 <style>

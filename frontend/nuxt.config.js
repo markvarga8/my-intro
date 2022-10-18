@@ -57,6 +57,9 @@ export default {
     {
       src: '~/plugins/aos',
       ssr: false
+    },
+    {
+      src: '~/plugins/firebase'
     }
   ],
 
@@ -74,7 +77,8 @@ export default {
     ],
     '@nuxtjs/axios',
     'mdbvue/nuxt',
-    'nuxt-i18n'
+    'nuxt-i18n',
+    'vue2-editor/nuxt'
   ],
   i18n: {
     locales: ['en', 'hu'],

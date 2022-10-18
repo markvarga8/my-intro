@@ -5,9 +5,53 @@
         <h1 class="heading display-3 heading-animation">
           {{ $t("name") }}
         </h1>
-        <h2 class="subheading font-weight-bold">
+        <h2 class="'ubheading'font-weight-bold">
           {{ $t("free") }}
         </h2>
+        <!-- <mdb-container>
+          <mdb-row>
+            <mdb-col v-for="(post,i) in posts" :key="i" sm="6">
+              <mdb-card class="card-image mt-5" :style="{'background-image': `url(${post.image})`}">
+                <div class="text-white text-center d-flex align-items-center rgba-indigo-strong py-5 px-4">
+                  <div>
+                    <h5 class="orange-text">
+                      <mdb-icon icon="desktop" /> Blog</h5>
+                    <mdb-card-title tag="h3" class="pt-2"><strong>{{ post.title }}</strong></mdb-card-title>
+                    <p v-html="post.content" />
+                    <mdb-btn color="deep-orange"><mdb-icon icon="clone left" /> View Article</mdb-btn>
+                  </div>
+                </div>
+              </mdb-card>
+            </mdb-col>
+          </mdb-row>
+        </mdb-container> -->
+
+        <mdb-carousel
+          :items="9"
+          multi
+          indicators
+          controlls
+          slide
+          :interval="4000"
+        >
+          <template #[i+1] v-for="(post, i) in basic">
+            <mdb-card :key="i">
+              <mdb-card-image
+                :src="post"
+                alt="Card image cap"
+              ></mdb-card-image>
+              <mdb-card-body>
+                <mdb-card-title>{{i + 1}}</mdb-card-title>
+                <mdb-card-text
+                  >Some quick example text to build on the card title and
+                  make up the bulk of the card's content.</mdb-card-text
+                >
+                <mdb-btn color="primary" size="md">Button</mdb-btn>
+              </mdb-card-body>
+            </mdb-card>
+          </template>
+        </mdb-carousel>
+
         <mdb-icon
           icon="angle-double-down"
           class="icolor bottom-left animated bounce infinite fa-3x arrows"
@@ -23,7 +67,7 @@
       </mdb-col>
       <mdb-col class="column" md="6" xs="0">
         <mdb-view>
-          <img class="image" src="../assets/images/_MG_8787.jpg" />
+          <img class="image" src="https://i.postimg.cc/HxxRDkH9/MG-8787.jpg" />
         </mdb-view>
       </mdb-col>
     </mdb-row>
@@ -315,9 +359,14 @@ import {
   mdbRow,
   mdbView,
   animateOnScroll,
-  mdbCard
-} from "mdbvue";
-import { mapState } from "vuex";
+  mdbCarousel,
+  mdbBtn,
+  mdbCard,
+  mdbCardImage,
+  mdbCardText,
+  mdbCardBody
+} from 'mdbvue'
+import { mapState } from 'vuex'
 
 export default {
   components: {
@@ -329,7 +378,12 @@ export default {
     mdbView,
     mdbIcon,
     mdbContainer,
-    mdbCard
+    mdbCarousel,
+    mdbBtn,
+    mdbCard,
+    mdbCardImage,
+    mdbCardText,
+    mdbCardBody
   },
   directives: {
     animateOnScroll
@@ -339,38 +393,56 @@ export default {
     backend: false,
     individual: false,
     entrepeneur: false,
-    loading: false
+    posts: null,
+    loading: false,
+    basic: [
+      'https://mdbootstrap.com/img/Photos/Others/img (36).jpg',
+      'https://mdbootstrap.com/img/Photos/Others/img (34).jpg',
+      'https://mdbootstrap.com/img/Photos/Others/img (38).jpg',
+      'https://mdbootstrap.com/img/Photos/Others/img (29).jpg',
+      'https://mdbootstrap.com/img/Photos/Others/img (30).jpg',
+      'https://mdbootstrap.com/img/Photos/Others/img (27).jpg',
+      'https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(53).jpg1',
+      'https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg',
+      'https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(51).jpg'
+    ]
   }),
   computed: mapState({
     en: state => state.LangModule.en,
     hu: state => state.LangModule.hu
   }),
-  created() {
+  created () {
     if (!this.en) {
-      this.$i18n.locale = "hu";
+      this.$i18n.locale = 'hu'
     } else {
-      this.$i18n.locale = "en";
+      this.$i18n.locale = 'en'
     }
+    this.getPosts()
   },
   methods: {
-    start() {
-      this.loading = true;
+    start () {
+      this.loading = true
     },
-    finish() {
-      this.loading = false;
+    finish () {
+      this.loading = false
+    },
+    async getPosts () {
+      const result = await this.$axios.get('https://auth-a5273-default-rtdb.firebaseio.com/posts.json')
+
+      this.posts = result.data
     }
   },
-  head() {
+  head () {
     return {
-      title: "Mark Varga",
+      title: 'Mark Varga',
       meta: [
         {
-          hid: "home",
-          name: "home",
-          content: "introduction mark varga"
+          hid: 'home',
+          name: 'home',
+          content: 'introduction mark varga'
         }
       ]
-    };
+    }
   }
-};
+}
 </script>

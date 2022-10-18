@@ -30,14 +30,16 @@
                   <a
                     href="https://www.facebook.com/vargabeni69/"
                     class="btn-floating btn-sm rgba-white-slight mx-1"
-                    ><i class="fab fa-facebook"
+                    ><i
+                    class="fab fa-facebook"
                   /></a>
                 </li>
                 <li class="list-inline-item">
                   <a
                     href="https://www.linkedin.com/in/varga-mark-61796a197/"
                     class="btn-floating btn-sm rgba-white-slight mx-1"
-                    ><i class="fab fa-linkedin-in"
+                    ><i
+                    class="fab fa-linkedin-in"
                   /></a>
                 </li>
               </ul>
@@ -50,9 +52,9 @@
 </template>
 
 <script>
-import { mdbFooter, mdbContainer, mdbRow, mdbCol } from "mdbvue";
+import { mdbFooter, mdbContainer, mdbRow, mdbCol } from 'mdbvue'
 export default {
-  name: "FooterPage",
+  name: 'FooterPage',
   components: {
     mdbFooter,
     mdbContainer,
@@ -63,11 +65,11 @@ export default {
     date: new Date()
   }),
   computed: {
-    year() {
-      return this.date.getFullYear();
+    year () {
+      return this.date.getFullYear()
     }
   }
-};
+}
 </script>
 
 <style lang="scss">
