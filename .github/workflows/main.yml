@@ -22,7 +22,7 @@ jobs:
         working-directory: ./frontend
         run: npm run build
       - name: Archive production artifact
-        uses: actions/upload-artifact@main
+        uses: actions/upload-artifact@master
         with:
           name: dist
           path: dist
@@ -32,8 +32,8 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Checkout repository
-        uses: actions/checkout@main
-      - name: publish test results
+        uses: actions/checkout@master
+      - name: publish results
         uses: actions/upload-artifact@v1
         with:
             name: dist
