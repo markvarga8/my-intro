@@ -10,14 +10,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@main
-      - name: Use Node.js 14
-        uses: actions/setup-node@v2
+        uses: actions/checkout@master
+      - name: Use Node.js 16
+        uses: actions/setup-node@v3
         with:
           node-version: '14'
       - name: Install dependencies
+        working-directory: ./frontend
         run: npm install
       - name: Build dependencies
+        working-directory: ./frontend
         run: npm run build
       - name: Archive production artifact
         uses: actions/upload-artifact@main
@@ -31,14 +33,15 @@ jobs:
     steps: 
       - name: Checkout repository
         uses: actions/checkout@main
-      - name: Download artifact
-        uses: actions/download-artifact@main
-        with: 
-          name: dist
-          path: dist
+      - name: publish test results
+        uses: actions/upload-artifact@v1
+        with:
+            name: dist
+            path: ./frontend/dist
       - name: Sync files to hosting
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with: 
+          local-dir: ./frontend/dist/
           server: wh10.rackhost.hu
           username: c19246vmark
           password: ${{ secrets.INTRO_FTP_PASSWORD }}
