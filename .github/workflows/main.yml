@@ -41,7 +41,7 @@ jobs:
       - name: Sync files to hosting
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with: 
-          local-dir: ./frontend/dist
+          local-dir: ./frontend/dist/
           server: wh10.rackhost.hu
           username: c19246vmark
           password: ${{ secrets.INTRO_FTP_PASSWORD }}
