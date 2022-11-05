@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
             name: dist
-            path: ./frontend/dist
+            path: dist
       - name: Sync files to hosting
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with: 
