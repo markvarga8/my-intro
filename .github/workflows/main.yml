@@ -19,25 +19,20 @@ jobs:
         working-directory: ./frontend
         run: npm install
       - name: Build dependencies
-        working-directory: ./frontend
+        working-directory: ./frontend/dist
         run: npm run build
       - name: Archive production artifact
         uses: actions/upload-artifact@master
         with:
           name: dist
           path: ./frontend/dist
-  deploy:
-    name: Deploy 🚀
-    needs: build
-    runs-on: ubuntu-latest
-    steps: 
       - name: Checkout repository
         uses: actions/checkout@master
       - name: publish results
         uses: actions/upload-artifact@v1
         with:
             name: dist
-            path: ./dist/
+            path: ./frontend/dist
       - name: Sync files to hosting
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with: 
