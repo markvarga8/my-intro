@@ -46,12 +46,6 @@
           </mdb-nav-item>
           <mdb-nav-item
             class="menu borderBottom"
-            href="https://www.facebook.com/vargabeni69/"
-          >
-            <mdb-icon fab icon="facebook-f" />
-          </mdb-nav-item>
-          <mdb-nav-item
-            class="menu borderBottom"
             href="https://www.linkedin.com/in/varga-mark-61796a197/"
           >
             <mdb-icon fab icon="linkedin" />
@@ -97,7 +91,7 @@ import {
   mdbNavItem,
   mdbNavbarBrand,
   mdbNavbarToggler,
-  mdbIcon
+  mdbIcon,
 } from "mdbvue";
 
 export default {
@@ -107,11 +101,11 @@ export default {
     mdbNavItem,
     mdbNavbarBrand,
     mdbNavbarToggler,
-    mdbIcon
+    mdbIcon,
   },
   computed: mapState({
-    en: state => state.LangModule.en,
-    hu: state => state.LangModule.hu
+    en: (state) => state.LangModule.en,
+    hu: (state) => state.LangModule.hu,
   }),
   methods: {
     translateEn(app) {
@@ -121,8 +115,8 @@ export default {
     translateHu() {
       this.$store.dispatch("LangModule/hu");
       this.$cookie.set("leng", "hu", { expires: "6h" });
-    }
-  }
+    },
+  },
 };
 </script>
 
