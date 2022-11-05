@@ -23,9 +23,6 @@ jobs:
         run: npm run build
       - name: Archive production artifact
         uses: actions/upload-artifact@master
-        with:
-          name: dist
-          path: ./frontend/dist
       - name: Checkout repository
         uses: actions/checkout@master
       - name: publish results
@@ -36,7 +33,7 @@ jobs:
       - name: Sync files to hosting
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with: 
-          local-dir: dist/
+          local-dir: ./frontend/dist
           server: wh10.rackhost.hu
           username: c19246vmark
           password: ${{ secrets.INTRO_FTP_PASSWORD }}
