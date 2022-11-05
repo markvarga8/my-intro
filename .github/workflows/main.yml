@@ -16,10 +16,10 @@ jobs:
         with:
           node-version: '14'
       - name: Install dependencies
-        working-directory: ./frontend
+        working-directory: frontend
         run: npm install
       - name: Build dependencies
-        working-directory: ./frontend/dist
+        working-directory: frontend/dist
         run: npm run build
       - name: Archive production artifact
         uses: actions/upload-artifact@master
@@ -29,11 +29,11 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
             name: dist
-            path: ./frontend/dist
+            path: frontend/dist
       - name: Sync files to hosting
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with: 
-          local-dir: ./frontend/dist
+          local-dir: frontend/dist
           server: wh10.rackhost.hu
           username: c19246vmark
           password: ${{ secrets.INTRO_FTP_PASSWORD }}
